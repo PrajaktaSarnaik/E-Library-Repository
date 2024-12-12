@@ -137,9 +137,8 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 ### Known Bugs
 - x
 
-
 ## Future Features
-
+- x
 
 
 ## Technologies Used
@@ -181,3 +180,26 @@ The live link can be found here - [Logophile, https://prajaktasarnaik.github.io/
 
 ## Credits
 Content References, Media References, Acknowledgements
+
+### Code
+
+The project brief and primary learning and README.md template was supplied by [Code Institute](https://codeinstitute.net/).
+
+Supplementary learning resources which were referenced throughout the project are listed below:
+
+- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [Microsoft Copilot](https://copilot.microsoft.com/)
+
+<hr>
+
+### Content 
+
+- The text and content included in the website was generated using Microsoft Copilot
+- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- The fonts were taken from [Google Fonts](https://fonts.google.com/)
+- The colours were taken from [Coolors](https://coolors.co/)
+
+<hr>
+
+### Media
+- The images used for the hero section on the Homepage and Resources page are from: [Image URLs]()
