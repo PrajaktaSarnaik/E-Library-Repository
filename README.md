@@ -61,18 +61,39 @@ For the most part, the designs remained consistent with the implementation, but 
 
 ### Typography
 
+The project used two sans-serif fonts which were implemented via [Google Fonts](https://fonts.google.com).
+
+- [Grenze Gotisch](https://fonts.google.com/specimen/Grenze+Gotisch) was used as the main logo and heading font to make it stand out and fit with the theme of the website.
+- [Open Sans](https://fonts.google.com/specimen/Open+Sans) was used for all the links and main content of the website to ensure easy readability.
+
 <hr>
 
 ### Colour Scheme
+
+The colours used were taken from [Coolors](https://coolors.co/). Contrasting colours were used for the background, text and other elements (like buttons and info cards) to make the website easier to read and interact with.
+
+- `#606C38` used for: card background, 
+- `#283618` used for: main background, textbox text
+- `#FEFAE0` used for: main text, textbox background, button text
+- `#DDA15E` used for: buttons
+- `#BC6C25` used for: buttons selected
+
+![Colour Palette](assets/images-readme/Colour-Palette.png)
 
 <hr>
 
 ### Imagery
 
 
+
+
 ## Website Features
 Include information on your JavaScript Logic/Functionality
 
+The website consists of three pages with distinct sections to ensure a good user experience. All features on the website were implemented using a combination of HTML5, CSS (including Bootstrap) and JavaScript and are responsive on multiple device sizes in accordance with appropriate breakpoints. 
+
+- x
+- x
 
 ## Testing
 Validation of HTML/CSS/JavaScript, Lighthouse Audits, Bugs
