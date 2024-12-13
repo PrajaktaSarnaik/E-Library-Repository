@@ -117,6 +117,46 @@ font-family: 'Grenze Gotisch', serif;
 /*******************Prajakta code Ends*******************/
 
 /*~~~~~~~~~~~~~~~~~ Mitali Code Starts ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.footer-style {
+    background-color: #283618;
+    bottom: 0;
+}
+
+/* Stop ul adding space at bottom (Bootstrap default)*/
+ul {
+    margin-bottom: 0;
+}
+
+/* Footer Layout */
+#social-networks {
+    text-align: center;
+    padding: 20px 0 5px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    flex-grow: 1;
+    height: 100%;
+}
+
+/* Footer Icons */
+#social-networks i {
+    font-size: 160%;
+    color: #BC6C25;
+}
+
+/* Footer Copyright Layout */
+#copyright-info {
+    text-align: left;
+    list-style-type: none;
+    color: #BC6C25;
+}
+
+/* Footer Copyright Text */
+#copyright-info p {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 10px;
+}
+
 /* Set Enquiry Form formatting */
 #enquiryPage {
     padding: 5vw;
