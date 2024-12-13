@@ -126,6 +126,13 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 
 <hr>
 
+- JavaScript
+  - No errors were found when passing through the official [JSHint validator](https://jshint.com/)
+
+![JavaScript Validation]()
+
+<hr>
+
 ### Manual Testing
 | Function | Expected Outcome | Does it work? |
 | ----------- | ----------- | ----------- |
