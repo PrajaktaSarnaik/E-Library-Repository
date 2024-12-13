@@ -43,7 +43,7 @@ For the most part, the designs remained consistent with the implementation, but 
 ![Homepage Tablet & Mobile](assets/images-readme/Wireframe-Homepage-TabletMobile.png)
 
 - Registration Page
-  - changes
+  - The registration was initially intended to be a separate page, but was later changed to a pop-up which could be accessed from the navbar to be more consistent with the login display
 
 ![Registration Desktop](assets/images-readme/Wireframe-Registration-Desktop.png)
 
@@ -123,6 +123,13 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
 
 ![CSS Validation]()
+
+<hr>
+
+- JavaScript
+  - No errors were found when passing through the official [JSHint validator](https://jshint.com/)
+
+![JavaScript Validation]()
 
 <hr>
 
