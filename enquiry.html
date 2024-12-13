@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,28 +21,64 @@
 </head>
 
 <body>
-    <!-- Header Section Navigation Bar -->
-    <header>
-        <nav id="navbar">
-            <div>
-                <a href="index.html">Logophile</a>
-                <a href="index.html">Home</a>
-                <a href="enquiry.html">Enquiry</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-            </div>
-        </nav>
-    </header>
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div>
+            <a href="index.html">Logophile</a>
+            <a href="index.html">Home</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </nav>
 
     <!-- Main Website Section -->
-    <main></main>
+    <main>
+        <!-- Enquiry Form Section -->
+        <section id="enquiry-form" class="container section">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <h2>Enquiry Form</h2>
+                    <p>Please send any questions through this form.</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-12 col-lg-6 mb-3">
+                                <label for="name" class="form-label">Name:</label>
+                                <input class="form-control" id="name" placeholder="Enter name.">
+                            </div>
+
+                            <div class="col-12 col-lg-6 mb-3">
+                                <label for="email" class="form-label">Email Address:</label>
+                                <input class="form-control" id="email" placeholder="Enter email address.">
+                            </div>
+
+                            <div class="col-12 col-lg-6 mb-3">
+                                <label for="phone" class="form-label">Phone Number:</label>
+                                <input class="form-control" id="phone" placeholder="Enter phone number.">
+                            </div>
+
+                            <div class="col-12 col-lg-6 mb-3">
+                                <label for="bookName" class="form-label">Book Title:</label>
+                                <input class="form-control" id="bookName" placeholder="Enter book title">
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <label for="query" class="form-label">Query:</label>
+                                <textarea class="form-control" rows="6" id="query" placeholder="Enter query."></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer Section -->
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <!-- Bootstrap Script Link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -51,4 +88,5 @@
     <!-- FontAwesome Kit Link -->
     <script src="https://kit.fontawesome.com/d9a84054bd.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

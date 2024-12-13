@@ -10,7 +10,7 @@ body {
 nav {
     background-color: transparent;
     overflow: hidden;
-    position: fixed;
+    position: fixed; 
     top: 0;
     width: 100%;
     transition: background-color 0.3s;
@@ -116,3 +116,16 @@ font-family: 'Grenze Gotisch', serif;
 }
 /*******************Prajakta code Ends*******************/
 
+/*~~~~~~~~~~~~~~~~~ Mitali Code Starts ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.btn-submit {
+    background-color: #BC6C25;
+    color: #FEFAE0;
+    border-color: #BC6C25;
+}
+
+.btn-submit:hover {
+    background-color: #FEFAE0;
+    color: #BC6C25;
+    border-color: #FEFAE0;
+}
+/*~~~~~~~~~~~~~~~~~ Mitali Code Ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
