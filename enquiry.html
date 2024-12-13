@@ -37,40 +37,52 @@
     <!-- Main Website Section -->
     <main>
         <!-- Enquiry Form Section -->
-        <section id="enquiry-form" class="container section">
+        <section id="enquiryPage" class="container section">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
-                    <h2>Enquiry Form</h2>
-                    <p>Please send any questions through this form.</p>
-                    <form>
+                    <!-- Form -->
+                    <form id="enquiryForm" action="https://api.web3forms.com/submit" method="POST">
+                        <h2>Enquiry Form</h2>
+                        <p>Please send any questions through this form.</p>
+
+                        <!-- Web3Forms Data -->
+                        <input type="hidden" name="access_key" value="113d34b1-205f-4602-b3c3-011c0c412257">
+                        <input type="hidden" name="subject" value="New Query from Logophile">
+
                         <div class="row">
                             <div class="col-12 col-lg-6 mb-3">
-                                <label for="name" class="form-label">Name:</label>
-                                <input class="form-control" id="name" placeholder="Enter name.">
+                                <label for="enquiryName" class="form-label">Name:</label>
+                                <input class="form-control input-box" id="enquiryName" name="enquiryName" type="text"
+                                    placeholder="Enter name." required>
                             </div>
 
                             <div class="col-12 col-lg-6 mb-3">
-                                <label for="email" class="form-label">Email Address:</label>
-                                <input class="form-control" id="email" placeholder="Enter email address.">
+                                <label for="enquiryEmail" class="form-label">Email Address:</label>
+                                <input class="form-control input-box" id="enquiryEmail" name="enquiryEmail" type="email"
+                                    placeholder="Enter email address." required>
                             </div>
 
                             <div class="col-12 col-lg-6 mb-3">
-                                <label for="phone" class="form-label">Phone Number:</label>
-                                <input class="form-control" id="phone" placeholder="Enter phone number.">
+                                <label for="enquiryPhone" class="form-label">Phone Number:</label>
+                                <input class="form-control input-box" id="enquiryPhone" name="enquiryPhone" type="tel"
+                                    placeholder="Enter phone number." required>
                             </div>
 
                             <div class="col-12 col-lg-6 mb-3">
-                                <label for="bookName" class="form-label">Book Title:</label>
-                                <input class="form-control" id="bookName" placeholder="Enter book title">
+                                <label for="enquiryBook" class="form-label">Book Title:</label>
+                                <input class="form-control input-box" id="enquiryBook" name="enquiryBook" type="text"
+                                    placeholder="Enter book title" required>
                             </div>
 
                             <div class="col-12 mb-3">
-                                <label for="query" class="form-label">Query:</label>
-                                <textarea class="form-control" rows="6" id="query" placeholder="Enter query."></textarea>
+                                <label for="enquiryQuery" class="form-label">Query:</label>
+                                <textarea class="form-control input-box" rows="6" id="enquiryQuery" name="enquiryQuery"
+                                    placeholder="Enter query." required></textarea>
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-submit">Submit</button>
+                        <button id="enquiryReset" type="reset" class="btn btn-submit">Reset</button>
+                        <button id="enquirySubmit" type="submit" class="btn btn-submit">Submit</button>
                     </form>
                 </div>
             </div>
@@ -84,6 +96,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <!-- JavaScript Script Link -->
+    <script src="assets/js/script.js"></script>
 
     <!-- FontAwesome Kit Link -->
     <script src="https://kit.fontawesome.com/d9a84054bd.js" crossorigin="anonymous"></script>

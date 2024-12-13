@@ -117,12 +117,25 @@ font-family: 'Grenze Gotisch', serif;
 /*******************Prajakta code Ends*******************/
 
 /*~~~~~~~~~~~~~~~~~ Mitali Code Starts ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* Set Enquiry Form formatting */
+#enquiryPage {
+    padding: 5vw;
+}
+
+#enquiryForm {
+    background-color: #283618;
+    color: #FEFAE0;
+    padding: 5vw;
+}
+
+/* Set colour of submit button */
 .btn-submit {
     background-color: #BC6C25;
     color: #FEFAE0;
     border-color: #BC6C25;
 }
 
+/* Set colour of submit button when hovered over */
 .btn-submit:hover {
     background-color: #FEFAE0;
     color: #BC6C25;
