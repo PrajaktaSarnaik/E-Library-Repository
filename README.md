@@ -43,14 +43,16 @@ For the most part, the designs remained consistent with the implementation, but 
 ![Homepage Tablet & Mobile](assets/images-readme/Wireframe-Homepage-TabletMobile.png)
 
 - Registration Page
-  - The registration was initially intended to be a separate page, but was later changed to a pop-up which could be accessed from the navbar to be more consistent with the login display
+  - The registration was initially intended to be a separate page, but was later changed to a pop-up which could be accessed from the navbar to be more consistent with the login display.
 
 ![Registration Desktop](assets/images-readme/Wireframe-Registration-Desktop.png)
 
 ![Registration Tablet & Mobile](assets/images-readme/Wireframe-Registration-TabletMobile.png)
 
 - Enquiry Page
-  - changes
+  - The layout was changed to better ensure responsivity across different device sizes.
+  - The success message pop-up was changed to a redirected success page with a return link (this was required in order to allow Web3Forms to send the user data inputs to the dummy email)
+  - Added a Reset button for easily resetting the form
   
 ![Enquiry Desktop](assets/images-readme/Wireframe-Enquiry-Desktop.png)
 
@@ -157,7 +159,7 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 | Registration - Submit Pop-Up | The button displays a pop-up when clicked to inform the user their details have been submitted. | Yes |
 | Enquiry - Display Fields | The relevant fields are all visible and can be interacted with. | Yes |
 | Enquiry - Input Validation | The text boxes validates the user's input to ensure data is in the correct format. | Yes |
-| Enquiry - Submit Pop-Up | The button displays a pop-up when clicked to inform the user the query has been sent. | Yes |
+| Enquiry - Submit Success | The page will show a success message to inform the user the query has been sent. | Yes |
 | Enquiry - Submit Email | The query is be sent to a dummy email after it is submitted. | Yes |
 
 <hr>
@@ -193,6 +195,7 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 ### Tools & Programs
 
 - Balsamiq
+- Web3Forms
 - Microsoft Copilot
 
 ## Deployment
@@ -216,6 +219,7 @@ The project brief and primary learning and README.md template was supplied by [C
 Supplementary learning resources which were referenced throughout the project are listed below:
 
 - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [Web3Forms](https://docs.web3forms.com/)
 - [Microsoft Copilot](https://copilot.microsoft.com/)
 
 <hr>
