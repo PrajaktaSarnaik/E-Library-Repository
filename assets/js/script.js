@@ -71,10 +71,3 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     }
 });
 /*******************Prajakta code Ends*******************/
-
-/*~~~~~~~~~~~~~~~~~ Mitali Code Starts ~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/**
- * Reset the Enquiry Form fields when the page loads
- */
-document.getElementById("enquiryForm").reset(); 
-/*~~~~~~~~~~~~~~~~~ Mitali Code Ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
