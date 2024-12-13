@@ -71,3 +71,10 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     }
 });
 /*******************Prajakta code Ends*******************/
+
+/**
+ * Resets form fields
+ */
+function clearForm() {
+    document.getElementById('enquiryForm').reset();
+}
