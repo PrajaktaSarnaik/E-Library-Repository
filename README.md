@@ -43,7 +43,7 @@ For the most part, the designs remained consistent with the implementation, but 
 ![Homepage Tablet & Mobile](assets/images-readme/Wireframe-Homepage-TabletMobile.png)
 
 - Registration Page
-  - changes
+  - The registration was initially intended to be a separate page, but was later changed to a pop-up which could be accessed from the navbar to be more consistent with the login display
 
 ![Registration Desktop](assets/images-readme/Wireframe-Registration-Desktop.png)
 
