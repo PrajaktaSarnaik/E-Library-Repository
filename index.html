@@ -51,23 +51,27 @@
 
                 <!-- /********************Prajakta code Starts here*******************/ -->
                 <li class="nav-item">
-                    <button id="buttonLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button id="buttonLogin" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
                 </li>
-                                <li class="nav-item">  
-                                    <div class="dropdown">
-                    <button type="button" id="buttonUser" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-person-circle"></i>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="buttonUser">
-                        <li><a class="dropdown-item" href="#">Borrowed Books</a></li>
-                        <li><a class="dropdown-item" href="#">Favourites</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#" id="logout">Log Out</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" id="buttonUser" class="btn btn-primary dropdown-toggle"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="buttonUser">
+                            <li><a class="dropdown-item" href="#">Borrowed Books</a></li>
+                            <li><a class="dropdown-item" href="#">Favourites</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" id="logout">Log Out</a></li>
+                        </ul>
                     </div>
                 </li>
-              
-                    <!-- /********************Prajakta code ends here*******************/ -->
+
+                <!-- /********************Prajakta code ends here*******************/ -->
 
                 <li class="nav-item search-bar">
                     <a href="#" class="nav-link">
@@ -78,69 +82,69 @@
             </ul>
         </div>
     </nav>
-<!-- /********************Prajakta code starts here*******************/ -->
+    <!-- /********************Prajakta code starts here*******************/ -->
     <!-- Login Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="loginModalLabel">Login</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="loginForm">
-                    <div class="mb-3">
-                        <label for="loginEmail" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="loginEmail" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="loginPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="loginPassword" required>
-                    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                    <hr>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <p>Don't have an account? <a href="#" id="registerLink">Register here</a></p>
                     </div>
-                </form>
-                <hr>
-                <div class="text-center">
-                    <p>Don't have an account? <a href="#" id="registerLink">Register here</a></p>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Register Modal -->
-<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="registerModalLabel">Register</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="registerForm">
-                    <div class="mb-3">
-                        <label for="registerEmail" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="registerEmail" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="registerPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="registerPassword" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="registerConfirmPassword" required>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Register</button>
-                    </div>
-                </form>
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="registerConfirmPassword" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- /********************Prajakta code ends here*******************/ -->
+    <!-- /********************Prajakta code ends here*******************/ -->
     <!-- Hero Section -->
     <header class="hero">
         <div class="container" id="overlay">
@@ -153,17 +157,18 @@
 
     <main id="main" class="container section">
         <!-- Book Section -->
-         <div class="row">
+        <div class="row">
             <h1 class="display-4">Fantasy</h1>
-         </div>
+        </div>
         <div class="row">
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="card bookcard">
                     <img src="assets/images/fantasy1.jpeg" class="card-img-top" alt="Book Image">
-                    
+
                     <div class="card-body">
                         <h5 class="card-title">Book Title 1</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
                         <a href="#" class="btn btn-primary">Borrow</a>
                         <i class="fa-regular fa-heart"></i>
                     </div>
@@ -174,7 +179,8 @@
                     <img src="assets/images/fantasy2.jpeg" class="card-img-top" alt="Book Image">
                     <div class="card-body">
                         <h5 class="card-title">Book Title 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
                         <a href="#" class="btn btn-primary">Borrow</a>
                         <i class="fa-regular fa-heart"></i>
                     </div>
@@ -185,7 +191,8 @@
                     <img src="assets/images/fantasy3.jpeg" class="card-img-top" alt="Book Image">
                     <div class="card-body">
                         <h5 class="card-title">Book Title 3</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
                         <a href="#" class="btn btn-primary">Borrow</a>
                         <i class="fa-regular fa-heart"></i>
                     </div>
@@ -196,7 +203,8 @@
                     <img src="assets/images/fantasy4.jpeg" class="card-img-top" alt="Book Image">
                     <div class="card-body">
                         <h5 class="card-title">Book Title 4</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
                         <a href="#" class="btn btn-primary">Borrow</a>
                         <i class="fa-regular fa-heart"></i>
                     </div>
@@ -207,7 +215,8 @@
                     <img src="assets/images/fantasy5.jpeg" class="card-img-top" alt="Book Image">
                     <div class="card-body">
                         <h5 class="card-title">Book Title 5</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
                         <a href="#" class="btn btn-primary">Borrow</a>
                         <i class="fa-regular fa-heart"></i>
                     </div>
@@ -218,7 +227,8 @@
                     <img src="assets/images/fantasy6.jpeg" class="card-img-top" alt="Book Image">
                     <div class="card-body">
                         <h5 class="card-title">Book Title 6</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
                         <a href="#" class="btn btn-primary">Borrow</a>
                         <i class="fa-regular fa-heart"></i>
                     </div>
@@ -235,99 +245,192 @@
             <!-- Add more book items here -->
         </div>
         <!-- /********************Prajakta code starts here*******************/ -->
-    <!-- Books section -->
-    <div>
-        <h2 class="ml-10">Fantasy </h2>
-    </div>
-    <section class="container mx-auto my-5">
-        <div class="row g-4 align-items-center">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="assets/images/fantasy1.jpeg" alt="fantasy1" class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <h3>Book Title 1</h3>
-                        <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                        <button class="borrow-btn">Borrow</button>
-                        <span class="heart-icon">❤️</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="assets/images/fantasy2.jpeg" alt="fantasy2" class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <h3>Book Title 2</h3>
-                        <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                        <button class="borrow-btn">Borrow</button>
-                        <span class="heart-icon">❤️</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="assets/images/fantasy3.jpeg" alt="fantasy3" class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <h3>Book Title 1</h3>
-                        <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                        <button class="borrow-btn">Borrow</button>
-                        <span class="heart-icon">❤️</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="assets/images/fantasy4.jpeg" alt="fantasy4" class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <h3>Book Title 2</h3>
-                        <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                        <button class="borrow-btn">Borrow</button>
-                        <span class="heart-icon">❤️</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="assets/images/fantasy5.jpeg" alt="fantasy5" class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <h3>Book Title 1</h3>
-                        <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                        <button class="borrow-btn">Borrow</button>
-                        <span class="heart-icon">❤️</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="assets/images/fantasy6.jpeg" alt="fantasy6" class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <h3>Book Title 2</h3>
-                        <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                        <button class="borrow-btn">Borrow</button>
-                        <span class="heart-icon">❤️</span>
-                    </div>
-                </div>
-            </div>
-
+        <!-- Books section -->
+        <!-- Fantacy Books -->
+        <div>
+            <h2 class="ml-10">Fantasy </h2>
         </div>
-    </section>
-    <!-- /********************Prajakta code ends here*******************/ -->
+        <section class="container mx-auto my-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/fantasy1.jpeg" alt="fantasy1" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Title 1</h3>
+                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
+                            <button class="borrow-btn">Borrow</button>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/fantasy2.jpeg" alt="fantasy2" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Title 2</h3>
+                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
+                            <button class="borrow-btn">Borrow</button>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/fantasy3.jpeg" alt="fantasy3" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Title 1</h3>
+                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
+                            <button class="borrow-btn">Borrow</button>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/fantasy4.jpeg" alt="fantasy4" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Title 2</h3>
+                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
+                            <button class="borrow-btn">Borrow</button>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/fantasy5.jpeg" alt="fantasy5" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Title 1</h3>
+                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
+                            <button class="borrow-btn">Borrow</button>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/fantasy6.jpeg" alt="fantasy6" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Title 2</h3>
+                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
+                            <button class="borrow-btn">Borrow</button>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Comedy Books -->
+        <div>
+            <h2 class="ml-10">Comedy </h2>
+        </div>
+        <section class="container mx-auto my-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/comedy1.jpeg" alt="fantacy1" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Title 1</h3>
+                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
+                            <button class="borrow-btn">Borrow</button>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/comedy2.jpeg" alt="fantacy2" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Title 2</h3>
+                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
+                            <button class="borrow-btn">Borrow</button>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/comedy3.jpeg" alt="fantacy3" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Title 1</h3>
+                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
+                            <button class="borrow-btn">Borrow</button>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/comedy4.jpeg" alt="fantacy4" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Title 2</h3>
+                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
+                            <button class="borrow-btn">Borrow</button>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/comedy5.jpeg" alt="fantacy5" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Title 1</h3>
+                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
+                            <button class="borrow-btn">Borrow</button>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/comedy6.jpeg" alt="fantacy6" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Title 2</h3>
+                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
+                            <button class="borrow-btn">Borrow</button>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /********************Prajakta code ends here*******************/ -->
     </main>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -340,7 +443,7 @@
 
     <!--------------------Prapti code*---------------------------------->
 
-   
+
 </body>
 
 </html>
