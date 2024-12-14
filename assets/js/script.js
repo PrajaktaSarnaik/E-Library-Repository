@@ -56,10 +56,10 @@ document.getElementById('search-bar').addEventListener('keydown', function (even
 
 /*******************Prajakta code Starts*******************/
 const users = [
-    { email: "prajakta@logophile.com", password: "prajakta" },
+    { email: "prajakta@e-library.com", password: "prajakta" },
     { email: "p@p", password: "p" },
-    { email: "prapti@logophile.com", password: "prapti" },
-    { email: "mitali@logophile.com", password: "mitali" }
+    { email: "prapti@e-library.com", password: "prapti" },
+    { email: "mitali@e-library.com", password: "mitali" }
 ]; // Array to store users
 document.getElementById('buttonUser').style.display = "none";
 // Switch to Register Modal
