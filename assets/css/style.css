@@ -19,7 +19,7 @@ body {
     background-color: var(--background-color);
 }
 
-
+/**************** Navbar ******************/
 
 #nav {
     background-color: transparent;
@@ -55,8 +55,18 @@ body {
 
 #nav .logo {
     width: 80px;
-    height:80px;
+    height: 80px;
+    margin-right: 5px; /* Adjust the value as needed */
 }
+
+.navbar-nav .nav-item {
+    margin-right: 2px; /* Adjust the value as needed */
+}
+
+.navbar-nav .nav-item:first-child {
+    margin-left: 5px; /* Adjust the value as needed */
+}
+
 
 .logo{
     width: 70px;
@@ -146,6 +156,20 @@ font-family: var(--primary-font);
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.9); /* Optional: Add a background color for better visibility */
 }
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    transform: translateY(100%);
+}
+
 
 #bookcard:hover {
     transform: scale(1.25);
