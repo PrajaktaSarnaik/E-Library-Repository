@@ -60,7 +60,7 @@ const users = [
     { email: "prapti@logophile.com", password: "prapti" },
     { email: "mitali@logophile.com", password: "mitali" }
 ]; // Array to store users
-
+document.getElementById('buttonUser').style.display = "none";
 // Switch to Register Modal
 document.getElementById('registerLink').addEventListener('click', function () {
     const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
