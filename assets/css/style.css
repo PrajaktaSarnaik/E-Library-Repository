@@ -1,13 +1,27 @@
-/*------------------Prapti code*--------------------------------*/
+/*------------------Prapti code starts*--------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Macondo&display=swap');
 
+/* CSS Variables */
+:root {
+    --primary-font: "Grenze Gotisch", sans-serif;
+    --secondary-font: "Macondo", cursive;
+    --primary-color: #283618; /* dark green */
+    --secondary-color: #FEFAE0; /*orange */
+   /* --highlight-color: rgb(6, 91, 6);  green */
+    /*--highlight-color-light: #FFB200; light yellow */
+    /*--text-color:#D91656;dark pink*/
+    --background-color: #E5DBC0; /* light yellow */
+}
 body {
     margin: 0;
     padding: 0;
-    /*font-family: 'Grenze Gotisch', serif;*/
-    background-color: #307667;
+   
+    background-color: var(--background-color);
 }
 
-nav {
+/**************** Navbar ******************/
+
+#nav {
     background-color: transparent;
     overflow: hidden;
     position: fixed; 
@@ -19,34 +33,91 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+
 }
 
-nav.scrolled {
-    background-color: black;
+#nav.scrolled {
+    background-color:var(--primary-color);
 }
 
-nav a {
-    color: white;
+#nav.scrolled .nav-link {
+    color: var(--secondary-color);
+}
+
+ #nav.button {
+    background-color: var(--primary-color);
+} 
+
+#nav a {
+    color: var(--primary-color);
     text-decoration: none;
     margin: 0 15px;
+    font-size: 1.20rem;
+
 }
+
+#nav button {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.20rem;
+}
+
+#nav .logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 5px; /* Adjust the value as needed */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 2px; /* Adjust the value as needed */
+}
+
+.navbar-nav .nav-item:first-child {
+    margin-left: 5px; /* Adjust the value as needed */
+}
+
+
+.logo{
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    display: block;
+}
+
 
 .search-bar {
     display: flex;
     align-items: center;
 }
 
-.search-bar input[type="text"] {
+.search-bar .nav-link {
+    padding: 5px;
+    color: var(--primary-color);
+    font-size: 1.20rem;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;  
+    color: var(--primary-color);
+}
+
+#search-input {
     padding: 5px;
     border: none;
     border-radius: 3px;
+    background-color: transparent;
+    color: var(--primary-color);
+    margin-left: 10px;
 }
 
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
-    background: url('../images/hero.jpeg') no-repeat center center/cover;
+    height: 80vh;
+    background: url('../images/hero.PNG') no-repeat center center/cover;
 }
 
 .hero h1, .hero button {
@@ -54,18 +125,17 @@ nav a {
     z-index: 2;
 }
 h1{
-font-family: 'Grenze Gotisch', serif;
+font-family: var(--primary-font);
 }
 #overlay {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 2.5%;
     transform: translateY(-50%);
-    
-    color: white;
+    color: var(--primary-color);
 }
 
-.card-container {
+.bookcard-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -73,29 +143,63 @@ font-family: 'Grenze Gotisch', serif;
     overflow-x: auto;
 }
 
-.card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+#bookcard {
     border-radius: 5px;
-    width: 18%;
-    margin: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
+.card {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Ensure content doesn't overflow the card */
+}
+
+.card-body {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: Add a background color for better visibility */
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    transform: translateY(100%);
+}
+
+
+#bookcard:hover {
     transform: scale(1.25);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
-    width: 100%;
-    height: auto;
+#bookcard:hover .card-body-full {
+    display: block;
 }
 
-.card button {
+#bookcard img {
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+#bookcard:hover img {
+    transform: scale(1.05);
+}
+
+#bookcard button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -105,16 +209,14 @@ font-family: 'Grenze Gotisch', serif;
     margin-top: 10px;
 }
 
-.card button:hover {
+#bookcard button:hover {
     background-color: #0056b3;
 }
 
-/*------------------Prapti code*--------------------------------*/
-/*******************Prajakta code Starts*******************/
-.modal-header {
-    justify-content: center;
-}
-/*******************Prajakta code Ends*******************/
+
+
+/*------------------Prapti code End*--------------------------------*/
+
 
 /*~~~~~~~~~~~~~~~~~ Mitali Code Starts ~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .footer-style {
