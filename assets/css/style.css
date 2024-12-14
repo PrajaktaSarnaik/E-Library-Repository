@@ -143,7 +143,7 @@ font-family: var(--primary-font);
     overflow-x: auto;
 }
 
-#bookcard {
+.bookcard {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -181,25 +181,25 @@ font-family: var(--primary-font);
 }
 
 
-#bookcard:hover {
+.bookcard:hover {
     transform: scale(1.25);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-#bookcard:hover .card-body-full {
+.bookcard:hover .card-body-full {
     display: block;
 }
 
-#bookcard img {
+.bookcard img {
     width: 100%;
     transition: transform 0.3s;
 }
 
-#bookcard:hover img {
+.bookcard:hover img {
     transform: scale(1.05);
 }
 
-#bookcard button {
+.bookcard button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -209,7 +209,7 @@ font-family: var(--primary-font);
     margin-top: 10px;
 }
 
-#bookcard button:hover {
+.bookcard button:hover {
     background-color: #0056b3;
 }
 

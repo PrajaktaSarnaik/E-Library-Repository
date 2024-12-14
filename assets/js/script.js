@@ -1,13 +1,7 @@
-/*------------------Prapti code Starts*--------------------------------*/
-
+/*********************Prapti code Starts**********************/
 window.onscroll = function() {
     var navbar = document.getElementById("nav");
     if (window.pageYOffset > 0) {
-window.onscroll = function () {
-    var navbar = document.getElementById("navbar");
-    var heroHeight = document.querySelector('.hero').offsetHeight;
-    if (window.pageYOffset > heroHeight) {
-
         navbar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
@@ -50,7 +44,6 @@ function searchBooks() {
     }
 }
 
-
 document.getElementById('search-bar').addEventListener('input', searchBooks);
 
 document.getElementById('search-bar').addEventListener('keydown', function(event) {
@@ -59,8 +52,7 @@ document.getElementById('search-bar').addEventListener('keydown', function(event
         searchBooks();
     }
 });
-
-/*------------------Prapti code Ends*--------------------------------*/
+/*********************Prapti code Ends**********************/
 
 /*******************Prajakta code Starts*******************/
 const users = [
