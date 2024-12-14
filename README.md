@@ -1,12 +1,12 @@
-# Logophile
+# E-Library
 
 <p align="center">
-| <a href="https://prajaktasarnaik.github.io/Logophile-Repository/" target="_blank">Live Project</a> |
+| <a href="https://prajaktasarnaik.github.io/E-Library-Repository/" target="_blank">Live Project</a> |
 </p>
 
 
 ## Introduction
-Logophile is a assessed portfolio project developed as part of the Code Institute Full Stack Software Developer Bootcamp, with the intention of demonstrating proficiency in HTML5, CSS and JavaScript to create a responsive website.
+E-Library is a assessed portfolio project developed as part of the Code Institute Full Stack Software Developer Bootcamp, with the intention of demonstrating proficiency in HTML5, CSS and JavaScript to create a responsive website.
 
 ![Responsive Mockup]()
 
@@ -206,7 +206,7 @@ This section should describe the process you went through to deploy the project 
   - From the source section drop-down menu, select the Master Branch
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - [Logophile, https://prajaktasarnaik.github.io/Logophile-Repository/](https://prajaktasarnaik.github.io/Logophile-Repository/)
+The live link can be found here - [E-Library, https://prajaktasarnaik.github.io/E-Library-Repository/](https://prajaktasarnaik.github.io/E-Library-Repository/)
 
 
 ## Credits
