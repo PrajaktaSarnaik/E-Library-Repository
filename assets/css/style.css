@@ -27,12 +27,13 @@ body {
     position: fixed; 
     top: 0;
     width: 100%;
+    
     transition: background-color 0.3s;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0 0;
 
 }
 
@@ -51,7 +52,7 @@ body {
 #nav a {
     color: var(--primary-color);
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0%;
     font-size: 1.20rem;
 
 }
@@ -69,12 +70,9 @@ body {
     margin-right: 5px; /* Adjust the value as needed */
 }
 
-.navbar-nav .nav-item {
-    margin-right: 2px; /* Adjust the value as needed */
-}
-
-.navbar-nav .nav-item:first-child {
-    margin-left: 5px; /* Adjust the value as needed */
+.navbar-nav {
+    margin: 0; 
+    padding:0;/* Adjust the value as needed */
 }
 
 
@@ -134,6 +132,8 @@ font-family: var(--primary-font);
     transform: translateY(-50%);
     color: var(--primary-color);
 }
+
+/* Cards */
 
 .bookcard-container {
     display: flex;
