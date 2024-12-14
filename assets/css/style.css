@@ -27,12 +27,13 @@ body {
     position: fixed; 
     top: 0;
     width: 100%;
+    
     transition: background-color 0.3s;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0 0;
 
 }
 
@@ -131,6 +132,8 @@ font-family: var(--primary-font);
     transform: translateY(-50%);
     color: var(--primary-color);
 }
+
+/* Cards */
 
 .bookcard-container {
     display: flex;
