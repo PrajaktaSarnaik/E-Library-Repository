@@ -1,5 +1,5 @@
 /*********************Prapti code Starts**********************/
-window.onscroll = function() {
+window.onscroll = function () {
     var navbar = document.getElementById("nav");
     if (window.pageYOffset > 0) {
         navbar.classList.add("scrolled");
@@ -9,7 +9,7 @@ window.onscroll = function() {
 };
 
 // ACTIVATE SEARCH BAR WHEN CLICKED ON SEARCH ICON
-document.getElementById('search-bar').addEventListener('click', function(event) {
+document.getElementById('search-bar').addEventListener('click', function (event) {
     event.preventDefault();
     var searchInput = document.getElementById('search-input');
     if (searchInput.style.display === 'none' || searchInput.style.display === '') {
@@ -46,7 +46,7 @@ function searchBooks() {
 
 document.getElementById('search-bar').addEventListener('input', searchBooks);
 
-document.getElementById('search-bar').addEventListener('keydown', function(event) {
+document.getElementById('search-bar').addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
         event.preventDefault();
         searchBooks();
@@ -57,6 +57,7 @@ document.getElementById('search-bar').addEventListener('keydown', function(event
 /*******************Prajakta code Starts*******************/
 const users = [
     { email: "prajakta@logophile.com", password: "prajakta" },
+    { email: "p@p", password: "p" },
     { email: "prapti@logophile.com", password: "prapti" },
     { email: "mitali@logophile.com", password: "mitali" }
 ]; // Array to store users
@@ -93,6 +94,8 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
 
     const registerModal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
     registerModal.hide();
+    document.getElementById('buttonLogin').style.display = "none";
+    document.getElementById('buttonUser').style.display = "block";
 });
 
 // Login Form Submission
@@ -105,6 +108,10 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     const user = users.find(user => user.email === email && user.password === password);
     if (user) {
         alert('Login successful!');
+        const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+        loginModal.hide();
+        document.getElementById('buttonLogin').style.display = "none";
+        document.getElementById('buttonUser').style.display = "block";
     } else {
         alert('Invalid email or password!');
     }
