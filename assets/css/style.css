@@ -1,4 +1,4 @@
-/*------------------Prapti code*--------------------------------*/
+/*------------------Prapti code starts*--------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Macondo&display=swap');
 
 /* CSS Variables */
@@ -24,6 +24,16 @@ body {
 #nav {
     background-color: transparent;
     overflow: hidden;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    transition: background-color 0.3s;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
 }
 
 #nav.scrolled {
@@ -203,4 +213,74 @@ font-family: var(--primary-font);
     background-color: #0056b3;
 }
 
-/*------------------Prapti code*--------------------------------*/
+
+
+/*------------------Prapti code End*--------------------------------*/
+
+
+/*~~~~~~~~~~~~~~~~~ Mitali Code Starts ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.footer-style {
+    background-color: #283618;
+    bottom: 0;
+}
+
+/* Stop ul adding space at bottom (Bootstrap default)*/
+ul {
+    margin-bottom: 0;
+}
+
+/* Footer Layout */
+#social-networks {
+    text-align: center;
+    padding: 20px 0 5px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    flex-grow: 1;
+    height: 100%;
+}
+
+/* Footer Icons */
+#social-networks i {
+    font-size: 160%;
+    color: #BC6C25;
+}
+
+/* Footer Copyright Layout */
+#copyright-info {
+    text-align: left;
+    list-style-type: none;
+    color: #BC6C25;
+}
+
+/* Footer Copyright Text */
+#copyright-info p {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 10px;
+}
+
+/* Set Enquiry Form formatting */
+#enquiryPage {
+    padding: 5vw;
+}
+
+#enquiryForm {
+    background-color: #283618;
+    color: #FEFAE0;
+    padding: 5vw;
+}
+
+/* Set colour of submit button */
+.btn-submit {
+    background-color: #BC6C25;
+    color: #FEFAE0;
+    border-color: #BC6C25;
+}
+
+/* Set colour of submit button when hovered over */
+.btn-submit:hover {
+    background-color: #FEFAE0;
+    color: #BC6C25;
+    border-color: #FEFAE0;
+}
+/*~~~~~~~~~~~~~~~~~ Mitali Code Ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

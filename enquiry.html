@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,28 +20,113 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
 </head>
 
-<body>
-    <!-- Header Section Navigation Bar -->
-    <header>
-        <nav id="navbar">
-            <div>
-                <a href="index.html">Logophile</a>
-                <a href="index.html">Home</a>
-                <a href="enquiry.html">Enquiry</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-            </div>
-        </nav>
-    </header>
+<body onload="clearForm()">
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div>
+            <a href="index.html">Logophile</a>
+            <a href="index.html">Home</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </nav>
 
     <!-- Main Website Section -->
-    <main></main>
+    <main>
+        <!-- Enquiry Form Section -->
+        <section id="enquiryPage" class="container section">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <!-- Form -->
+                    <form id="enquiryForm" action="https://api.web3forms.com/submit" method="POST">
+                        <h2>Enquiry Form</h2>
+                        <p>Please send any questions through this form.</p>
+
+                        <!-- Web3Forms Data -->
+                        <input type="hidden" name="access_key" value="113d34b1-205f-4602-b3c3-011c0c412257">
+                        <input type="hidden" name="subject" value="New Query from Logophile">
+
+                        <div class="row">
+                            <div class="col-12 col-lg-6 mb-3">
+                                <label for="enquiryName" class="form-label">Name:</label>
+                                <input class="form-control input-box" id="enquiryName" name="enquiryName" type="text"
+                                    placeholder="Enter name." required>
+                            </div>
+
+                            <div class="col-12 col-lg-6 mb-3">
+                                <label for="enquiryEmail" class="form-label">Email Address:</label>
+                                <input class="form-control input-box" id="enquiryEmail" name="enquiryEmail" type="email"
+                                    placeholder="Enter email address." required>
+                            </div>
+
+                            <div class="col-12 col-lg-6 mb-3">
+                                <label for="enquiryPhone" class="form-label">Phone Number:</label>
+                                <input class="form-control input-box" id="enquiryPhone" name="enquiryPhone" type="tel"
+                                    placeholder="Enter phone number." required>
+                            </div>
+
+                            <div class="col-12 col-lg-6 mb-3">
+                                <label for="enquiryBook" class="form-label">Book Title:</label>
+                                <input class="form-control input-box" id="enquiryBook" name="enquiryBook" type="text"
+                                    placeholder="Enter book title" required>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <label for="enquiryQuery" class="form-label">Query:</label>
+                                <textarea class="form-control input-box" rows="6" id="enquiryQuery" name="enquiryQuery"
+                                    placeholder="Enter query." required></textarea>
+                            </div>
+                        </div>
+
+                        <button id="enquiryReset" type="reset" class="btn btn-submit">Reset</button>
+                        <button id="enquirySubmit" type="submit" class="btn btn-submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer Section -->
     <footer>
+        <div style="min-height: 100%;" class="container-fluid footer-style">
+            <ul id="social-networks">
+                <li id="copyright-info" class="d-none d-md-flex col-md-8">
+                    <i class="fa-regular fa-copyright"></i>
+                    <p>2024 Copyright: KnowledgeKeepers</p>
+                </li>
 
+                <li>
+                    <a href="https://github.com/PrajaktaSarnaik/Logophile-Repository" target="_blank" rel="noopener"
+                        aria-label="Visit our GitHub Project page (opens in a new tab)">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook page (opens in a new tab)">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Twitter page (opens in a new tab)">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our YouTube page (opens in a new tab)">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
     <!-- Bootstrap Script Link -->
@@ -48,7 +134,11 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <!-- JavaScript Script Link -->
+    <script src="assets/js/script.js"></script>
+
     <!-- FontAwesome Kit Link -->
     <script src="https://kit.fontawesome.com/d9a84054bd.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
