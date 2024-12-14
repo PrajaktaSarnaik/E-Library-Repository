@@ -52,6 +52,92 @@ document.getElementById('search-bar').addEventListener('keydown', function (even
         searchBooks();
     }
 });
+
+/*****Borrow books************/ 
+document.addEventListener('DOMContentLoaded', function() {
+    if (isUserLoggedIn()) {
+        document.getElementById('loginModal').style.display = 'none';
+        document.getElementById('borrowed-books-section').style.display = 'block';
+    } else {
+        document.getElementById('borrowed-books-section').style.display = 'none';
+    }
+});
+
+document.getElementById('borrow-btn').addEventListener('click', function() {
+    if (isUserLoggedIn()) {
+        // Proceed with the borrow action
+        borrowBook('Whispers of The Wild');
+    } else {
+        // Show the login/register modal
+        document.getElementById('loginModal').style.display = 'block';
+    }
+});
+
+function isUserLoggedIn() {
+    // Replace this with your actual login check logic
+    // For example, check if a token exists in localStorage
+    return localStorage.getItem('userToken') !== null;
+}
+
+function borrowBook(bookTitle) {
+    // Add the book to the borrowed books list
+    const borrowedBooksList = document.getElementById('borrowed-books-list');
+    const listItem = document.createElement('li');
+    listItem.textContent = bookTitle;
+
+    // Create a return button
+    const returnButton = document.createElement('button');
+    returnButton.textContent = 'Return';
+    returnButton.className = 'btn return-btn';
+    returnButton.addEventListener('click', function() {
+        returnBook(listItem);
+    });
+
+    listItem.appendChild(returnButton);
+    borrowedBooksList.appendChild(listItem);
+
+    // Display the borrowed books section
+    document.getElementById('borrowed-books-section').style.display = 'block';
+
+    alert('Book borrowed successfully!');
+}
+
+function returnBook(listItem) {
+    // Remove the book from the borrowed books list
+    const borrowedBooksList = document.getElementById('borrowed-books-list');
+    borrowedBooksList.removeChild(listItem);
+
+    // Hide the borrowed books section if the list is empty
+    if (borrowedBooksList.children.length === 0) {
+        document.getElementById('borrowed-books-section').style.display = 'none';
+    }
+
+    alert('Book returned successfully!');
+}
+
+// Get the modal
+var modal = document.getElementById('loginModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName('close')[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Trigger home page login button click when modal login button is clicked
+document.getElementById('modal-login-btn').addEventListener('click', function() {
+    document.getElementById('home-login-btn').click();
+});
+
 /*********************Prapti code Ends**********************/
 
 /*******************Prajakta code Starts*******************/
@@ -124,4 +210,3 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 function clearForm() {
     document.getElementById('enquiryForm').reset();
 }
-
