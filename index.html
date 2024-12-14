@@ -53,15 +53,20 @@
                 <li class="nav-item">
                     <button id="buttonLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
                 </li>
-                <li class="nav-item">  
-                    <button id="buttonUser" class="btn btn-primary" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle"></i></button>
-                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                <li class="nav-item">  
+                                    <div class="dropdown">
+                    <button type="button" id="buttonUser" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="buttonUser">
                         <li><a class="dropdown-item" href="#">Borrowed Books</a></li>
                         <li><a class="dropdown-item" href="#">Favourites</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#" id="logout">Log Out</a></li>
                     </ul>
-                <li>
+                    </div>
+                </li>
+              
                     <!-- /********************Prajakta code ends here*******************/ -->
 
                 <li class="nav-item search-bar">
@@ -73,7 +78,69 @@
             </ul>
         </div>
     </nav>
+<!-- /********************Prajakta code starts here*******************/ -->
+    <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="loginEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+                <hr>
+                <div class="text-center">
+                    <p>Don't have an account? <a href="#" id="registerLink">Register here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="mb-3">
+                        <label for="registerEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="registerEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="registerPassword" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="registerConfirmPassword" required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /********************Prajakta code ends here*******************/ -->
     <!-- Hero Section -->
     <header class="hero">
         <div class="container" id="overlay">
@@ -173,13 +240,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
-
     <!-- Font Awesome kit -->
     <script src="https://kit.fontawesome.com/a77a90ea30.js" crossorigin="anonymous"></script>
 
     <script src="assets/js/script.js"></script>
 
     <!--------------------Prapti code*---------------------------------->
+
+   
 </body>
 
 </html>
