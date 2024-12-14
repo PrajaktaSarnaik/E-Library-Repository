@@ -5,17 +5,21 @@
 :root {
     --primary-font: "Grenze Gotisch", sans-serif;
     --secondary-font: "Macondo", cursive;
-    --primary-color: #283618; /* dark green */
-    --secondary-color: #FEFAE0; /*orange */
-   /* --highlight-color: rgb(6, 91, 6);  green */
+    --primary-color: #283618;
+    /* dark green */
+    --secondary-color: #FEFAE0;
+    /*orange */
+    /* --highlight-color: rgb(6, 91, 6);  green */
     /*--highlight-color-light: #FFB200; light yellow */
     /*--text-color:#D91656;dark pink*/
-    --background-color: #E5DBC0; /* light yellow */
+    --background-color: #E5DBC0;
+    /* light yellow */
 }
+
 body {
     margin: 0;
     padding: 0;
-   
+
     background-color: var(--background-color);
 }
 
@@ -24,9 +28,10 @@ body {
 #nav {
     background-color: transparent;
     overflow: hidden;
-    position: fixed; 
+    position: fixed;
     top: 0;
     width: 100%;
+    height: 60px;
     
     transition: background-color 0.3s;
     z-index: 1000;
@@ -38,16 +43,16 @@ body {
 }
 
 #nav.scrolled {
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
 }
 
 #nav.scrolled .nav-link {
     color: var(--secondary-color);
 }
 
- #nav.button {
+#nav.button {
     background-color: var(--primary-color);
-} 
+}
 
 #nav a {
     color: var(--primary-color);
@@ -67,8 +72,10 @@ body {
 #nav .logo {
     width: 80px;
     height: 80px;
-    margin-right: 5px; /* Adjust the value as needed */
+    margin-right: 5px;
+    /* Adjust the value as needed */
 }
+
 
 .navbar-nav {
     margin: 0; 
@@ -76,7 +83,7 @@ body {
 }
 
 
-.logo{
+.logo {
     width: 70px;
     height: 70px;
     margin: 0 auto;
@@ -98,7 +105,7 @@ body {
 .search-bar input {
     padding: 5px;
     border: none;
-    border-radius: 3px;  
+    border-radius: 3px;
     color: var(--primary-color);
 }
 
@@ -110,7 +117,18 @@ body {
     color: var(--primary-color);
     margin-left: 10px;
 }
+/* *****************Prajakta code starts here*********************** */
+#buttonLogin,
+#buttonUser {
+    border: none;
+    background: none;
+    color: #1f3b32
+}
 
+#buttonUser {
+    font-size: 1.5rem;
+}
+/* *****************Prajakta code starts here*********************** */
 .hero {
     position: relative;
     width: 100%;
@@ -118,13 +136,16 @@ body {
     background: url('../images/hero.PNG') no-repeat center center/cover;
 }
 
-.hero h1, .hero button {
+.hero h1,
+.hero button {
     position: relative;
     z-index: 2;
 }
-h1{
-font-family: var(--primary-font);
+
+h1 {
+    font-family: var(--primary-font);
 }
+
 #overlay {
     position: absolute;
     top: 50%;
@@ -154,7 +175,8 @@ font-family: var(--primary-font);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden; /* Ensure content doesn't overflow the card */
+    overflow: hidden;
+    /* Ensure content doesn't overflow the card */
 }
 
 .card-body {
@@ -164,7 +186,8 @@ font-family: var(--primary-font);
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.9); /* Optional: Add a background color for better visibility */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Optional: Add a background color for better visibility */
 }
 
 .card-content {
@@ -283,4 +306,5 @@ ul {
     color: #BC6C25;
     border-color: #FEFAE0;
 }
+
 /*~~~~~~~~~~~~~~~~~ Mitali Code Ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
