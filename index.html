@@ -157,103 +157,22 @@
 
     <main id="main" class="container section">
         <!-- Book Section -->
-        <div class="row">
-            <h1 class="display-4">Fantasy</h1>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <div class="card bookcard">
-                    <img src="assets/images/fantasy1.jpeg" class="card-img-top" alt="Book Image">
+        <!-- Book List Section -->
+    <h2>Available Books</h2>
+    <div id="bookList" class="book-list">
+      <!-- Books will be dynamically inserted here -->
+    </div>
 
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title 1</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Borrow</a>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <div class="card bookcard">
-                    <img src="assets/images/fantasy2.jpeg" class="card-img-top" alt="Book Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Borrow</a>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <div class="card bookcard">
-                    <img src="assets/images/fantasy3.jpeg" class="card-img-top" alt="Book Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title 3</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Borrow</a>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <div class="card bookcard">
-                    <img src="assets/images/fantasy4.jpeg" class="card-img-top" alt="Book Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title 4</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Borrow</a>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <div class="card bookcard">
-                    <img src="assets/images/fantasy5.jpeg" class="card-img-top" alt="Book Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title 5</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Borrow</a>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <div class="card bookcard">
-                    <img src="assets/images/fantasy6.jpeg" class="card-img-top" alt="Book Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title 6</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Borrow</a>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="book-list">
-            <!-- Example book items -->
-            <div class="book" data-title="Whispers of The Wild" data-author="John Doe" data-genre="Thriller">
-                <h2>Whispers of The Wild</h2>
-                <p>Author: John Doe</p>
-                <p>Genre: Thriller</p>
-            </div>
-            <!-- Add more book items here -->
-        </div>
         <!-- /********************Prajakta code starts here*******************/ -->
         <!-- Books section -->
         <!-- Fantacy Books -->
         <div>
             <h2 class="ml-10">Fantasy </h2>
         </div>
-        <section class="container mx-auto my-5">
+        <section class="container mx-auto my-5" id="fantasy-books">
             <div class="row g-4 align-items-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book" data-title="The crystal shards" data-author="Arlen Wynd" data-genre="Fantasy">
                         <div class="card-image-wrapper">
                             <img src="assets/images/fantasy1.jpeg" alt="fantasy1" class="card-image">
                         </div>
@@ -342,7 +261,7 @@
         <div>
             <h2 class="ml-10">Comedy </h2>
         </div>
-        <section class="container mx-auto my-5">
+        <section class="container mx-auto my-5" id="comedy-books">
             <div class="row g-4 align-items-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
