@@ -51,7 +51,7 @@ body {
 #nav a {
     color: var(--primary-color);
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0%;
     font-size: 1.20rem;
 
 }
@@ -69,12 +69,9 @@ body {
     margin-right: 5px; /* Adjust the value as needed */
 }
 
-.navbar-nav .nav-item {
-    margin-right: 2px; /* Adjust the value as needed */
-}
-
-.navbar-nav .nav-item:first-child {
-    margin-left: 5px; /* Adjust the value as needed */
+.navbar-nav {
+    margin: 0; 
+    padding:0;/* Adjust the value as needed */
 }
 
 
