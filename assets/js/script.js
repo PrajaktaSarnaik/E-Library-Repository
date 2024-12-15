@@ -80,13 +80,13 @@ let isLoggedIn = false; // This should be set to true when the user logs in
 const borrowedBooks = [];
 
 // Add event listener to all borrow buttons
-document.querySelectorAll('.borrow-btn').forEach((button) => {
+document.querySelectorAll('.borrow-btn').forEach((button,index) => {
     button.addEventListener('click', function() {
         if (!isLoggedIn) {
             showModal();
             return;
         }
-
+console.log(index); 
         const book = books[index];
         if (book) {
             if (book.borrowed) {
@@ -125,7 +125,7 @@ function showModal() {
     modalMessage.show();
 }
 
-var timesClicked = 0;
+//var timesClicked = 0;
 
 // function btnClick() {
 //   timesClicked++;
