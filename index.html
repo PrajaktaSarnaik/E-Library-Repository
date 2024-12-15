@@ -219,16 +219,15 @@
     </div>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero" id="13">
         <div class="container" id="overlay">
             <h1 class="display-2">Whispers of The Wild</h1>
             <p>A Chilling Dark Suspense Thriller</p>
             <p>(Wolf Lake Thriller Book 5)</p>
             <button class="borrow-btn">Borrow</button>
-            <!-- <span id="timesClicked">0</span><i class="fa fa-heart-o btn btn-default" onclick="btnClick()"></i> -->
-            <label class="add-fav" id="favorite-btn">
+            <label class="add-fav">
                 <input type="checkbox">
-                    <i class="fa-sharp fa-solid fa-heart icon-heart"></i>
+                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                 </i>
             </label>
         </div>
@@ -255,7 +254,11 @@
                             <div hidden>author:Arlen Wynd,genre:Fantasy</div>
                             <p>Short summary of the book, describing key themes and events in 10 words.</p>
                             <button class="borrow-btn" data-id="1">Borrow</button>
-                            <span class="heart-icon" id="addToFavourites">❤️</span>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
                         </div>
                         
                     </div>

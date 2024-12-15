@@ -165,12 +165,16 @@ body {
       input[type="checkbox"] { 
       position: absolute;
       opacity: 0;
-        &:checked + .icon-heart {
+        /* &:checked + .icon-heart {
         color: red;
         
-      }   
+      }    */
     } 
   } 
+/* fill heart icon with red color when clicked */
+  .add-fav .favorite {
+   color: red;       
+}
 
 /* *****************Prajakta code starts here*********************** */
 .navbar {

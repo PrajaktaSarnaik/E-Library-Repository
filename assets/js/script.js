@@ -22,7 +22,7 @@ const books = [
     { id: 10, title: "mildred & milte's misadventures", author: "clara tickle", genre: "comedy", borrowed: false, favorite: false },
     { id: 11, title: "how to loose friends", author: "holly laugh", genre: "Comedy", borrowed: false, favorite: false },
     { id: 12, title: "coffee & chaos", author: "jake giggle", genre: "Comedy", borrowed: false, favorite: false },
-    { id: 14, title: "Whispers of The Wild", author: "Areaina Greens", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 13, title: "Whispers of The Wild", author: "Areaina Greens", genre: "Comedy", borrowed: false, favorite: false },
     { id: 14, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
     { id: 15, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
     { id: 16, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
@@ -80,6 +80,7 @@ const borrowedBooks = [];
 
 // Add event listener to all borrow buttons
 document.querySelectorAll('.borrow-btn').forEach((button,index) => {
+    console.log(index);
     button.addEventListener('click', function() {
         if (!isLoggedIn) {
             showModal();
@@ -129,8 +130,7 @@ function showModal() {
 const favorites = [];
 // Favourite book 
 // Add event listener to all favorite buttons
-document.querySelectorAll('#favorite-btn').forEach((button, index) => {
-    console.log(index);
+document.querySelectorAll('.favorite-btn').forEach((button, index) => {
     button.addEventListener('click', function() {
         console.log(index);
         if (!isLoggedIn) {
@@ -144,7 +144,9 @@ document.querySelectorAll('#favorite-btn').forEach((button, index) => {
             if (book.favorite) {
                 // Remove from favorites
                 book.favorite = false;
-                this.textContent = 'Add to Favorites';
+                // this.textContent = 'Add to Favorites';
+                this.classList.remove('favorite');
+                console.log('Removed from favorites');
                 const favoriteIndex = favorites.findIndex(b => b.id == book.id);
                 if (favoriteIndex > -1) {
                     favorites.splice(favoriteIndex, 1);
@@ -152,7 +154,11 @@ document.querySelectorAll('#favorite-btn').forEach((button, index) => {
             } else {
                 // Add to favorites
                 book.favorite = true;
-                this.textContent = 'Remove from Favorites';
+               // this.textContent = 'Remove from Favorites';
+                this.classList.add('favorite');
+                console.log(this.classList);
+                console.log('Added to favorites');
+
                 favorites.push(book);
             }
             updateFavoritesList();
