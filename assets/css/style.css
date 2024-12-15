@@ -31,7 +31,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 60px;
+    /* height: 60px; */
     
     transition: background-color 0.3s;
     z-index: 1000;
@@ -42,11 +42,32 @@ body {
 
 }
 
+#nav .navbar-toggle{
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+#nav.toggled {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+#nav.toggled .nav-link {
+    color: var(--secondary-color);
+}
+#nav.toggled .button {
+    color: var(--secondary-color);
+}
+
 #nav.scrolled {
     background-color: var(--primary-color);
 }
 
 #nav.scrolled .nav-link {
+    color: var(--secondary-color);
+}
+
+#nav.scrolled .button{
     color: var(--secondary-color);
 }
 
@@ -262,6 +283,9 @@ h1 {
     transition: border 0.6s ease;
 }
 
+/* .dropdown-menu {
+    background-color: white;
+} */
 /*------------------Prapti code End*--------------------------------*/
 
 
@@ -332,3 +356,80 @@ ul {
 }
 
 /*~~~~~~~~~~~~~~~~~ Mitali Code Ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+.dropdown-menu {
+    right: auto;
+    left: auto;
+}
+@media (max-width: 1024px) {
+.hero {
+min-height: calc(100vh - 70px); 
+}
+
+.hero h1 {
+font-size: 3rem; /* Adjust heading size for tablet screens */
+}
+
+.hero p {
+font-size: 1.3rem; /* Adjust paragraph font size */
+}
+
+.borrow-btn {
+font-size: 1.1rem; /* Adjust button font size */
+}
+
+.heart-icon {
+font-size: 1.7rem; /* Adjust heart icon size */
+}
+}
+
+@media (max-width: 768px) {
+.hero {
+min-height: calc(100vh - 80px);
+
+text-align: left;  /* Keep the text aligned to the left */
+}
+
+.hero h1 {
+font-size: 2.5rem; /* Smaller heading font size */
+}
+
+.hero p {
+font-size: 1.1rem; /* Adjust paragraph font size */
+}
+
+.borrow-btn {
+font-size: 1.1rem;
+padding: 12px 25px;
+}
+
+.heart-icon {
+font-size: 1.8rem;
+}
+}
+
+@media (max-width: 576px) {
+.hero {
+min-height: calc(100vh - 90px);
+padding-top: 90px; /* Adjust padding-top more for small screens */
+padding: 20px; /* Add padding to prevent text from touching edges */
+}
+
+.hero h1 {
+font-size: 2rem; /* Smaller heading font size for small screens */
+}
+
+.hero p {
+font-size: 1rem; /* Adjust paragraph text size */
+}
+
+.borrow-btn {
+font-size: 1rem; /* Adjust button text size */
+padding: 10px 20px;
+}
+
+.heart-icon {
+font-size: 1.5rem; /* Adjust heart icon size */
+}
+}

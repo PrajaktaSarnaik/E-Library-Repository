@@ -135,6 +135,15 @@ var timesClicked = 0;
 //   return true
 // }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbar = document.getElementById('nav');
+
+    navbarToggler.addEventListener('click', function() {
+        navbar.classList.toggle('toggled');
+    });
+});
+
 /*********************Prapti code Ends**********************/
 
 /*******************Prajakta code Starts*******************/
