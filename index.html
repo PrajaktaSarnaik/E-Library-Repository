@@ -146,6 +146,25 @@
         </div>
     </div>
     <!-- /********************Prajakta code ends here*******************/ -->
+    <!-- Modal Structure -->
+    <div id="messageModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Message</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Please login first</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Hero Section -->
     <header class="hero">
         <div class="container" id="overlay">
@@ -170,6 +189,7 @@
         <div>
             <h2 class="ml-10">Fantasy </h2>
         </div>
+        
         <section class="container mx-auto my-5">
             <div class="row g-4 align-items-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -181,9 +201,10 @@
                             <h3>The crystal shards</h3>
                             <div hidden>author:Arlen Wynd,genre:Fantasy</div>
                             <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+                            <button class="borrow-btn" data-id="1">Borrow</button>
                             <span class="heart-icon">❤️</span>
                         </div>
+                        
                     </div>
                 </div>
 

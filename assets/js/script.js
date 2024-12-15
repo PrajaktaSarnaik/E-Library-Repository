@@ -53,13 +53,13 @@ searchBar.addEventListener('input', function() {
 
 // Function to jump to the book card
 function jumpToBook(bookId) {
-    const bookElement = document.getElementById(`${bookId}`);
+    const bookElement = document.querySelector(`.book-card:nth-child(${bookId + 1})`);
     if (bookElement) {
         bookElement.scrollIntoView({ behavior: 'smooth' });
         bookElement.classList.add('highlight'); // Optionally add a highlight class
         setTimeout(() => {
             bookElement.classList.remove('highlight');
-        }, 6000); // Remove highlight after 2 seconds
+        }, 6000); // Remove highlight after 6 seconds
     }
 }
 
@@ -67,7 +67,55 @@ function jumpToBook(bookId) {
 function clearResults() {
     searchResults.innerHTML = '';
 }
-/*********************Prapti code Ends**********************/
+
+let isLoggedIn = false; // This should be set to true when the user logs in
+const borrowedBooks = [];
+
+// Add event listener to all borrow buttons
+document.querySelectorAll('.borrow-btn').forEach((button, index) => {
+    button.addEventListener('click', function() {
+        if (!isLoggedIn) {
+            showModal();
+            return;
+        }
+
+        const book = books[index];
+        if (book) {
+            if (book.borrowed) {
+                // Return the book
+                book.borrowed = false;
+                this.textContent = 'Borrow';
+                const borrowedIndex = borrowedBooks.findIndex(b => b.id == book.id);
+                if (borrowedIndex > -1) {
+                    borrowedBooks.splice(borrowedIndex, 1);
+                }
+            } else {
+                // Borrow the book
+                book.borrowed = true;
+                this.textContent = 'Return';
+                borrowedBooks.push(book);
+            }
+            updateBorrowedBooksList();
+        }
+    });
+});
+
+// Function to update the borrowed books list
+function updateBorrowedBooksList() {
+    const borrowedBooksList = document.getElementById('borrowedBooksList');
+    borrowedBooksList.innerHTML = '';
+    borrowedBooks.forEach(book => {
+        const bookElement = document.createElement('li');
+        bookElement.textContent = `${book.title} by ${book.author}`;
+        borrowedBooksList.appendChild(bookElement);
+    });
+}
+
+// Function to show the modal
+function showModal() {
+    const modalMessage = new bootstrap.Modal(document.getElementById('messageModal'));
+    modalMessage.show();
+}
 
 /*******************Prajakta code Starts*******************/
 const users = [
