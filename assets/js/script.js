@@ -122,6 +122,21 @@ function showModal() {
     modalMessage.show();
 }
 
+var timesClicked = 0;
+
+// function btnClick() {
+//   timesClicked++;
+//   if (timesClicked === 1) {
+//     var elem = document.querySelector('i');
+//     elem.classList.remove('fa-heart-o');
+//     elem.classList.add('fa-heart');
+//   }
+//   document.getElementById('timesClicked').innerHTML = timesClicked;
+//   return true
+// }
+
+/*********************Prapti code Ends**********************/
+
 /*******************Prajakta code Starts*******************/
 const users = [
     { email: "prajakta@e-library.com", password: "prajakta" },
