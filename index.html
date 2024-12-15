@@ -37,7 +37,7 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse navbar-toggle" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.html">E-Library</a>
@@ -51,7 +51,7 @@
 
                 <!-- /********************Prajakta code Starts here*******************/ -->
                 <li class="nav-item">
-                    <button id="buttonLogin" class="btn btn-primary" data-bs-toggle="modal"
+                    <button id="buttonLogin" class="button btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#loginModal">Login</button>
                 </li>
                 <li class="nav-item">
@@ -77,7 +77,8 @@
                     <a href="#" class="nav-link">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
-                    <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Title,Author,Genre">
+                    <input id="search-bar" class="form-control" type="search" placeholder="Title,Author,Genre">
+                    <ul id="searchResults"></ul>
                 </li>
             </ul>
         </div>
@@ -145,124 +146,62 @@
         </div>
     </div>
     <!-- /********************Prajakta code ends here*******************/ -->
+    <!-- Modal Structure -->
+    <div id="messageModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Message</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Please login first</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Hero Section -->
     <header class="hero">
         <div class="container" id="overlay">
             <h1 class="display-2">Whispers of The Wild</h1>
             <p>A Chilling Dark Suspense Thriller</p>
             <p>(Wolf Lake Thriller Book 5)</p>
-            <button style="float: left;">Borrow</button> <i class="fa-sharp fa-regular fa-heart"></i>
+            <button class="borrow-btn">Borrow</button>
+            <!-- <span id="timesClicked">0</span><i class="fa fa-heart-o btn btn-default" onclick="btnClick()"></i> -->
+            <span class="heart-icon">❤️</span>
+            <!-- <button style="float: left;">Borrow</button> <i class="fa-sharp fa-regular fa-heart"></i> -->
         </div>
     </header>
 
     <main id="main" class="container section">
-        <!-- Book Section -->
-        <div class="row">
-            <h1 class="display-4">Fantasy</h1>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <div class="card bookcard">
-                    <img src="assets/images/fantasy1.jpeg" class="card-img-top" alt="Book Image">
 
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title 1</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Borrow</a>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <div class="card bookcard">
-                    <img src="assets/images/fantasy2.jpeg" class="card-img-top" alt="Book Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Borrow</a>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <div class="card bookcard">
-                    <img src="assets/images/fantasy3.jpeg" class="card-img-top" alt="Book Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title 3</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Borrow</a>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <div class="card bookcard">
-                    <img src="assets/images/fantasy4.jpeg" class="card-img-top" alt="Book Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title 4</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Borrow</a>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <div class="card bookcard">
-                    <img src="assets/images/fantasy5.jpeg" class="card-img-top" alt="Book Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title 5</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Borrow</a>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <div class="card bookcard">
-                    <img src="assets/images/fantasy6.jpeg" class="card-img-top" alt="Book Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title 6</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Borrow</a>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="book-list">
-            <!-- Example book items -->
-            <div class="book" data-title="Whispers of The Wild" data-author="John Doe" data-genre="Thriller">
-                <h2>Whispers of The Wild</h2>
-                <p>Author: John Doe</p>
-                <p>Genre: Thriller</p>
-            </div>
-            <!-- Add more book items here -->
-        </div>
         <!-- /********************Prajakta code starts here*******************/ -->
         <!-- Books section -->
         <!-- fantasy Books -->
         <div>
             <h2 class="ml-10">Fantasy </h2>
         </div>
+        
         <section class="container mx-auto my-5">
             <div class="row g-4 align-items-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book book-card" id="1">
                         <div class="card-image-wrapper">
                             <img src="assets/images/fantasy1.jpeg" alt="fantasy1" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>Book Title 1</h3>
+                            <h3>The crystal shards</h3>
+                            <div hidden>author:Arlen Wynd,genre:Fantasy</div>
                             <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+                            <button class="borrow-btn" data-id="1">Borrow</button>
                             <span class="heart-icon">❤️</span>
                         </div>
+                        
                     </div>
                 </div>
 
