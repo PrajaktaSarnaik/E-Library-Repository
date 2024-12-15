@@ -37,8 +37,10 @@ const searchResults = document.getElementById('searchResults');
 // Add an event listener to the search bar
 searchBar.addEventListener('input', function() {
     const query = searchBar.value.toLowerCase();
+    console.log(query);
     if (query === '') {
         clearResults();
+        console.log('clear');
         return;
     }
     const book = books.find(book => 
@@ -46,14 +48,17 @@ searchBar.addEventListener('input', function() {
         book.author.toLowerCase().includes(query) ||
         book.genre.toLowerCase().includes(query)
     );
+    console.log(book);
     if (book) {
         jumpToBook(book.id);
+        console.log('jump');
     }
 });
 
 // Function to jump to the book card
 function jumpToBook(bookId) {
-    const bookElement = document.querySelector(`.book-card:nth-child(${bookId + 1})`);
+    const bookElement = document.getElementById(`${bookId}`);
+    console.log(bookElement);
     if (bookElement) {
         bookElement.scrollIntoView({ behavior: 'smooth' });
         bookElement.classList.add('highlight'); // Optionally add a highlight class
