@@ -380,8 +380,9 @@ ul {
 
 /* Footer Copyright Text */
 #copyright-info p {
-    font-family: 'Open Sans', sans-serif;
-    padding: 0 10px;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    padding-left: 10px;
 }
 
 /* Set Enquiry Form formatting */
@@ -396,17 +397,32 @@ ul {
 }
 
 /* Set colour of submit button */
-.btn-submit {
+.btn {
     background-color: #BC6C25;
     color: #FEFAE0;
     border-color: #BC6C25;
 }
 
 /* Set colour of submit button when hovered over */
-.btn-submit:hover {
+.btn:hover {
     background-color: #FEFAE0;
     color: #BC6C25;
     border-color: #FEFAE0;
 }
 
+#enquiryPage h1 {
+    font-family: var(--primary-font);
+}
+
+#hero-heart {
+    font-size: 2.3rem;
+    margin-left: 15px;
+    cursor: pointer;
+    color: #283618;
+}
+
+.modal-content {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+};
 /*~~~~~~~~~~~~~~~~~ Mitali Code Ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
