@@ -8,7 +8,6 @@ window.onscroll = function () {
     }
 };
 
-
 //Book Database
 const books = [
     { id: 1, title:"the crystal shards" ,author:"arlen wynd" ,genre:"fantasy",image:'assets/images/fantasy1.jpeg', borrowed: false, favorite: false },
@@ -210,10 +209,20 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         // Praptis Code starts
         isLoggedIn = true;
         // Praptis Code ends
+     
     } else {
         alert('Invalid email or password!');
     }
 });
+// Logout Form Submission
+document.getElementById('logout').addEventListener('click', logout);
+function logout() {
+    
+        document.getElementById('buttonLogin').style.display = "block";
+        document.getElementById('buttonUser').style.display = "none";
+        isLoggedIn = false;
+      
+};
 /*******************Prajakta code Ends*******************/
 
 /**

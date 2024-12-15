@@ -28,7 +28,7 @@
     <!--------------------Prapti code*---------------------------------->
 
     <!-- Navigation-->
-    <nav id="nav" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+    <!-- <nav id="nav" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
 
         <a class="navbar-brand" href="index.html">
             <img src="assets/images/Logophile-Logo.webp" alt="E-Library-logo" class="logo">
@@ -47,10 +47,10 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="enquiry.html">Enquiry</a>
-                </li>
+                </li> -->
 
                 <!-- /********************Prajakta code Starts here*******************/ -->
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <button id="buttonLogin" class="button btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#loginModal">Login</button>
                 </li>
@@ -61,20 +61,20 @@
                             <i class="bi bi-person-circle"></i>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="buttonUser">
-                            <li><a class="dropdown-item" href="#">Borrowed Books</a>
+                            <li><a class="dropdown-item" href="#">Borrowed Books</a> -->
                                 <!-- <ul id="borrowedBooksList"></ul> -->
-                            <li><a class="dropdown-item" href="#">Favourites</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Favourites</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="#" id="logout">Log Out</a></li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
 
                 <!-- /********************Prajakta code ends here*******************/ -->
 
-                <li class="nav-item search-bar">
+                <!-- <li class="nav-item search-bar">
                     <a href="#" class="nav-link" id="search-icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
@@ -83,8 +83,57 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
     <!-- /********************Prajakta code starts here*******************/ -->
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg fixed-top transparent">
+        <div class="container navbar-container">
+            <div class="d-flex align-items-center">
+                <img src="assets/images/Logophile-Logo.webp" alt="icon" id="title-name" width="50" height="50">
+                <a class="navbar-brand fw-bold" href="#">E-Library</a>
+            </div>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav pt-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="enquiry.html">Enquiry</a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="buttonLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button type="button" id="buttonUser" class="btn btn-primary dropdown-toggle"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-person-circle"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="buttonUser">
+                                    <li><a class="dropdown-item" href="#">Borrowed Books</a></li>
+                                    <li><a class="dropdown-item" href="#">Favourites</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" id="logout">Log Out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                            <input type="text" id="search-bar" class="form-control"
+                                placeholder="Name, Genre, Author"></input>
+                        </li>
+                        <li>
+                            <label class="search-icon" for="search-bar"><button class="button-search"><i
+                                        class="bi bi-search"></i></button></label>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+    </nav>
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
