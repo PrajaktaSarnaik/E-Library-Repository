@@ -74,11 +74,11 @@
                 <!-- /********************Prajakta code ends here*******************/ -->
 
                 <li class="nav-item search-bar">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" id="search-icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
                     <input id="search-bar" class="form-control" type="search" placeholder="Title,Author,Genre">
-                    <ul id="searchResults"></ul>
+                    <ul id="searchResults"></ul>                    
                 </li>
             </ul>
         </div>
@@ -190,7 +190,7 @@
         <section class="container mx-auto my-5">
             <div class="row g-4 align-items-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card book book-card" id="1">
+                    <div class="card book-card" id="1">
                         <div class="card-image-wrapper">
                             <img src="assets/images/fantasy1.jpeg" alt="fantasy1" class="card-image">
                         </div>
@@ -206,70 +206,70 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book-card" id="2">
                         <div class="card-image-wrapper">
                             <img src="assets/images/fantasy2.jpeg" alt="fantasy2" class="card-image">
                         </div>
                         <div class="card-content">
                             <h3>Book Title 2</h3>
                             <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+                            <button class="borrow-btn" data-id="2">Borrow</button>
                             <span class="heart-icon">❤️</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book-card" id="3">
                         <div class="card-image-wrapper">
                             <img src="assets/images/fantasy3.jpeg" alt="fantasy3" class="card-image">
                         </div>
                         <div class="card-content">
                             <h3>Book Title 1</h3>
                             <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+                            <button class="borrow-btn" data-id="3">Borrow</button>
                             <span class="heart-icon">❤️</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book-card" id="4">
                         <div class="card-image-wrapper">
                             <img src="assets/images/fantasy4.jpeg" alt="fantasy4" class="card-image">
                         </div>
                         <div class="card-content">
                             <h3>Book Title 2</h3>
                             <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+                            <button class="borrow-btn" data-id="4">Borrow</button>
                             <span class="heart-icon">❤️</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book-card" id="5">
                         <div class="card-image-wrapper">
                             <img src="assets/images/fantasy5.jpeg" alt="fantasy5" class="card-image">
                         </div>
                         <div class="card-content">
                             <h3>Book Title 1</h3>
                             <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+                            <button class="borrow-btn" data-id="5">Borrow</button>
                             <span class="heart-icon">❤️</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book-card" id="6">
                         <div class="card-image-wrapper">
                             <img src="assets/images/fantasy6.jpeg" alt="fantasy6" class="card-image">
                         </div>
                         <div class="card-content">
                             <h3>Book Title 2</h3>
                             <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+                            <button class="borrow-btn" data-id="6">Borrow</button>
                             <span class="heart-icon">❤️</span>
                         </div>
                     </div>
@@ -284,7 +284,7 @@
         <section class="container mx-auto my-5">
             <div class="row g-4 align-items-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book-card" id="7" >
                         <div class="card-image-wrapper">
                             <img src="assets/images/comedy1.jpeg" alt="fantasy1" class="card-image">
                         </div>
@@ -298,7 +298,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book-card" id="8">
                         <div class="card-image-wrapper">
                             <img src="assets/images/comedy2.jpeg" alt="fantasy2" class="card-image">
                         </div>
@@ -312,7 +312,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book-card" id="9">
                         <div class="card-image-wrapper">
                             <img src="assets/images/comedy3.jpeg" alt="fantasy3" class="card-image">
                         </div>
@@ -326,7 +326,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book-card" id="10">
                         <div class="card-image-wrapper">
                             <img src="assets/images/comedy4.jpeg" alt="fantasy4" class="card-image">
                         </div>
@@ -340,7 +340,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book-card" id="11">
                         <div class="card-image-wrapper">
                             <img src="assets/images/comedy5.jpeg" alt="fantasy5" class="card-image">
                         </div>
@@ -354,7 +354,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
+                    <div class="card book-card" id="12">
                         <div class="card-image-wrapper">
                             <img src="assets/images/comedy6.jpeg" alt="fantasy6" class="card-image">
                         </div>
