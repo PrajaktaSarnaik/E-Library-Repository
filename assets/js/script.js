@@ -164,10 +164,10 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
 // Login Form Submission
 document.getElementById('loginForm').addEventListener('submit', function (e) {
     e.preventDefault();
-
+     
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
-
+    
     const user = users.find(user => user.email === email && user.password === password);
     if (user) {
         alert('Login successful!');
@@ -175,6 +175,9 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         loginModal.hide();
         document.getElementById('buttonLogin').style.display = "none";
         document.getElementById('buttonUser').style.display = "block";
+        // Praptis Code starts
+        isLoggedIn = true;
+        // Praptis Code ends
     } else {
         alert('Invalid email or password!');
     }
