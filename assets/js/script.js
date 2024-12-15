@@ -10,6 +10,7 @@
 
 //Book Database
 const books = [
+    { id: 0, title: "Whispers of The Wild", author: "Areaina Greens", genre: "Comedy", borrowed: false, favorite: false },
     { id: 1, title:"the crystal shards" ,author:"arlen wynd" ,genre:"fantasy",image:'assets/images/fantasy1.jpeg', borrowed: false, favorite: false },
     { id: 2, title: "embers of sorcery" ,author:"sylas raven" ,genre:"fantasy",image:'assets/images/fantasy2.jpeg', borrowed: false, favorite: false },
     { id: 3, title: "the dragon's heir", author: "elara wind", genre: "fantasy",image:'assets/images/fantasy3.jpeg', borrowed: false, favorite: false },
@@ -22,7 +23,6 @@ const books = [
     { id: 10, title: "mildred & milte's misadventures", author: "clara tickle", genre: "comedy", borrowed: false, favorite: false },
     { id: 11, title: "how to loose friends", author: "holly laugh", genre: "Comedy", borrowed: false, favorite: false },
     { id: 12, title: "coffee & chaos", author: "jake giggle", genre: "Comedy", borrowed: false, favorite: false },
-    { id: 13, title: "Whispers of The Wild", author: "Areaina Greens", genre: "Comedy", borrowed: false, favorite: false },
     { id: 14, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
     { id: 15, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
     { id: 16, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
@@ -80,7 +80,6 @@ const borrowedBooks = [];
 
 // Add event listener to all borrow buttons
 document.querySelectorAll('.borrow-btn').forEach((button,index) => {
-    console.log(index);
     button.addEventListener('click', function() {
         if (!isLoggedIn) {
             showModal();
@@ -88,6 +87,7 @@ document.querySelectorAll('.borrow-btn').forEach((button,index) => {
         }
 console.log(index); 
         const book = books[index];
+        console.log(book);
         if (book) {
             if (book.borrowed) {
                 // Return the book
