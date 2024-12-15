@@ -113,8 +113,10 @@
                                     <i class="bi bi-person-circle"></i>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="buttonUser">
-                                    <li><a class="dropdown-item" href="#">Borrowed Books</a></li>
-                                    <li><a class="dropdown-item" href="#">Favourites</a></li>
+                                    <li><a class="dropdown-item" href="#">Borrowed Books</a>
+                                        <ul id="borrowedBooksList"></ul></li>
+                                    <li><a class="dropdown-item" href="#">Favourites</a>
+                                        <ul id="favouritesList"></ul></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -224,8 +226,11 @@
             <p>(Wolf Lake Thriller Book 5)</p>
             <button class="borrow-btn">Borrow</button>
             <!-- <span id="timesClicked">0</span><i class="fa fa-heart-o btn btn-default" onclick="btnClick()"></i> -->
-            <span class="heart-icon">❤️</span>
-            <!-- <button style="float: left;">Borrow</button> <i class="fa-sharp fa-regular fa-heart"></i> -->
+            <label class="add-fav" id="favorite-btn">
+                <input type="checkbox">
+                    <i class="fa-sharp fa-solid fa-heart icon-heart"></i>
+                </i>
+            </label>
         </div>
     </header>
 
@@ -250,7 +255,7 @@
                             <div hidden>author:Arlen Wynd,genre:Fantasy</div>
                             <p>Short summary of the book, describing key themes and events in 10 words.</p>
                             <button class="borrow-btn" data-id="1">Borrow</button>
-                            <span class="heart-icon">❤️</span>
+                            <span class="heart-icon" id="addToFavourites">❤️</span>
                         </div>
                         
                     </div>
@@ -265,7 +270,7 @@
                             <h3>Book Title 2</h3>
                             <p>Short summary of the book, describing key themes and events in 10 words.</p>
                             <button class="borrow-btn" data-id="2">Borrow</button>
-                            <span class="heart-icon">❤️</span>
+                            <span class="heart-icon" id="addToFavourites">❤️</span>
                         </div>
                     </div>
                 </div>
@@ -422,8 +427,6 @@
         </section>
         <!-- /********************Prajakta code ends here*******************/ -->
 
-        <h2>Borrowed Books</h2>
-    <ul id="borrowedBooksList"></ul>
     </main>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

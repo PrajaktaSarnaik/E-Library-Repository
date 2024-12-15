@@ -1,12 +1,12 @@
 /*********************Prapti code Starts**********************/
-window.onscroll = function () {
-    var navbar = document.getElementById("nav");
-    if (window.pageYOffset > 0) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-};
+// window.onscroll = function () {
+//     var navbar = document.getElementById("nav");
+//     if (window.pageYOffset > 0) {
+//         navbar.classList.add("scrolled");
+//     } else {
+//         navbar.classList.remove("scrolled");
+//     }
+// };
 
 //Book Database
 const books = [
@@ -22,7 +22,7 @@ const books = [
     { id: 10, title: "mildred & milte's misadventures", author: "clara tickle", genre: "comedy", borrowed: false, favorite: false },
     { id: 11, title: "how to loose friends", author: "holly laugh", genre: "Comedy", borrowed: false, favorite: false },
     { id: 12, title: "coffee & chaos", author: "jake giggle", genre: "Comedy", borrowed: false, favorite: false },
-    { id: 13, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 14, title: "Whispers of The Wild", author: "Areaina Greens", genre: "Comedy", borrowed: false, favorite: false },
     { id: 14, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
     { id: 15, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
     { id: 16, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
@@ -119,32 +119,67 @@ function updateBorrowedBooksList() {
 }
 
 // Function to show the modal
+
+
 function showModal() {
     const modalMessage = new bootstrap.Modal(document.getElementById('messageModal'));
     modalMessage.show();
 }
 
-//var timesClicked = 0;
+const favorites = [];
+// Favourite book 
+// Add event listener to all favorite buttons
+document.querySelectorAll('#favorite-btn').forEach((button, index) => {
+    console.log(index);
+    button.addEventListener('click', function() {
+        console.log(index);
+        if (!isLoggedIn) {
+            console.log('Please log in first.');
+            showModal();
+            return;
+        }
 
-// function btnClick() {
-//   timesClicked++;
-//   if (timesClicked === 1) {
-//     var elem = document.querySelector('i');
-//     elem.classList.remove('fa-heart-o');
-//     elem.classList.add('fa-heart');
-//   }
-//   document.getElementById('timesClicked').innerHTML = timesClicked;
-//   return true
-// }
-
-document.addEventListener('DOMContentLoaded', function() {
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbar = document.getElementById('nav');
-
-    navbarToggler.addEventListener('click', function() {
-        navbar.classList.toggle('toggled');
+        const book = books[index];
+        if (book) {
+            if (book.favorite) {
+                // Remove from favorites
+                book.favorite = false;
+                this.textContent = 'Add to Favorites';
+                const favoriteIndex = favorites.findIndex(b => b.id == book.id);
+                if (favoriteIndex > -1) {
+                    favorites.splice(favoriteIndex, 1);
+                }
+            } else {
+                // Add to favorites
+                book.favorite = true;
+                this.textContent = 'Remove from Favorites';
+                favorites.push(book);
+            }
+            updateFavoritesList();
+        }
     });
 });
+
+// Function to update the favorites list in the dropdown menu
+function updateFavoritesList() {
+    const favoritesList = document.getElementById('favouritesList');
+    favoritesList.innerHTML = ''; // Clear the current list
+
+    favorites.forEach(book => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${book.title}`; // Assuming book has a title property
+        favoritesList.appendChild(listItem);
+    });
+}
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const navbarToggler = document.querySelector('.navbar-toggler');
+//     const navbar = document.getElementById('nav');
+
+//     navbarToggler.addEventListener('click', function() {
+//         navbar.classList.toggle('toggled');
+//     });
+// });
 
 /*********************Prapti code Ends**********************/
 
