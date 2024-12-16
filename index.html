@@ -27,119 +27,65 @@
 </head>
 
 <body>
-    <!--------------------Prapti code*---------------------------------->
-    <!-- Navigation-->
-    <!-- <nav id="nav" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
-
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/images/E-Library-Logo.webp" alt="E-Library-logo" class="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse navbar-toggle" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.html">E-Library</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="enquiry.html">Enquiry</a>
-                </li> -->
-
-                <!-- /********************Prajakta code Starts here*******************/ -->
-                <!-- <li class="nav-item">
-                    <button id="buttonLogin" class="button btn btn-primary nav-link" data-bs-toggle="modal"
-                        data-bs-target="#loginModal">Login</button>
-                </li>
-                <li class="nav-item">
-                    <div class="dropdown">
-                        <button type="button" id="buttonUser" class="btn btn-primary dropdown-toggle"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person-circle"></i>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="buttonUser">
-                            <li><a class="dropdown-item" href="#">Borrowed Books</a> -->
-                                <!-- <ul id="borrowedBooksList"></ul> -->
-                            <!-- <li><a class="dropdown-item" href="#">Favourites</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" id="logout">Log Out</a></li>
-                        </ul>
-                    </div>
-                </li> -->
-
-                <!-- /********************Prajakta code ends here*******************/ -->
-
-                <!-- <li class="nav-item search-bar">
-                    <a href="#" class="nav-link" id="search-icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
-                    <input id="search-bar" class="form-control" type="search" placeholder="Title, Author, Genre">
-                    <ul id="searchResults"></ul>    
-                </li>
-            </ul>
-        </div>
-    </nav> -->
-    <!-- /********************Prajakta code starts here*******************/ -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top transparent">
         <div class="container navbar-container">
             <div class="d-flex align-items-center">
                 <img src="assets/images/E-Library-Logo.webp" alt="icon" id="title-name" width="50" height="50">
-                <a class="navbar-brand fw-bold" href="#">E-Library</a>
+                <a class="navbar-brand fw-bold" href="index.html">E-Library</a>
             </div>
-                <button class="navbar-toggler ms-auto" id="button-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav pt-2">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="children.html">Children</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="enquiry.html">Enquiry</a>
-                        </li>
-                       
-                        <li class="nav-item">
-                            <button id="buttonLogin" class="btn btn-primary nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
-                        </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <button type="button" id="buttonUser" class="btn btn-primary dropdown-toggle"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-person-circle"></i>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="buttonUser">
-                                    <li><a class="dropdown-item" href="#">Borrowed Books</a>
-                                        <ul id="borrowedBooksList"></ul></li>
-                                    <li><a class="dropdown-item" href="#">Favourites</a>
-                                        <ul id="favouritesList"></ul></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#" id="logout" onclick="afterLogOut()">Log Out</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                            <input type="text" id="search-bar" class="form-control"
-                                placeholder="Title, Genre, Author"></input>
-                        </li>
-                        <li>
-                            <label class="search-icon" for="search-bar"><button class="button-search"><i
-                                        class="bi bi-search"></i></button></label>
-                        </li>
-                    </ul>
-                </div>
+            <button class="navbar-toggler ms-auto" id="button-navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav pt-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="children.html">Children</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="enquiry.html">Enquiry</a>
+                    </li>
 
+                    <li class="nav-item">
+                        <button id="buttonLogin" class="btn btn-primary nav-link" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Login</button>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button type="button" id="buttonUser" class="btn btn-primary dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="buttonUser">
+                                <li><a class="dropdown-item" href="#">Borrowed Books</a>
+                                    <ul id="borrowedBooksList"></ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Favourites</a>
+                                    <ul id="favouritesList"></ul>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#" id="logout" onclick="afterLogOut()">Log Out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <input type="text" id="search-bar" class="form-control" placeholder="Title, Genre, Author"></input>
+                    </li>
+                    <li>
+                        <label class="search-icon" for="search-bar"><button class="button-search"><i
+                                    class="bi bi-search"></i></button></label>
+                    </li>
+                </ul>
             </div>
+
+        </div>
     </nav>
 
     <!-- Login Modal -->
@@ -204,7 +150,6 @@
         </div>
     </div>
 
-    <!-- /********************Prajakta code ends here*******************/ -->
     <!-- Modal Structure -->
     <div id="messageModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -212,9 +157,6 @@
                 <div class="modal-header">
                     <h5 class="modal-title">Message</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button> -->
                 </div>
                 <div class="modal-body">
                     <p>Please login first.</p>
@@ -235,21 +177,19 @@
             <button class="btn borrow-btn">Borrow</button>
             <label class="add-fav">
                 <input type="checkbox">
-                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                 </i>
             </label>
         </div>
     </header>
 
     <main id="main" class="container section">
-
-        <!-- /********************Prajakta code starts here*******************/ -->
         <!-- Books section -->
         <!-- fantasy Books -->
         <div>
             <h2 class="ml-10">Fantasy </h2>
         </div>
-        
+
         <section class="container mx-auto my-5">
             <div class="row g-4 align-items-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -264,11 +204,11 @@
                             <button class="btn borrow-btn" data-id="1">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -282,10 +222,10 @@
                             <h3>Embers of Sorcery</h3>
                             <div hidden>author:Sylas Raven,genre:Fantasy</div>
                             <p>Mage battles darkness, unearths hidden powers, embarks on epic journey.</p>
-                          <button class="btn borrow-btn" data-id="2">Borrow</button>
-                          <label class="add-fav">
+                            <button class="btn borrow-btn" data-id="2">Borrow</button>
+                            <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -304,7 +244,7 @@
                             <button class="btn borrow-btn" data-id="3">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -321,10 +261,10 @@
                             <h3>Wings of the Star</h3>
                             <div hidden>author:Elysaa Thorn,genre:Fantasy</div>
                             <p>Young adventurer discovers hidden powers, battles darkness, saves the galaxy.</p>
-                             <button class="btn borrow-btn" data-id="4">Borrow</button>
-                             <label class="add-fav">
+                            <button class="btn borrow-btn" data-id="4">Borrow</button>
+                            <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -344,7 +284,7 @@
                             <button class="btn borrow-btn" data-id="5">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -364,7 +304,7 @@
                             <button class="btn borrow-btn" data-id="6">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -380,7 +320,7 @@
         <section class="container mx-auto my-5">
             <div class="row g-4 align-items-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card book-card" id="7" >
+                    <div class="card book-card" id="7">
                         <div class="card-image-wrapper">
                             <img src="assets/images/comedy1.jpeg" alt="comedy1" class="card-image">
                         </div>
@@ -392,7 +332,7 @@
                             <button class="btn borrow-btn" data-id="7">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -412,7 +352,7 @@
                             <button class="btn borrow-btn" data-id="8">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -431,7 +371,7 @@
                             <button class="btn borrow-btn" data-id="9">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -451,7 +391,7 @@
                             <button class="btn borrow-btn" data-id="10">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -471,7 +411,7 @@
                             <button class="btn borrow-btn" data-id="11">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -490,7 +430,7 @@
                             <button class="btn borrow-btn" data-id="12">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -501,11 +441,11 @@
         </section>
 
 
-          <!-- Mystery Books -->
-          <div>
+        <!-- Mystery Books -->
+        <div>
             <h2 class="ml-10">Mystery </h2>
         </div>
-        
+
         <section class="container mx-auto my-5">
             <div class="row g-4 align-items-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -520,11 +460,11 @@
                             <button class="btn borrow-btn" data-id="13">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -540,7 +480,7 @@
                             <button class="btn borrow-btn" data-id="14">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -560,7 +500,7 @@
                             <button class="btn borrow-btn" data-id="15">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -579,7 +519,7 @@
                             <button class="btn borrow-btn" data-id="4">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -598,7 +538,7 @@
                             <button class="btn borrow-btn" data-id="17">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -617,7 +557,7 @@
                             <button class="btn borrow-btn" data-id="18">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -628,11 +568,11 @@
         </section>
 
 
-          <!-- SciFiction Books -->
-          <div>
+        <!-- SciFiction Books -->
+        <div>
             <h2 class="ml-10">Science Fiction</h2>
         </div>
-        
+
         <section class="container mx-auto my-5">
             <div class="row g-4 align-items-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -647,11 +587,11 @@
                             <button class="btn borrow-btn" data-id="19">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -667,7 +607,7 @@
                             <button class="btn borrow-btn" data-id="20">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -686,7 +626,7 @@
                             <button class="btn borrow-btn" data-id="21">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -705,7 +645,7 @@
                             <button class="btn borrow-btn" data-id="22">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -724,7 +664,7 @@
                             <button class="btn borrow-btn" data-id="23">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -743,7 +683,7 @@
                             <button class="btn borrow-btn" data-id="24">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
-                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
                             </label>
                         </div>
@@ -752,8 +692,6 @@
 
             </div>
         </section>
-        <!-- /********************Prajakta code ends here*******************/ -->
-
     </main>
 
     <!-- Footer Section -->
@@ -796,19 +734,16 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap Script Link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
-    <!-- Font Awesome kit -->
-    <script src="https://kit.fontawesome.com/a77a90ea30.js" crossorigin="anonymous"></script>
-
+    <!-- JavaScript Script Link -->
     <script src="assets/js/script.js"></script>
 
-    <!--------------------Prapti code*---------------------------------->
-
-
+    <!-- FontAwesome Kit Link -->
+    <script src="https://kit.fontawesome.com/d9a84054bd.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
