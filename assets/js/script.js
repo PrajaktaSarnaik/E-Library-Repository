@@ -101,8 +101,8 @@ console.log(index);
                 }
             } else {
                 // Borrow the book
-                if (borrowedBooks.length >= 5) {
-                    alert('You cannot borrow more than 5 books.');
+                if (borrowedBooks.length >= 3) {
+                    alert('You cannot borrow more than 3 books.');
                     return;
                 }else{
                     book.borrowed = true;
@@ -158,8 +158,8 @@ document.querySelectorAll('.favorite-btn').forEach((button, index) => {
                     favorites.splice(favoriteIndex, 1);
                 }
             } else {
-                if (favorites.length >= 5) {
-                alert('You cannot have more than 5 favorite books.');
+                if (favorites.length >= 3) {
+                alert('You cannot have more than 3 favorite books.');
                 return;
             }
                else{ // Add to favorites
