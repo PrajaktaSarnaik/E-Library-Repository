@@ -23,11 +23,19 @@ const books = [
     { id: 10, title: "mildred & milte's misadventures", author: "clara tickle", genre: "comedy", borrowed: false, favorite: false },
     { id: 11, title: "how to loose friends", author: "holly laugh", genre: "Comedy", borrowed: false, favorite: false },
     { id: 12, title: "coffee & chaos", author: "jake giggle", genre: "Comedy", borrowed: false, favorite: false },
-    { id: 14, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
-    { id: 15, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
-    { id: 16, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
-    { id: 17, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
-    { id: 18, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false }
+    { id: 13, title: "Missing Girl", author: "Gillian Flynn", genre: "Mystery", borrowed: false, favorite: false },
+    { id: 14, title: "Bluebird,Bluebird", author: "Attica Locke", genre: "Mystery", borrowed: false, favorite: false },
+    { id: 15, title: "In the Woods", author: "Tana French", genre: "Mystery", borrowed: false, favorite: false },
+    { id: 16, title: "The woman in white", author: "Wilie Collins", genre: "Mystery", borrowed: false, favorite: false },
+    { id: 17, title: "Sharp Objects", author: "Gillian Flynn", genre: "Mystery", borrowed: false, favorite: false },
+    { id: 18, title: "The name of the rose", author: "Umberto Eco", genre: "Mystery", borrowed: false, favorite: false },
+    { id: 19, title: "Lord of light", author: "Roger Zelangzy", genre: "Science-Fiction", borrowed: false, favorite: false },
+    { id: 20, title: "Station Eleven", author: "Emily St. John Mandal", genre: "Science-Fiction", borrowed: false, favorite: false },
+    { id: 21, title: "Ascension", author: "Martin Maclnness", genre: "Science-Fiction", borrowed: false, favorite: false },
+    { id: 22, title: "Project Hair Mary", author: "Andy Weir", genre: "Science-Fiction", borrowed: false, favorite: false },
+    { id: 23, title: "An unkidness of the ghosts", author: "Rivers Solomon", genre: "Science-Fiction", borrowed: false, favorite: false },
+    { id: 24, title: "The Calculating Stars", author: "Mary Robinette kowal", genre: "Science-Fiction", borrowed: false, favorite: false },
+
   ];
 
   // Get the search bar element
