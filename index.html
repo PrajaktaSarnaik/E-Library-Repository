@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap" rel="stylesheet">
@@ -26,12 +28,11 @@
 
 <body>
     <!--------------------Prapti code*---------------------------------->
-
     <!-- Navigation-->
     <!-- <nav id="nav" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
 
         <a class="navbar-brand" href="index.html">
-            <img src="assets/images/Logophile-Logo.webp" alt="E-Library-logo" class="logo">
+            <img src="assets/images/E-Library-Logo.webp" alt="E-Library-logo" class="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +41,7 @@
         <div class="collapse navbar-collapse navbar-toggle" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">E-Library</a>
+                    <a class="nav-link" aria-current="page" href="index.html">E-Library</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.html">Home</a>
@@ -51,7 +52,7 @@
 
                 <!-- /********************Prajakta code Starts here*******************/ -->
                 <!-- <li class="nav-item">
-                    <button id="buttonLogin" class="button btn btn-primary" data-bs-toggle="modal"
+                    <button id="buttonLogin" class="button btn btn-primary nav-link" data-bs-toggle="modal"
                         data-bs-target="#loginModal">Login</button>
                 </li>
                 <li class="nav-item">
@@ -78,18 +79,18 @@
                     <a href="#" class="nav-link" id="search-icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
-                    <input id="search-bar" class="form-control" type="search" placeholder="Title,Author,Genre">
-                    <ul id="searchResults"></ul>                    
+                    <input id="search-bar" class="form-control" type="search" placeholder="Title, Author, Genre">
+                    <ul id="searchResults"></ul>    
                 </li>
             </ul>
         </div>
     </nav> -->
     <!-- /********************Prajakta code starts here*******************/ -->
-     <!-- Navbar -->
-     <nav class="navbar navbar-expand-lg fixed-top transparent">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top transparent">
         <div class="container navbar-container">
             <div class="d-flex align-items-center">
-                <img src="assets/images/Logophile-Logo.webp" alt="icon" id="title-name" width="50" height="50">
+                <img src="assets/images/E-Library-Logo.webp" alt="icon" id="title-name" width="50" height="50">
                 <a class="navbar-brand fw-bold" href="#">E-Library</a>
             </div>
                 <button class="navbar-toggler ms-auto" id="button-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -104,7 +105,7 @@
                             <a class="nav-link" href="enquiry.html">Enquiry</a>
                         </li>
                         <li class="nav-item">
-                            <button id="buttonLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                            <button id="buttonLogin" class="btn btn-primary nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
@@ -120,12 +121,12 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#" id="logout">Log Out</a></li>
+                                    <li><a class="dropdown-item" href="#" id="logout" onclick="afterLogOut()">Log Out</a></li>
                                 </ul>
                             </div>
                         </li>
                             <input type="text" id="search-bar" class="form-control"
-                                placeholder="Name, Genre, Author"></input>
+                                placeholder="Title, Genre, Author"></input>
                         </li>
                         <li>
                             <label class="search-icon" for="search-bar"><button class="button-search"><i
@@ -136,6 +137,7 @@
 
             </div>
     </nav>
+
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -197,6 +199,7 @@
             </div>
         </div>
     </div>
+
     <!-- /********************Prajakta code ends here*******************/ -->
     <!-- Modal Structure -->
     <div id="messageModal" class="modal" tabindex="-1" role="dialog">
@@ -204,12 +207,13 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Message</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                    </button>
+                    </button> -->
                 </div>
                 <div class="modal-body">
-                    <p>Please login first</p>
+                    <p>Please login first.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -224,7 +228,7 @@
             <h1 class="display-2">Whispers of The Wild</h1>
             <p>A Chilling Dark Suspense Thriller</p>
             <p>(Wolf Lake Thriller Book 5)</p>
-            <button class="borrow-btn">Borrow</button>
+            <button class="btn borrow-btn">Borrow</button>
             <label class="add-fav">
                 <input type="checkbox">
                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
@@ -250,10 +254,10 @@
                             <img src="assets/images/fantasy1.jpeg" alt="fantasy1" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>The crystal shards</h3>
+                            <h3>The Crystal Shards</h3>
                             <div hidden>author:Arlen Wynd,genre:Fantasy</div>
-                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn" data-id="1">Borrow</button>
+                            <p>Young hero discovers magical artifact, battles evil forces, saves homeland.</p>
+                            <button class="btn borrow-btn" data-id="1">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
                                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
@@ -270,10 +274,12 @@
                             <img src="assets/images/fantasy2.jpeg" alt="fantasy2" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>Book Title 2</h3>
-                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn" data-id="2">Borrow</button>
-                            <label class="add-fav">
+
+                            <h3>Embers of Sorcery</h3>
+                            <div hidden>author:Sylas Raven,genre:Fantasy</div>
+                            <p>Mage battles darkness, unearths hidden powers, embarks on epic journey.</p>
+                          <button class="btn borrow-btn" data-id="2">Borrow</button>
+                          <label class="add-fav">
                                 <input type="checkbox">
                                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
@@ -288,9 +294,10 @@
                             <img src="assets/images/fantasy3.jpeg" alt="fantasy3" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>Book Title 1</h3>
-                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn" data-id="3">Borrow</button>
+                            <h3>The Dragon's Heir</h3>
+                            <div hidden>author:Elara Wind,genre:Fantasy</div>
+                            <p>Destined heir discovers truth, confronts evil, and saves dragonkind.</p>
+                            <button class="btn borrow-btn" data-id="3">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
                                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
@@ -306,10 +313,12 @@
                             <img src="assets/images/fantasy4.jpeg" alt="fantasy4" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>Book Title 2</h3>
-                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn" data-id="4">Borrow</button>
-                            <label class="add-fav">
+
+                            <h3>Wings of the Star</h3>
+                            <div hidden>author:Elysaa Thorn,genre:Fantasy</div>
+                            <p>Young adventurer discovers hidden powers, battles darkness, saves the galaxy.</p>
+                             <button class="btn borrow-btn" data-id="4">Borrow</button>
+                             <label class="add-fav">
                                 <input type="checkbox">
                                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
                                 </i>
@@ -324,9 +333,11 @@
                             <img src="assets/images/fantasy5.jpeg" alt="fantasy5" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>Book Title 1</h3>
-                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn" data-id="5">Borrow</button>
+
+                            <h3>The Forgotten Gods</h3>
+                            <div hidden>author:Cealan Storm,genre:Fantasy</div>
+                            <p>Heroes rediscover ancient gods, battle darkness, and restore balance.</p>
+                            <button class="btn borrow-btn" data-id="5">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
                                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
@@ -342,9 +353,11 @@
                             <img src="assets/images/fantasy6.jpeg" alt="fantasy6" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>Book Title 2</h3>
-                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn" data-id="6">Borrow</button>
+
+                            <h3>Veil of Eternity</h3>
+                            <div hidden>author:Roderick,genre:Fantasy</div>
+                            <p>Heroes uncover ancient secrets, face powerful foes, and save realms.</p>
+                            <button class="btn borrow-btn" data-id="6">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
                                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
@@ -365,12 +378,14 @@
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card book-card" id="7" >
                         <div class="card-image-wrapper">
-                            <img src="assets/images/comedy1.jpeg" alt="fantasy1" class="card-image">
+                            <img src="assets/images/comedy1.jpeg" alt="comedy1" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>Book Title 1</h3>
-                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+
+                            <h3>Oops I Did It Again</h3>
+                            <div hidden>author:Max Droll,genre:Comedy</div>
+                            <p>Romantic mishaps and second chances, navigating love's unexpected twists.</p>
+                            <button class="btn borrow-btn" data-id="7">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
                                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
@@ -383,12 +398,14 @@
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card book-card" id="8">
                         <div class="card-image-wrapper">
-                            <img src="assets/images/comedy2.jpeg" alt="fantasy2" class="card-image">
+                            <img src="assets/images/comedy2.jpeg" alt="comedy2" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>Book Title 2</h3>
-                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+
+                            <h3>Laughing Through Chaos</h3>
+                            <div hidden>author:Benny High ,genre:Comedy</div>
+                            <p>Finding humor in life's trials, navigating challenges with resilience.</p>
+                            <button class="btn borrow-btn" data-id="8">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
                                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
@@ -401,12 +418,13 @@
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card book-card" id="9">
                         <div class="card-image-wrapper">
-                            <img src="assets/images/comedy3.jpeg" alt="fantasy3" class="card-image">
+                            <img src="assets/images/comedy3.jpeg" alt="comedy3" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>Book Title 1</h3>
-                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+                            <h3>The Unlikely Hero's Guide</h3>
+                            <div hidden>author:Sally Quick,genre:Comedy</div>
+                            <p>Ordinary person stumbles into adventure, hilarity ensues, saves the day.</p>
+                            <button class="btn borrow-btn" data-id="9">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
                                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
@@ -419,12 +437,14 @@
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card book-card" id="10">
                         <div class="card-image-wrapper">
-                            <img src="assets/images/comedy4.jpeg" alt="fantasy4" class="card-image">
+                            <img src="assets/images/comedy4.jpeg" alt="comedy4" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>Book Title 2</h3>
-                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+
+                            <h3>Mildred & Milte's Misadventures</h3>
+                            <div hidden>author:Clara Tickle,genre:Comedy</div>
+                            <p>Hilarious duo's misadventures, laughter, and unexpected twists in life.</p>
+                            <button class="btn borrow-btn" data-id="10">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
                                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
@@ -437,12 +457,14 @@
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card book-card" id="11">
                         <div class="card-image-wrapper">
-                            <img src="assets/images/comedy5.jpeg" alt="fantasy5" class="card-image">
+                            <img src="assets/images/comedy5.jpeg" alt="comedy5" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>Book Title 1</h3>
-                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+
+                            <h3>How to Loose Friends</h3>
+                            <div hidden>author:Holly Laugh,genre:Comedy</div>
+                            <p>Alienates everyone, learns valuable lessons, and finds true friendship.</p>
+                            <button class="btn borrow-btn" data-id="11">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
                                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
@@ -455,12 +477,266 @@
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card book-card" id="12">
                         <div class="card-image-wrapper">
-                            <img src="assets/images/comedy6.jpeg" alt="fantasy6" class="card-image">
+                            <img src="assets/images/comedy6.jpeg" alt="comedy6" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h3>Book Title 2</h3>
-                            <p>Short summary of the book, describing key themes and events in 10 words.</p>
-                            <button class="borrow-btn">Borrow</button>
+                            <h3>Coffee & Chaos</h3>
+                            <div hidden>author:Jake Giggle,genre:Comedy</div>
+                            <p>Hilarious mishaps in a coffee shop, laughter, and unexpected friendships.</p>
+                            <button class="btn borrow-btn" data-id="12">Borrow</button>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+          <!-- Mystery Books -->
+          <div>
+            <h2 class="ml-10">Mystery </h2>
+        </div>
+        
+        <section class="container mx-auto my-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card book-card" id="13">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/mystery1.png" alt="fantasy1" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Missing Girl</h3>
+                            <div hidden>author:Gillian Flynn,genre:Mystery</div>
+                            <p>Solving a mystery, uncovering secrets, and facing danger.</p>
+                            <button class="btn borrow-btn" data-id="13">Borrow</button>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card book-card" id="14">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/mystery2.png" alt="fantasy2" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Bluebird,Bluebird</h3>
+                            <div hidden>author:Attica Locke,genre:Mystery</div>
+                            <p>Solving a mystery, uncovering secrets, and facing danger.</p>
+                            <button class="btn borrow-btn" data-id="14">Borrow</button>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card book-card" id="15">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/mystery3.png" alt="mystery3" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>In the Woods</h3>
+                            <div hidden>author:Tana French,genre:Mystery</div>
+                            <p>Detectives uncover dark secrets, solve murder, and face personal demons.
+                            </p>
+                            <button class="btn borrow-btn" data-id="15">Borrow</button>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card book-card" id="16">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/mystery4.png" alt="mystery4" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>The Woman in White</h3>
+                            <div hidden>author:Wilie Collins,genre:Mystery</div>
+                            <p>Detectives uncover dark secrets, solve murder, and face personal demons.</p>
+                            <button class="btn borrow-btn" data-id="4">Borrow</button>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card book-card" id="17">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/mystery5.png" alt="mystery5" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Sharp Objects</h3>
+                            <div hidden>author:Gillian Flynn,genre:Mystery</div>
+                            <p>Detective uncovers dark secrets, solves murder, faces personal demons.</p>
+                            <button class="btn borrow-btn" data-id="17">Borrow</button>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card book-card" id="18">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/mystery6.png" alt="mystery6" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>The Name of the Rose</h3>
+                            <div hidden>author:Umberto Eco,genre:Mystery</div>
+                            <p>10th-century monk solves murders in abbey, uncovering dark secrets.</p>
+                            <button class="btn borrow-btn" data-id="18">Borrow</button>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+          <!-- SciFiction Books -->
+          <div>
+            <h2 class="ml-10">Science Fiction</h2>
+        </div>
+        
+        <section class="container mx-auto my-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card book-card" id="19">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/scifiction1.png" alt="scifiction1" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Lord of Light</h3>
+                            <div hidden>author:Roger Zelangzy,genre:Science-Fiction</div>
+                            <p> Epic battle between gods and humans, blending science and mythology.</p>
+                            <button class="btn borrow-btn" data-id="19">Borrow</button>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card book-card" id="20">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/scifiction2.png" alt="scifiction2" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Station Eleven</h3>
+                            <div hidden>author:Emily St. John Mandel,genre:Science-Fiction</div>
+                            <p>Post-apocalyptic world, survival, and the enduring power of art.</p>
+                            <button class="btn borrow-btn" data-id="20">Borrow</button>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card book-card" id="21">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/scifiction3.png" alt="scifiction3" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Ascension</h3>
+                            <div hidden>author:Martin Maclnness,genre:Science-Fiction</div>
+                            <p>Exploring deep space, uncovering mysteries, and facing unknown challenges.</p>
+                            <button class="btn borrow-btn" data-id="21">Borrow</button>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card book-card" id="22">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/scifiction4.png" alt="scifiction4" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Project Hail Mary</h3>
+                            <div hidden>author:Andy Weir,genre:Science-Fiction</div>
+                            <p>Astronaut's mission to save Earth, unexpected ally, thrilling adventure.</p>
+                            <button class="btn borrow-btn" data-id="22">Borrow</button>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card book-card" id="23">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/scifiction5.png" alt="scifiction5" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>An Unkidness of the Ghosts</h3>
+                            <div hidden>author:Rivers Solomon,genre:Science-Fiction</div>
+                            <p>Survivor's journey through space, uncovering secrets, and facing oppression.</p>
+                            <button class="btn borrow-btn" data-id="23">Borrow</button>
+                            <label class="add-fav">
+                                <input type="checkbox">
+                                    <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
+                                </i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card book-card" id="24">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/scifiction6.png" alt="scifiction6" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>The Calculating Stars</h3>
+                            <div hidden>author:Mary Robinette Kowal,genre:Science-Fiction</div>
+                            <p>Female astronaut's journey to Mars, overcoming challenges, and breaking barriers.</p>
+                            <button class="btn borrow-btn" data-id="24">Borrow</button>
                             <label class="add-fav">
                                 <input type="checkbox">
                                     <i class="fa-sharp fa-solid fa-heart icon-heart favorite-btn"></i>
@@ -475,10 +751,52 @@
         <!-- /********************Prajakta code ends here*******************/ -->
 
     </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div style="min-height: 100%;" class="container-fluid footer-style">
+            <ul id="social-networks">
+                <li id="copyright-info" class="d-none d-md-flex col-md-8">
+                    <i class="fa-regular fa-copyright"></i>
+                    <p>2024 Copyright: KnowledgeKeepers</p>
+                </li>
+
+                <li>
+                    <a href="https://github.com/PrajaktaSarnaik/E-Library-Repository" target="_blank" rel="noopener"
+                        aria-label="Visit our GitHub Project page (opens in a new tab)">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook page (opens in a new tab)">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Twitter page (opens in a new tab)">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our YouTube page (opens in a new tab)">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
+
     <!-- Font Awesome kit -->
     <script src="https://kit.fontawesome.com/a77a90ea30.js" crossorigin="anonymous"></script>
 

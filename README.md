@@ -4,39 +4,55 @@
 | <a href="https://prajaktasarnaik.github.io/E-Library-Repository/" target="_blank">Live Project</a> |
 </p>
 
-
+<a id="introduction"></a>
 ## Introduction
 E-Library is a assessed portfolio project developed as part of the Code Institute Full Stack Software Developer Bootcamp, with the intention of demonstrating proficiency in HTML5, CSS and JavaScript to create a responsive website.
+
+The intention of this project was to create an interactive website for an online library which will allow users to create an account and borrow books. The books displayed are sorted by genre, with each genre containing an initial five books to choose from.
+
+The users can register an account and login to borrow and favourite books to view later in their account. Books available in the catalogue can be searched for by title, genre or author. Any enquiries about specific books can be sent to the library email via a form on the website.
 
 ![Responsive Mockup]()
 
 
 ## Contents
-The intention of this project was to create an interactive website for an online library which will allow users to create an account and borrow books. The books displayed are sorted by genre, with each genre containing an initial five books to choose from.
+- [Introduction](#introduction)
+- [UX](#user-experience)
+  - [User Stories](#user-stories)
+  - [Wireframes](#wireframes)
+- [Design](#design)
+  - [Topography](#topography)
+  - [Colour Scheme](#colour-scheme)
+- [Features](#features)
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+  - [Known Bugs](#bugs)
+- [Future Features](#future-features)
+- [Technology Used](#tech-used)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
-
+<a id="user-experience"></a>
 ## UX (User Experience)
 
+<a id="user-stories"></a>
 ### User Stories
 - As a user, I want to register an account, so that I can borrow books and access personalized features.
 - As a user, I want to search for books by title, author, or genre, so that I can easily find books of interest.
 - As a user, I want to enquire about a specific book, so that I can get detailed information or request assistance regarding its availability.
-- As a user, I want to rate and review books, so that I can share my feedback with others.
-- As a user, I want to view my borrowed books and their due dates, so that I can manage my reading schedule.
-- As a user, I want to receive notifications about my book return dates, so that I can return my books on time and avoid late fees.
-- As a user, I want to borrow an e-book, so that I can read it online or download it.
-- As a user, I want to bookmark specific pages of e-books, so that I can resume reading later.
-- As a user, I want to receive personalized book recommendations, so that I can discover books I’d enjoy.
+- As a user, I want to view my borrowed books and favourited books, so that I can manage my reading schedule.
 
 <hr>
 
+<a id="wireframes"></a>
 ### Wireframes
 Wireframes for all pages of the website were created before coding began. Versions for desktop, tablet and mobile size were created to reflect the responsive design expected. 
 
 For the most part, the designs remained consistent with the implementation, but some changes were made - they will be shown and explained below.
 
 - Homepage
-  - changes
+  - The homepage has stayed mostly the same as the wireframe.
+  - the login/registration dropdown was changed to a modal pop-up as it was decided that would be more suitable for user experience.
 
 ![Homepage Desktop](assets/images-readme/Wireframe-Homepage-Desktop.png)
 
@@ -59,8 +75,10 @@ For the most part, the designs remained consistent with the implementation, but 
 ![Enquiry Tablet & Mobile](assets/images-readme/Wireframe-Enquiry-TabletMobile.png)
 
 
+<a id="design"></a>
 ## Design
 
+<a id="topography"></a>
 ### Typography
 
 The project used two sans-serif fonts which were implemented via [Google Fonts](https://fonts.google.com).
@@ -70,33 +88,58 @@ The project used two sans-serif fonts which were implemented via [Google Fonts](
 
 <hr>
 
+<a id="colour-scheme"></a>
 ### Colour Scheme
 
-The colours used were taken from [Coolors](https://coolors.co/). Contrasting colours were used for the background, text and other elements (like buttons and info cards) to make the website easier to read and interact with.
+The colours used were taken from [Coolors](https://coolors.co/). Contrasting colours were used for the background, text and other elements (like buttons and info cards) to make the website easier to read and interact with. Some colours were not used in the final implementation, as they did not contrast enough to provide a suitable user experience.
 
-- `#606C38` used for: card background, 
-- `#283618` used for: main background, textbox text
-- `#FEFAE0` used for: main text, textbox background, button text
-- `#DDA15E` used for: buttons
-- `#BC6C25` used for: buttons selected
+- `#283618` used for: header & footer backgrounds, form & modal pop-up backgrounds, homepage headings & text
+- `#FEFAE0` used for: form & modal pop-up text, button text, selected buttons
+- `#BC6C25` used for: buttons, selected button text, footer text & icon colour
 
 ![Colour Palette](assets/images-readme/Colour-Palette.png)
 
 <hr>
 
-### Imagery
 
-
-
-
+<a id="features"></a>
 ## Website Features
-Include information on your JavaScript Logic/Functionality
 
 The website consists of three pages with distinct sections to ensure a good user experience. All features on the website were implemented using a combination of HTML5, CSS (including Bootstrap) and JavaScript and are responsive on multiple device sizes in accordance with appropriate breakpoints. 
 
-- x
-- x
+- Header Navigation Bar
+  - A sticky navigation bar on all pages with the logo and website title which redirects to the homepage
+  - Links to other pages on the website
+- Login Pop-Up
+  - A pop-up which allows users to log in to their account and validates their inputs to ensure the details entered are for a registered account
+  - Contains a direct link to register a new account
+- Register Pop-Up
+  - A pop-up which allows users to register a new account and validates their inputs to ensure the details entered are the correct format
+- Dropdown Menu when Logged In
+  - Displays up to 5 borrowed and favourite books and an option to log out
+  - Page automatically refreshes after logging out
+- Search Bar
+  - Allows books to be searched by Title, Author or Genre
+  - The first matching result is highlighted on the page
+- Hero Section
+  - Book of the Week with Title, Author, a short description and borrow & favourite buttons
+- Borrow & Favourite Buttons
+  - Buttons to add the chosen book to your account
+- Catalogued Books
+  - Books displayed with cover pages and sorted by genre
+  - The title, short description and borrow & favourite buttons are displayed when a book is hovered over
+- Enquiry Form
+  - A separate page for users to send a enquiry to the library about specific books
+  - Enquiries can be sent by both registered and unregistered users
+  - The form validates user inputs and ensures all fields are filled
+  - The form will be sent to the library's email with the details entered by the user
+  - The page will display a success page after submission
+  - The form automatically clears after returning from success page
+- Footer
+  - Copyright details
+  - Links to GitHub repository and social media sites
 
+<a id="testing"></a>
 ## Testing
 Validation of HTML/CSS/JavaScript, Lighthouse Audits, Bugs
 
@@ -135,6 +178,7 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 
 <hr>
 
+<a id="manual-testing"></a>
 ### Manual Testing
 | Function | Expected Outcome | Does it work? |
 | ----------- | ----------- | ----------- |
@@ -164,13 +208,22 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 
 <hr>
 
+<a id="bugs"></a>
 ### Known Bugs
 - x
 
+<a id="future-features"></a>
 ## Future Features
-- x
+- Accounts retain information about borrowed and favourite books
+- Rate and review books, so feedback can be shared with other users.
+- View due dates for borrowed books.
+- Receive notifications about book return dates, so they can be returned on time and avoid late fees.
+- Borrowing e-books which can be read online or downloaded.
+- Bookmark specific pages of e-books, to resume reading later.
+- Personalized book recommendations for users based on previous enjoyed and well rated books.
 
 
+<a id="tech-used"></a>
 ## Technologies Used
 
 ### Technologies & Languages
@@ -198,6 +251,7 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 - Web3Forms
 - Microsoft Copilot
 
+<a id="deployment"></a>
 ## Deployment
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
 
@@ -209,8 +263,8 @@ This section should describe the process you went through to deploy the project 
 The live link can be found here - [E-Library, https://prajaktasarnaik.github.io/E-Library-Repository/](https://prajaktasarnaik.github.io/E-Library-Repository/)
 
 
+<a id="credits"></a>
 ## Credits
-Content References, Media References, Acknowledgements
 
 ### Code
 
@@ -226,7 +280,7 @@ Supplementary learning resources which were referenced throughout the project ar
 
 ### Content 
 
-- The text and content included in the website was generated using Microsoft Copilot
+- The text and content included in the website was generated using Microsoft Copilot AI
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 - The fonts were taken from [Google Fonts](https://fonts.google.com/)
 - The colours were taken from [Coolors](https://coolors.co/)
@@ -234,4 +288,6 @@ Supplementary learning resources which were referenced throughout the project ar
 <hr>
 
 ### Media
-- The images used for the hero section on the Homepage and Resources page are from: [Image URLs]()
+
+- The images used for the Homepage page are genereated using Microsoft Copilot AI
+- The images used for the Kids page are genereated using Microsoft Copilot AI
