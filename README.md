@@ -12,7 +12,7 @@ The intention of this project was to create an interactive website for an online
 
 The users can register an account and login to borrow and favourite books to view later in their account. Books available in the catalogue can be searched for by title, genre or author. Any enquiries about specific books can be sent to the library email via a form on the website.
 
-![Responsive Mockup]()
+![Responsive Mockup](assets/images-readme/E-LibraryResponsive.png)
 
 
 ## Contents
@@ -112,64 +112,71 @@ The website consists of three pages with distinct sections to ensure a good user
   - A sticky navigation bar on all pages with the logo and website title which redirects to the homepage
   - Links to other pages on the website
 
-![Navigation Bar]()
+![Navigation Bar](assets/images-readme/NavBar.png)
 
 - Login Pop-Up
   - A pop-up which allows users to log in to their account and validates their inputs to ensure the details entered are for a registered account
   - Contains a direct link to register a new account
 
-![Login Pop-Up]()
+![Login Pop-Up](assets/images-readme/LoginPopUp.png)
 
 - Registration Pop-Up
   - A pop-up which allows users to register a new account and validates their inputs to ensure the details entered are the correct format
 
-![Registration Pop-Up]()
+![Registration Pop-Up](assets/images-readme/RegisterationPopUp.png)
 
 - Dropdown Menu when Logged In
   - Displays up to 5 borrowed and favourite books and an option to log out
   - Page automatically refreshes after logging out
 
-![Account Dropdown Menu]()
+![Account Dropdown Menu](assets/images-readme/AccountDropdown.png)
 
 - Search Bar
   - Allows books to be searched by Title, Author or Genre
   - The first matching result is highlighted on the page
 
-![Search Bar]()
+![Search Bar](assets/images-readme/SearchBar.png)
 
 - Hero Section
   - Book of the Week with Title, Author, a short description and borrow & favourite buttons
 - Borrow & Favourite Buttons
   - Buttons to add the chosen book to your account
 
-![Hero Section]()
+![Hero Section](assets/images-readme/HeroSection.png)
 
 - Catalogued Books
   - Books displayed with cover pages and sorted by genre
   - The title, short description and borrow & favourite buttons are displayed when a book is hovered over
 
-![Catalogued Books]()
+![Catalogued Books](assets/images-readme/BookHover.png)
 
 - Enquiry Form Page
   - A separate page for users to send a enquiry to the library about specific books
   - Enquiries can be sent by both registered and unregistered users
   - The form validates user inputs and ensures all fields are filled
 
-![Enquiry Page]()
+![Enquiry Page](assets/images-readme/EnquiryPage.png)
 
 - Form Sends Email after Submit
   - The form will be sent to the library's email with the details entered by the user
   - The page will display a success page after submission
   - The form automatically clears after returning from success page
 
-![Email Recieved]()
-![Submission Page]()
+![Email Recieved](assets/images-readme/EmailRecieved.png)
+![Submission Page](assets/images-readme/SubmissionPage.png)
+
+- Kids Page
+  - Short stories with an E-Reader
+  - Allows user to move pages
+  - Gives the user buttons to read the pages aloud
+
+![Kids Page](assets/images-readme/KidsPage.png)
 
 - Footer
   - Copyright details
   - Links to GitHub repository and social media sites
 
-![Footer]()
+![Footer](assets/images-readme/Footer.png)
 
 <a id="testing"></a>
 ## Testing
@@ -177,13 +184,13 @@ Validation of HTML/CSS/JavaScript, Lighthouse Audits, Bugs
 
 ### Google Lighthouse Testing
 
-High scores (90+) were achieved for both Desktop and Mobile when passing through the official [Google Lighthouse](https://pagespeed.web.dev/)
+Good scores were achieved for both Desktop and Mobile when passing through the official [Google Lighthouse](https://pagespeed.web.dev/)
 
 - Desktop
-![Desktop Results]()
+![Desktop Results](assets/images-readme/Lighthouse_Desktop.png)
 
 - Mobile
-![Mobile Results]()
+![Mobile Results](assets/images-readme/Lighthouse_Mobile.png)
 
 <hr>
 
@@ -193,8 +200,8 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/)
 
 ![HTML Validation Homepage]()
-![HTML Validation Registration]()
 ![HTML Validation Enquiry]()
+![HTML Validation Kids Page]()
 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
@@ -205,8 +212,9 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 
 - JavaScript
   - No errors were found when passing through the official [JSHint validator](https://jshint.com/)
+  - Some warnings were made, but most were regarding different versions of JavaScript
 
-![JavaScript Validation]()
+![JavaScript Validation](assets/images-readme/JSValidation.png)
 
 <hr>
 
@@ -239,12 +247,16 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 | Enquiry - Submit Success | The page will show a success message to inform the user the query has been sent. | Yes |
 | Enquiry - Submit Email | The query is be sent to a dummy email after it is submitted. | Yes |
 | Enquiry - Form Reset | The form resets after returning from the submit page. | Yes |
+| Kids Page - Opens Short Story | The page opens a short story when the title is clicked. | Yes |
+| Kids Page - Page Buttons Work | The page turns to a new page when the relevant buttons are clicked. | Yes |
+| Kids Page - Read Aloud Button | The page reads the story aloud and stops playing when the relevant button is clicked. | Yes |
 
 <hr>
 
 <a id="bugs"></a>
 ### Known Bugs
-- x
+- The Kids Page has a styling issue with the images for each page.
+- Registering an account shows the logged in account, but doesn't allow users to borrow or favourite books.
 
 <a id="future-features"></a>
 ## Future Features
