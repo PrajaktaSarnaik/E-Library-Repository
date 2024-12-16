@@ -329,6 +329,123 @@ body {
 }
 
 /* *****************Prajakta code ends here*********************** */
+/* *****************Prajakta code starts for children tab here*********************** */
+.book-container {
+    perspective: 1000px;
+    margin-bottom: 20px;
+  }
+
+  .book {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: auto;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    display: none; /* Hide by default */
+  }
+
+  .page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    backface-visibility: hidden;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .page-content {
+    flex-grow: 1;
+  }
+
+  .book-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .btn-control {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-control:hover {
+    background-color: #0056b3;
+  }
+
+  .btn-speak {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-speak:hover {
+    background-color: #e64a19;
+  }
+
+  .page img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .story-button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .story-button:hover {
+    background-color: #0056b3;
+  }
+
+  .horizontal-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .horizontal-card img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .horizontal-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* *****************Prajakta code ends for children tab here*********************** */
 /*------------------Prapti code starts*--------------------------------*/
 .hero {
     position: relative;
