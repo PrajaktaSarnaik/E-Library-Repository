@@ -115,16 +115,54 @@ document.querySelectorAll('.borrow-btn').forEach((button,index) => {
                     borrowedBooks.splice(borrowedIndex, 1);
                 }
             } else {
-                // Borrow the book
-                book.borrowed = true;
+                if (borrowedBooks.length >= 3) {
+                    alert('You cannot borrow more than 3 books.');
+                    return;
+                }else{
+                    book.borrowed = true;
                 this.textContent = 'Return';
                 borrowedBooks.push(book);
+                }
             }
             updateBorrowedBooksList();
+            localStorage.setItem('borrowedBooks', JSON.stringify(borrowedBooks)); // Save borrowed books to localStorage
         }
     });
 });
+// Check login state and borrowed books on page load
+document.addEventListener('DOMContentLoaded', function () {
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+        document.getElementById('buttonLogin').style.display = "none";
+        document.getElementById('buttonUser').style.display = "block";
+        isLoggedIn = true;
 
+        const storedBorrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks'));
+        if (storedBorrowedBooks) {
+            storedBorrowedBooks.forEach(book => {
+                const bookIndex = books.findIndex(b => b.id === book.id);
+                if (bookIndex > -1) {
+                    books[bookIndex].borrowed = true;
+                    borrowedBooks.push(books[bookIndex]);
+                    document.querySelectorAll('.borrow-btn')[bookIndex].textContent = 'Return'; // Update button text
+                }
+            });
+            updateBorrowedBooksList();
+        }
+        const storedFavorites = JSON.parse(localStorage.getItem('favorites'));
+        if (storedFavorites) {
+            storedFavorites.forEach(book => {
+                const bookIndex = books.findIndex(b => b.id === book.id);
+                if (bookIndex > -1) {
+                    books[bookIndex].favorite = true;
+                    favorites.push(books[bookIndex]);
+                    document.querySelectorAll('.favorite-btn')[bookIndex].classList.add('favorite'); // Update button state
+                }
+            });
+            updateFavoritesList();
+            
+        }
+    }
+});
 /**
  * Function to update the borrowed books list
  */ 
@@ -163,7 +201,7 @@ document.querySelectorAll('.favorite-btn').forEach((button, index) => {
             if (book.favorite) {
                 // Remove from favorites
                 book.favorite = false;
-                // this.textContent = 'Add to Favorites';
+                
                 this.classList.remove('favorite');
                 console.log('Removed from favorites');
                 const favoriteIndex = favorites.findIndex(b => b.id == book.id);
@@ -171,16 +209,21 @@ document.querySelectorAll('.favorite-btn').forEach((button, index) => {
                     favorites.splice(favoriteIndex, 1);
                 }
             } else {
-                // Add to favorites
-                book.favorite = true;
-                // this.textContent = 'Remove from Favorites';
-                this.classList.add('favorite');
-                console.log(this.classList);
-                console.log('Added to favorites');
-
-                favorites.push(book);
+                if (favorites.length >= 3) {
+                    alert('You cannot have more than 3 favorite books.');
+                    return;
+                }
+                   else{ // Add to favorites
+                    book.favorite = true;
+                   // this.textContent = 'Remove from Favorites';
+                    this.classList.add('favorite');
+                    console.log(this.classList);
+                    console.log('Added to favorites');
+                    favorites.push(book);
+                   }
             }
             updateFavoritesList();
+            localStorage.setItem('favorites', JSON.stringify(favorites)); // Save favorites to localStorage
         }
     });
 });
@@ -283,7 +326,10 @@ function logout() {
     document.getElementById('buttonLogin').style.display = "block";
     document.getElementById('buttonUser').style.display = "none";
     isLoggedIn = false;
-
+    borrowedBooks.length = 0; // Clear the borrowed books array
+    favorites.length = 0; // Clear the favorites array
+    updateBorrowedBooksList();
+    updateFavoritesList();
 };
 
 // Children's Books Database
@@ -350,22 +396,21 @@ function initChildrenBooks() {
             }
         ],
         book2: [
-            { text: "Page 1: Meet Rusty, a little robot living in the heart of a big city full of adventure.", img: "assets/images/brave_robot1.jpg" },
-            { text: "Page 2: Rusty dreams of becoming a hero, but he’s small and underestimated.", img: "assets/images/brave_robot2.jpg" },
-            { text: "Page 3: One day, a mysterious signal leads him on a quest that changes everything.", img: "assets/images/brave_robot3.jpg" }
+            { text: `Once upon a time, in a cozy burrow under a big tree, lived a brave little rabbit named Ruby. Ruby was known for her curious nature and adventurous spirit. Every day, she would venture into the forest, exploring new paths and meeting new friends.
+One sunny morning, Ruby decided to explore a part of the forest she had never been to before. As she hopped along, she heard a faint chirping sound. Following the sound, Ruby discovered a tiny bird trapped in a thorny bush. The poor bird was scared and unable to free itself.`, img: "assets/images/rabbit1.jpeg" },
+            { text: `With her gentle paws, Ruby carefully pushed the thorns aside, creating a small opening for the bird to escape. The bird flapped its wings and flew out, chirping joyfully. "Thank you, brave rabbit!" the bird sang. "You saved me!"
+Ruby smiled, happy to have helped. The bird, whose name was Twinkle, became Ruby's best friend. Every day, they would explore the forest together, helping other animals in need and sharing many adventures.`, img: "assets/images/rabbit2.jpeg" },
+            { text: `One day, a big storm hit the forest, and all the animals were frightened. Ruby and Twinkle worked together to guide their friends to safety, finding shelter in a large cave. Thanks to their bravery and quick thinking, everyone was safe and sound.
+From that day on, Ruby and Twinkle were known as the heroes of the forest. Their bond grew stronger with each passing day, and they continued to bring joy and kindness to all the creatures around them.
+And so, in their cozy burrow under the big tree, Ruby and Twinkle lived happily ever after, always ready for their next adventure.`, img: "assets/images/rabbit3.jpeg" }
         ],
-        book3: [
-            { text: "Page 1: Fluffy, the cloud, wonders what lies beyond the vast blue sky.", img: "assets/images/curious_cloud1.jpg" },
-            { text: "Page 2: He floats over mountains, seas, and cities, meeting other clouds.", img: "assets/images/curious_cloud2.jpg" },
-            { text: "Page 3: Finally, he discovers a magical storm that teaches him the power of teamwork.", img: "assets/images/curious_cloud3.jpg" }
-        ]
+      
     };
 
     // Current page trackers
     const currentPage = {
         book1: 0,
-        book2: 0,
-        book3: 0
+        book2: 0       
     };
 
     // Text-to-Speech functionality
@@ -433,23 +478,21 @@ function initChildrenBooks() {
     // Add event listeners to story buttons
     document.getElementById('buttonBook1').addEventListener('click', () => openStory('book1'));
     document.getElementById('buttonBook2').addEventListener('click', () => openStory('book2'));
-    document.getElementById('buttonBook3').addEventListener('click', () => openStory('book3'));
+   
 
     // Add event listeners to book controls
     document.getElementById('prevBook1').addEventListener('click', () => changePage('book1', -1));
     document.getElementById('nextBook1').addEventListener('click', () => changePage('book1', 1));
     document.getElementById('prevBook2').addEventListener('click', () => changePage('book2', -1));
     document.getElementById('nextBook2').addEventListener('click', () => changePage('book2', 1));
-    document.getElementById('prevBook3').addEventListener('click', () => changePage('book3', -1));
-    document.getElementById('nextBook3').addEventListener('click', () => changePage('book3', 1));
+    
 
     // Add event listeners to reading buttons
     document.getElementById('startReadingBook1').addEventListener('click', () => startReading('content1'));
     document.getElementById('stopReadingBook1').addEventListener('click', stopReading);
     document.getElementById('startReadingBook2').addEventListener('click', () => startReading('content2'));
     document.getElementById('stopReadingBook2').addEventListener('click', stopReading);
-    document.getElementById('startReadingBook3').addEventListener('click', () => startReading('content3'));
-    document.getElementById('stopReadingBook3').addEventListener('click', stopReading);
+   
 
     // Stop reading voice on page unload
     window.addEventListener('beforeunload', stopReading);
