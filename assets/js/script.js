@@ -11,18 +11,18 @@
 //Book Database
 const books = [
     { id: 0, title: "Whispers of The Wild", author: "Areaina Greens", genre: "Comedy", borrowed: false, favorite: false },
-    { id: 1, title:"the crystal shards" ,author:"arlen wynd" ,genre:"fantasy",image:'assets/images/fantasy1.jpeg', borrowed: false, favorite: false },
-    { id: 2, title: "embers of sorcery" ,author:"sylas raven" ,genre:"fantasy",image:'assets/images/fantasy2.jpeg', borrowed: false, favorite: false },
-    { id: 3, title: "the dragon's heir", author: "elara wind", genre: "fantasy",image:'assets/images/fantasy3.jpeg', borrowed: false, favorite: false },
-    { id: 4, title: "wings of the star", author: "elysaa thorn", genre: "fantasy",image:'assets/images/fantasy4.jpeg', borrowed: false, favorite: false },
-    { id: 5, title: "the Forgotten Gods", author: "cealan storm", genre: "fantasy",image:'assets/images/fantasy5.jpeg', borrowed: false, favorite: false },
-    { id: 6, title: "veil of eternity", author: "roderick", genre: "fantasy",image:'assets/images/fantasy5.jpeg', borrowed: false, favorite: false },
-    { id: 7, title: "oops I did it again", author: "max droll", genre: "comedy",image:'assets/images/comedy1.jpeg', borrowed: false, favorite: false },
-    { id: 8, title: "laughing through chaos", author: "benny high", genre: "comedy", borrowed: false, favorite: false },
-    { id: 9, title: "the unlikaly heros guide", author: "sally quick", genre: "comedy", borrowed: false, favorite: false },
-    { id: 10, title: "mildred & milte's misadventures", author: "clara tickle", genre: "comedy", borrowed: false, favorite: false },
-    { id: 11, title: "how to loose friends", author: "holly laugh", genre: "Comedy", borrowed: false, favorite: false },
-    { id: 12, title: "coffee & chaos", author: "jake giggle", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 1, title:"The Crystal Shards" ,author:"Arlen Wynd" ,genre:"Fantasy",image:'assets/images/fantasy1.jpeg', borrowed: false, favorite: false },
+    { id: 2, title: "Embers of Sorcery" ,author:"Sylas Raven" ,genre:"Fantasy",image:'assets/images/fantasy2.jpeg', borrowed: false, favorite: false },
+    { id: 3, title: "The Dragon's Heir", author: "Elara Wind", genre: "Fantasy",image:'assets/images/fantasy3.jpeg', borrowed: false, favorite: false },
+    { id: 4, title: "Wings of the Star", author: "Elysaa Thorn", genre: "Fantasy",image:'assets/images/fantasy4.jpeg', borrowed: false, favorite: false },
+    { id: 5, title: "The Forgotten Gods", author: "Cealan Storm", genre: "Fantasy",image:'assets/images/fantasy5.jpeg', borrowed: false, favorite: false },
+    { id: 6, title: "Veil of Eternity", author: "Roderick", genre: "Fantasy",image:'assets/images/fantasy5.jpeg', borrowed: false, favorite: false },
+    { id: 7, title: "Oops I Did It Again", author: "Max Droll", genre: "Comedy",image:'assets/images/comedy1.jpeg', borrowed: false, favorite: false },
+    { id: 8, title: "Laughing Through Chaos", author: "Benny High", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 9, title: "The unlikely Hero's Guide", author: "Sally Quick", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 10, title: "Mildred & Milte's Misadventures", author: "Clara Tickle", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 11, title: "How To Lose Friends", author: "Holly Laugh", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 12, title: "Coffee & Chaos", author: "Jake Giggle", genre: "Comedy", borrowed: false, favorite: false },
     { id: 14, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
     { id: 15, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
     { id: 16, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
@@ -30,7 +30,7 @@ const books = [
     { id: 18, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false }
   ];
 
-  // Get the search bar element
+// Get the search bar element
 const searchBar = document.getElementById('search-bar');
 const searchResults = document.getElementById('searchResults');
 
@@ -120,8 +120,6 @@ function updateBorrowedBooksList() {
 }
 
 // Function to show the modal
-
-
 function showModal() {
     const modalMessage = new bootstrap.Modal(document.getElementById('messageModal'));
     modalMessage.show();
