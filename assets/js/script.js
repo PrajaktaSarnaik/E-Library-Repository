@@ -124,10 +124,3 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 function clearForm() {
     document.getElementById('enquiryForm').reset();
 };
-
-/**
- * Changes heart icon to solid and back when clicked
- */
-document.getElementById('hero-heart').addEventListener('click', function heartClick(event) {
-    event.target.classList.toggle('fa-solid');
-})

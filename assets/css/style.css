@@ -414,13 +414,6 @@ ul {
     font-family: var(--primary-font);
 }
 
-#hero-heart {
-    font-size: 2.3rem;
-    margin-left: 15px;
-    cursor: pointer;
-    color: #283618;
-}
-
 .modal-content {
     background-color: var(--primary-color);
     color: var(--secondary-color);
