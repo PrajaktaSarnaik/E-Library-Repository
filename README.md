@@ -197,16 +197,16 @@ Good scores were achieved for both Desktop and Mobile when passing through the o
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/)
+  - Some error were returned when passing through the official [W3C validator](https://validator.w3.org/nu/)
+  - These could not be addressed in the time available
 
-![HTML Validation Homepage]()
-![HTML Validation Enquiry]()
-![HTML Validation Kids Page]()
+![HTML Validation Homepage](assets/images-readme/HTMLValidation_Home.png)
+![HTML Validation Enquiry](assets/images-readme/HTMLValidation_Enquiry.png)
 
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
+  - One error was found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
 
-![CSS Validation]()
+![CSS Validation](assets/images-readme/CSSValidation.png)
 
 <hr>
 
