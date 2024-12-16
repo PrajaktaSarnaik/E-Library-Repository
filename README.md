@@ -51,7 +51,8 @@ Wireframes for all pages of the website were created before coding began. Versio
 For the most part, the designs remained consistent with the implementation, but some changes were made - they will be shown and explained below.
 
 - Homepage
-  - changes
+  - The homepage has stayed mostly the same as the wireframe.
+  - the login/registration dropdown was changed to a modal pop-up as it was decided that would be more suitable for user experience.
 
 ![Homepage Desktop](assets/images-readme/Wireframe-Homepage-Desktop.png)
 
@@ -90,12 +91,10 @@ The project used two sans-serif fonts which were implemented via [Google Fonts](
 <a id="colour-scheme"></a>
 ### Colour Scheme
 
-The colours used were taken from [Coolors](https://coolors.co/). Contrasting colours were used for the background, text and other elements (like buttons and info cards) to make the website easier to read and interact with.
+The colours used were taken from [Coolors](https://coolors.co/). Contrasting colours were used for the background, text and other elements (like buttons and info cards) to make the website easier to read and interact with. Some colours were not used in the final implementation, as they did not contrast enough to provide a suitable user experience.
 
-- `#606C38` used for: 
 - `#283618` used for: header & footer backgrounds, form & modal pop-up backgrounds, homepage headings & text
 - `#FEFAE0` used for: form & modal pop-up text, button text, selected buttons
-- `#DDA15E` used for: 
 - `#BC6C25` used for: buttons, selected button text, footer text & icon colour
 
 ![Colour Palette](assets/images-readme/Colour-Palette.png)
@@ -108,8 +107,37 @@ The colours used were taken from [Coolors](https://coolors.co/). Contrasting col
 
 The website consists of three pages with distinct sections to ensure a good user experience. All features on the website were implemented using a combination of HTML5, CSS (including Bootstrap) and JavaScript and are responsive on multiple device sizes in accordance with appropriate breakpoints. 
 
-- x
-- x
+- Header Navigation Bar
+  - A sticky navigation bar on all pages with the logo and website title which redirects to the homepage
+  - Links to other pages on the website
+- Login Pop-Up
+  - A pop-up which allows users to log in to their account and validates their inputs to ensure the details entered are for a registered account
+  - Contains a direct link to register a new account
+- Register Pop-Up
+  - A pop-up which allows users to register a new account and validates their inputs to ensure the details entered are the correct format
+- Dropdown Menu when Logged In
+  - Displays up to 5 borrowed and favourite books and an option to log out
+  - Page automatically refreshes after logging out
+- Search Bar
+  - Allows books to be searched by Title, Author or Genre
+  - The first matching result is highlighted on the page
+- Hero Section
+  - Book of the Week with Title, Author, a short description and borrow & favourite buttons
+- Borrow & Favourite Buttons
+  - Buttons to add the chosen book to your account
+- Catalogued Books
+  - Books displayed with cover pages and sorted by genre
+  - The title, short description and borrow & favourite buttons are displayed when a book is hovered over
+- Enquiry Form
+  - A separate page for users to send a enquiry to the library about specific books
+  - Enquiries can be sent by both registered and unregistered users
+  - The form validates user inputs and ensures all fields are filled
+  - The form will be sent to the library's email with the details entered by the user
+  - The page will display a success page after submission
+  - The form automatically clears after returning from success page
+- Footer
+  - Copyright details
+  - Links to GitHub repository and social media sites
 
 <a id="testing"></a>
 ## Testing
@@ -186,6 +214,7 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 
 <a id="future-features"></a>
 ## Future Features
+- Accounts retain information about borrowed and favourite books
 - Rate and review books, so feedback can be shared with other users.
 - View due dates for borrowed books.
 - Receive notifications about book return dates, so they can be returned on time and avoid late fees.
