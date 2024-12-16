@@ -34,11 +34,10 @@ const books = [
     { id: 21, title: "Ascension", author: "Martin Maclnness", genre: "Science-Fiction", borrowed: false, favorite: false },
     { id: 22, title: "Project Hair Mary", author: "Andy Weir", genre: "Science-Fiction", borrowed: false, favorite: false },
     { id: 23, title: "An unkidness of the ghosts", author: "Rivers Solomon", genre: "Science-Fiction", borrowed: false, favorite: false },
-    { id: 24, title: "The Calculating Stars", author: "Mary Robinette kowal", genre: "Science-Fiction", borrowed: false, favorite: false },
+    { id: 24, title: "The Calculating Stars", author: "Mary Robinette kowal", genre: "Science-Fiction", borrowed: false, favorite: false }
+];
 
-  ];
-
-  // Get the search bar element
+// Get the search bar element
 const searchBar = document.getElementById('search-bar');
 const searchResults = document.getElementById('searchResults');
 
@@ -128,8 +127,6 @@ function updateBorrowedBooksList() {
 }
 
 // Function to show the modal
-
-
 function showModal() {
     const modalMessage = new bootstrap.Modal(document.getElementById('messageModal'));
     modalMessage.show();
@@ -279,7 +276,11 @@ function logout() {
  */
 function clearForm() {
     document.getElementById('enquiryForm').reset();
-}
+};
 
-
-
+/**
+ * Clears session after logout
+ */
+function afterLogOut() {
+    location.reload();
+};

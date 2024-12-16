@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Macondo&display=swap');
+
 /*------------------Prapti code starts*--------------------------------*/
 /* CSS Variables */
 :root {
@@ -43,9 +43,9 @@ body {
 }
 
 #nav .navbar-toggle{
-    border: none; */ 
-    /* background-color: var(--primary-color); */
-    /* color: var(--primary-color);
+    border: none; */
+/* background-color: var(--primary-color); */
+/* color: var(--primary-color);
     font-size: 1rem;
 }
 #nav.toggled {
@@ -93,14 +93,14 @@ body {
     width: 80px;
     height: 80px;
     margin-right: 5px; */
-    /* Adjust the value as needed */
+/* Adjust the value as needed */
 /* }
 
 
 .navbar-nav {
     margin: 0; 
     padding:0; */
-    /* Adjust the value as needed */
+/* Adjust the value as needed */
 /* }
 
 .logo {
@@ -145,93 +145,93 @@ body {
     padding: 5px;
     cursor: pointer;
     border: 1px solid #ccc;
-    background: -webkit-linear-gradient( top,#fff,#ddd) #ddd;
+    background: -webkit-linear-gradient(top, #fff, #ddd) #ddd;
     position: relative;
     transition: all .5s ease;
     border-radius: 3px;
     box-shadow: inset 0 -1px 1px #eee;
-    
+
     /* &:hover {
         background: -webkit-linear-gradient( top,#fff,#ccc) #ddd;
     } */
-  
+
     .icon-heart {
-      font-size: 24px;
-      color: #666;
-      position: relative;
-      transition: all .5s ease-in-out;
+        font-size: 24px;
+        color: #666;
+        position: relative;
+        transition: all .5s ease-in-out;
     }
 
-      input[type="checkbox"] { 
-      position: absolute;
-      opacity: 0;
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
         /* &:checked + .icon-heart {
         color: red;
         
       }    */
-    } 
-  } 
+    }
+}
+
 /* fill heart icon with red color when clicked */
-  .add-fav .favorite {
-   color: red;       
+.add-fav .favorite {
+    color: red;
 }
 
 /* *****************Prajakta code starts here*********************** */
 .navbar {
-            transition: background-color 0.3s ease;
-        }
+    transition: background-color 0.3s ease;
+}
 
-        .navbar.transparent {
-            background-color: var(--primary-color) !important;
-        }
+.navbar.transparent {
+    background-color: var(--primary-color) !important;
+}
 
-        .navbar.scrolled {
-            background-color: var(--primary-color) !important;
-            
-        }
+.navbar.scrolled {
+    background-color: var(--primary-color) !important;
 
-        .navbar-brand,
-        .nav-link
-        
-        {
-            color: #fff !important;
-        }
-        #button-navbar-toggler
-        {
-            color: #fff;
-            border: 2px solid #fff;
-            background-color: #fff;
-            border-radius: 5px;
-        }
-        .search-icon {
-            color: #4D937D;
-            font-size: 1.2rem;
-            cursor: pointer;
+}
 
-        }
-        #search-input {
-            border: 1px solid #1f3b32;
-        }
+.navbar-brand,
+.nav-link {
+    color: #fff !important;
+}
 
-        #buttonLogin,
-        #buttonUser,
-        .button-search
-         {
-            border: none;
-            background: none;
-            color: #fff;
-            padding: 8px;
-        }
-        
+#button-navbar-toggler {
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: #fff;
+    border-radius: 5px;
+}
 
-        #buttonUser
-        {
-            font-size: 1.2rem;
-        }
-        .navbar-container {
-            margin-left: 10px;
-            margin-right: 10px;
-        }
+.search-icon {
+    color: #4D937D;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+}
+
+#search-input {
+    border: 1px solid #1f3b32;
+}
+
+#buttonLogin,
+#buttonUser,
+.button-search {
+    border: none;
+    background: none;
+    color: #fff;
+    padding: 8px;
+}
+
+
+#buttonUser {
+    font-size: 1.2rem;
+}
+
+.navbar-container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 /* Cards Section */
 .card-container {
@@ -404,8 +404,9 @@ ul {
 
 /* Footer Copyright Text */
 #copyright-info p {
-    font-family: 'Open Sans', sans-serif;
-    padding: 0 10px;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    padding-left: 10px;
 }
 
 /* Set Enquiry Form formatting */
@@ -419,95 +420,116 @@ ul {
     padding: 5vw;
 }
 
-/* Set colour of submit button */
-.btn-submit {
+#enquiryPage h1 {
+    font-family: var(--primary-font);
+}
+
+.modal-content {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Set colour of buttons */
+.btn {
     background-color: #BC6C25;
     color: #FEFAE0;
     border-color: #BC6C25;
 }
 
 /* Set colour of submit button when hovered over */
-.btn-submit:hover {
+.btn:hover {
     background-color: #FEFAE0;
     color: #BC6C25;
     border-color: #FEFAE0;
 }
-
 /*~~~~~~~~~~~~~~~~~ Mitali Code Ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 
 .dropdown-menu {
     right: auto;
     left: auto;
 }
+
 @media (max-width: 1024px) {
-.hero {
-min-height: calc(100vh - 70px); 
-}
+    .hero {
+        min-height: calc(100vh - 70px);
+    }
 
-.hero h1 {
-font-size: 3rem; /* Adjust heading size for tablet screens */
-}
+    .hero h1 {
+        font-size: 3rem;
+        /* Adjust heading size for tablet screens */
+    }
 
-.hero p {
-font-size: 1.3rem; /* Adjust paragraph font size */
-}
+    .hero p {
+        font-size: 1.3rem;
+        /* Adjust paragraph font size */
+    }
 
-.borrow-btn {
-font-size: 1.1rem; /* Adjust button font size */
-}
+    .borrow-btn {
+        font-size: 1.1rem;
+        /* Adjust button font size */
+    }
 
-.heart-icon {
-font-size: 1.7rem; /* Adjust heart icon size */
-}
+    .heart-icon {
+        font-size: 1.7rem;
+        /* Adjust heart icon size */
+    }
 }
 
 @media (max-width: 768px) {
-.hero {
-min-height: calc(100vh - 80px);
+    .hero {
+        min-height: calc(100vh - 80px);
 
-text-align: left;  /* Keep the text aligned to the left */
-}
+        text-align: left;
+        /* Keep the text aligned to the left */
+    }
 
-.hero h1 {
-font-size: 2.5rem; /* Smaller heading font size */
-}
+    .hero h1 {
+        font-size: 2.5rem;
+        /* Smaller heading font size */
+    }
 
-.hero p {
-font-size: 1.1rem; /* Adjust paragraph font size */
-}
+    .hero p {
+        font-size: 1.1rem;
+        /* Adjust paragraph font size */
+    }
 
-.borrow-btn {
-font-size: 1.1rem;
-padding: 12px 25px;
-}
+    .borrow-btn {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+    }
 
-.heart-icon {
-font-size: 1.8rem;
-}
+    .heart-icon {
+        font-size: 1.8rem;
+    }
 }
 
 @media (max-width: 576px) {
-.hero {
-min-height: calc(100vh - 90px);
-padding-top: 90px; /* Adjust padding-top more for small screens */
-padding: 20px; /* Add padding to prevent text from touching edges */
-}
+    .hero {
+        min-height: calc(100vh - 90px);
+        padding-top: 90px;
+        /* Adjust padding-top more for small screens */
+        padding: 20px;
+        /* Add padding to prevent text from touching edges */
+    }
 
-.hero h1 {
-font-size: 2rem; /* Smaller heading font size for small screens */
-}
+    .hero h1 {
+        font-size: 2rem;
+        /* Smaller heading font size for small screens */
+    }
 
-.hero p {
-font-size: 1rem; /* Adjust paragraph text size */
-}
+    .hero p {
+        font-size: 1rem;
+        /* Adjust paragraph text size */
+    }
 
-.borrow-btn {
-font-size: 1rem; /* Adjust button text size */
-padding: 10px 20px;
-}
+    .borrow-btn {
+        font-size: 1rem;
+        /* Adjust button text size */
+        padding: 10px 20px;
+    }
 
-.heart-icon {
-font-size: 1.5rem; /* Adjust heart icon size */
-}
+    .heart-icon {
+        font-size: 1.5rem;
+        /* Adjust heart icon size */
+    }
 }
