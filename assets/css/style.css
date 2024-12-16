@@ -404,8 +404,9 @@ ul {
 
 /* Footer Copyright Text */
 #copyright-info p {
-    font-family: 'Open Sans', sans-serif;
-    padding: 0 10px;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    padding-left: 10px;
 }
 
 /* Set Enquiry Form formatting */
@@ -419,27 +420,35 @@ ul {
     padding: 5vw;
 }
 
-/* Set colour of submit button */
-.btn-submit {
+/* Set colour of buttons */
+.btn {
     background-color: #BC6C25;
     color: #FEFAE0;
     border-color: #BC6C25;
 }
 
 /* Set colour of submit button when hovered over */
-.btn-submit:hover {
+.btn:hover {
     background-color: #FEFAE0;
     color: #BC6C25;
     border-color: #FEFAE0;
 }
 
-/*~~~~~~~~~~~~~~~~~ Mitali Code Ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#enquiryPage h1 {
+    font-family: var(--primary-font);
+}
 
+.modal-content {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+};
+/*~~~~~~~~~~~~~~~~~ Mitali Code Ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .dropdown-menu {
     right: auto;
     left: auto;
 }
+
 @media (max-width: 1024px) {
 .hero {
 min-height: calc(100vh - 70px); 

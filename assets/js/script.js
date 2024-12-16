@@ -271,7 +271,4 @@ function logout() {
  */
 function clearForm() {
     document.getElementById('enquiryForm').reset();
-}
-
-
-
+};
