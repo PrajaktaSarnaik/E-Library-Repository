@@ -2,15 +2,6 @@
 if (window.location.pathname.includes('children.html')) {
     initChildrenBooks();
   }
-/*********************Prapti code Starts**********************/
-// window.onscroll = function () {
-//     var navbar = document.getElementById("nav");
-//     if (window.pageYOffset > 0) {
-//         navbar.classList.add("scrolled");
-//     } else {
-//         navbar.classList.remove("scrolled");
-//     }
-// };
 
 //Book Database
 const books = [
@@ -110,9 +101,15 @@ console.log(index);
                 }
             } else {
                 // Borrow the book
-                book.borrowed = true;
+                if (borrowedBooks.length >= 5) {
+                    alert('You cannot borrow more than 5 books.');
+                    return;
+                }else{
+                    book.borrowed = true;
                 this.textContent = 'Return';
                 borrowedBooks.push(book);
+                }
+                
             }
             updateBorrowedBooksList();
         }
@@ -161,14 +158,18 @@ document.querySelectorAll('.favorite-btn').forEach((button, index) => {
                     favorites.splice(favoriteIndex, 1);
                 }
             } else {
-                // Add to favorites
+                if (favorites.length >= 5) {
+                alert('You cannot have more than 5 favorite books.');
+                return;
+            }
+               else{ // Add to favorites
                 book.favorite = true;
                // this.textContent = 'Remove from Favorites';
                 this.classList.add('favorite');
                 console.log(this.classList);
                 console.log('Added to favorites');
-
                 favorites.push(book);
+               }
             }
             updateFavoritesList();
         }
