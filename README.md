@@ -110,34 +110,65 @@ The website consists of three pages with distinct sections to ensure a good user
 - Header Navigation Bar
   - A sticky navigation bar on all pages with the logo and website title which redirects to the homepage
   - Links to other pages on the website
+
+![Navigation Bar]()
+
 - Login Pop-Up
   - A pop-up which allows users to log in to their account and validates their inputs to ensure the details entered are for a registered account
   - Contains a direct link to register a new account
-- Register Pop-Up
+
+![Login Pop-Up]()
+
+- Registration Pop-Up
   - A pop-up which allows users to register a new account and validates their inputs to ensure the details entered are the correct format
+
+![Registration Pop-Up]()
+
 - Dropdown Menu when Logged In
   - Displays up to 5 borrowed and favourite books and an option to log out
   - Page automatically refreshes after logging out
+
+![Account Dropdown Menu]()
+
 - Search Bar
   - Allows books to be searched by Title, Author or Genre
   - The first matching result is highlighted on the page
+
+![Search Bar]()
+
 - Hero Section
   - Book of the Week with Title, Author, a short description and borrow & favourite buttons
 - Borrow & Favourite Buttons
   - Buttons to add the chosen book to your account
+
+![Hero Section]()
+
 - Catalogued Books
   - Books displayed with cover pages and sorted by genre
   - The title, short description and borrow & favourite buttons are displayed when a book is hovered over
-- Enquiry Form
+
+![Catalogued Books]()
+
+- Enquiry Form Page
   - A separate page for users to send a enquiry to the library about specific books
   - Enquiries can be sent by both registered and unregistered users
   - The form validates user inputs and ensures all fields are filled
+
+![Enquiry Page]()
+
+- Form Sends Email after Submit
   - The form will be sent to the library's email with the details entered by the user
   - The page will display a success page after submission
   - The form automatically clears after returning from success page
+
+![Email Recieved]()
+![Submission Page]()
+
 - Footer
   - Copyright details
   - Links to GitHub repository and social media sites
+
+![Footer]()
 
 <a id="testing"></a>
 ## Testing
@@ -188,14 +219,15 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 | General - NavBar Login | The Login link opens a pop-up when clicked. | Yes |
 | General - Login | The Login pop-up allows the user to sign in or register. | Yes |
 | General - Login Validation | The Login pop-up validates user's input if they sign in. | Yes |
-| General - Login Registration Button | The Login pop-up redirects the user to the Registration page if the button is clicked. | Yes |
+| General - Login Registration Link | The Login pop-up redirects the user to the Registration page if the button is clicked. | Yes |
+| General - Account Dropdown | When logged in, an account dropdown menu will appear with borrowed and favourited books listed. | Yes |
+| General - Page Reset | The page reloads after logging out. | Yes |
 | General - Footer | The footer is displayed at the bottom of the page and shows social media links and a copyright. | Yes |
 | General - Footer Links | The social media links direct the user to the relevant websites when clicked. | Yes |
 | General - Footer Links New Page | The social media links open in new pages. | Yes |
 | General - Responsivity | The website is responsive and changes format depending on the device size. | Yes |
 | Homepage - Hero Section | The Jumbrotron is displayed with a background image, text overlay and Borrow and Favourite buttons. | Yes |
-| Homepage - Book of the Week | The Jumbrotron displays the book of the week. | Yes |
-| Homepage - Jumbotron Buttons | The Borrow and Favourite buttons work as intended when clicked. | Yes |
+| Homepage - Hero Section Buttons | The Borrow and Favourite buttons work as intended when clicked. | Yes |
 | Homepage - Info Cards | The cards are displayed side by side with book titles and images. | Yes |
 | Homepage - Info Cards Hover | The cards are expanded to show a short description and Borrow and Favourite buttons when hovered over. | Yes |
 | Registration - Display Fields | The relevant fields are all visible and can be interacted with. | Yes |
@@ -205,6 +237,7 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 | Enquiry - Input Validation | The text boxes validates the user's input to ensure data is in the correct format. | Yes |
 | Enquiry - Submit Success | The page will show a success message to inform the user the query has been sent. | Yes |
 | Enquiry - Submit Email | The query is be sent to a dummy email after it is submitted. | Yes |
+| Enquiry - Form Reset | The form resets after returning from the submit page. | Yes |
 
 <hr>
 
