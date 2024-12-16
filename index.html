@@ -34,55 +34,53 @@
                 <img src="assets/images/E-Library-Logo.webp" alt="icon" id="title-name" width="50" height="50">
                 <a class="navbar-brand fw-bold" href="index.html">E-Library</a>
             </div>
-            <button class="navbar-toggler ms-auto" id="button-navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav pt-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="children.html">Children</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="enquiry.html">Enquiry</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <button id="buttonLogin" class="btn btn-primary nav-link" data-bs-toggle="modal"
-                            data-bs-target="#loginModal">Login</button>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <button type="button" id="buttonUser" class="btn btn-primary dropdown-toggle"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-circle"></i>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="buttonUser">
-                                <li><a class="dropdown-item" href="#">Borrowed Books</a>
-                                    <ul id="borrowedBooksList"></ul>
-                                </li>
-                                <li><a class="dropdown-item" href="#">Favourites</a>
-                                    <ul id="favouritesList"></ul>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#" id="logout" onclick="afterLogOut()">Log Out</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <input type="text" id="search-bar" class="form-control" placeholder="Title, Genre, Author"></input>
-                    </li>
-                    <li>
-                        <label class="search-icon" for="search-bar"><button class="button-search"><i
-                                    class="bi bi-search"></i></button></label>
-                    </li>
-                </ul>
+                <button class="navbar-toggler ms-auto" id="button-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav pt-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="children.html">Children</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="enquiry.html">Enquiry</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <button id="buttonLogin" class="btn btn-primary nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button type="button" id="buttonUser" class="btn btn-primary dropdown-toggle"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-person-circle"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="buttonUser">
+                                    <li><a class="dropdown-item" href="#"><strong>Borrowed Books</strong></a>
+                                        <ul id="borrowedBooksList"></ul></li>
+                                    <li><a class="dropdown-item" href="#"><strong>Favourites</strong></a>
+                                        <ul id="favouritesList"></ul></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" id="logout" onclick="afterLogOut()"><strong>Log Out</strong></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                            <input type="text" id="search-bar" class="form-control"
+                                placeholder="Title, Genre, Author"></input>
+                        </li>
+                        <li>
+                            <label class="search-icon" for="search-bar"><button class="button-search"><i
+                                        class="bi bi-search"></i></button></label>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
 
         </div>
