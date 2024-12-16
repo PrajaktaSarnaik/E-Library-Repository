@@ -270,3 +270,10 @@ function logout() {
 function clearForm() {
     document.getElementById('enquiryForm').reset();
 };
+
+/**
+ * Clears session after logout
+ */
+function afterLogOut() {
+    location.reload();
+};
