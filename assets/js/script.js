@@ -1,18 +1,12 @@
 // Check if the current page is children.html and initialize children's books functionality
 if (window.location.pathname.includes('children.html')) {
     initChildrenBooks();
-}
-/*********************Prapti code Starts**********************/
-// window.onscroll = function () {
-//     var navbar = document.getElementById("nav");
-//     if (window.pageYOffset > 0) {
-//         navbar.classList.add("scrolled");
-//     } else {
-//         navbar.classList.remove("scrolled");
-//     }
-// };
 
-//Book Database
+}
+
+/**
+ * Book Database
+ */
 const books = [
     { id: 0, title: "Whispers of The Wild", author: "Areaina Greens", genre: "Comedy", borrowed: false, favorite: false },
     { id: 1, title: "The Crystal Shards", author: "Arlen Wynd", genre: "Fantasy", image: 'assets/images/fantasy1.jpeg', borrowed: false, favorite: false },
@@ -45,8 +39,12 @@ const books = [
 const searchBar = document.getElementById('search-bar');
 const searchResults = document.getElementById('searchResults');
 
-// Add an event listener to the search bar
-searchBar.addEventListener('input', function () {
+
+/**
+ * Add an event listener to the search bar
+ */
+searchBar.addEventListener('input', function() {
+
     const query = searchBar.value.toLowerCase();
     console.log(query);
 
@@ -68,7 +66,9 @@ searchBar.addEventListener('input', function () {
     }
 });
 
-// Function to jump to the book card
+/**
+ * Function to jump to the book card
+ */ 
 function jumpToBook(bookId) {
     const bookElement = document.getElementById(`${bookId}`);
     console.log(bookElement);
@@ -81,7 +81,9 @@ function jumpToBook(bookId) {
     }
 }
 
-// Function to clear search results
+/**
+ * Function to clear search results
+ */ 
 function clearResults() {
     searchResults.innerHTML = '';
 }
@@ -89,9 +91,13 @@ function clearResults() {
 let isLoggedIn = false; // This should be set to true when the user logs in
 const borrowedBooks = [];
 
-// Add event listener to all borrow buttons
-document.querySelectorAll('.borrow-btn').forEach((button, index) => {
-    button.addEventListener('click', function () {
+
+/**
+ * Add event listener to all borrow buttons
+ */ 
+document.querySelectorAll('.borrow-btn').forEach((button,index) => {
+    button.addEventListener('click', function() {
+
         if (!isLoggedIn) {
             showModal();
             return;
@@ -119,7 +125,9 @@ document.querySelectorAll('.borrow-btn').forEach((button, index) => {
     });
 });
 
-// Function to update the borrowed books list
+/**
+ * Function to update the borrowed books list
+ */ 
 function updateBorrowedBooksList() {
     const borrowedBooksList = document.getElementById('borrowedBooksList');
     borrowedBooksList.innerHTML = '';
@@ -130,7 +138,9 @@ function updateBorrowedBooksList() {
     });
 }
 
-// Function to show the modal
+/**
+ * Function to show the modal
+ */ 
 function showModal() {
     const modalMessage = new bootstrap.Modal(document.getElementById('messageModal'));
     modalMessage.show();
@@ -175,7 +185,9 @@ document.querySelectorAll('.favorite-btn').forEach((button, index) => {
     });
 });
 
-// Function to update the favorites list in the dropdown menu
+/**
+ * Function to update the favorites list in the dropdown menu
+ */ 
 function updateFavoritesList() {
     const favoritesList = document.getElementById('favouritesList');
     favoritesList.innerHTML = ''; // Clear the current list
@@ -187,18 +199,6 @@ function updateFavoritesList() {
     });
 }
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const navbarToggler = document.querySelector('.navbar-toggler');
-//     const navbar = document.getElementById('nav');
-
-//     navbarToggler.addEventListener('click', function() {
-//         navbar.classList.toggle('toggled');
-//     });
-// });
-
-/*********************Prapti code Ends**********************/
-
-/*******************Prajakta code Starts*******************/
 const users = [
     { email: "prajakta@e-library.com", password: "prajakta" },
     { email: "p@p", password: "p" },
@@ -214,7 +214,9 @@ document.getElementById('registerLink').addEventListener('click', function () {
     registerModal.show();
 });
 
-// Register Form Submission
+/**
+ * Register Form Submission
+ */ 
 document.getElementById('registerForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -242,7 +244,9 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
     document.getElementById('buttonUser').style.display = "block";
 });
 
-// Login Form Submission
+/**
+ * Login Form Submission
+ */
 document.getElementById('loginForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -266,15 +270,12 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         alert('Invalid email or password!');
     }
 });
-// Check login state on page load
-document.addEventListener('DOMContentLoaded', function () {
-    if (localStorage.getItem('isLoggedIn') === 'true') {
-        document.getElementById('buttonLogin').style.display = "none";
-        document.getElementById('buttonUser').style.display = "block";
-        isLoggedIn = true;
-    }
-});
-// Logout Form Submission
+
+
+/**
+ * Logout Form Submission
+ */ 
+
 document.getElementById('logout').addEventListener('click', logout);
 function logout() {
     localStorage.removeItem('isLoggedIn'); // Remove login state
@@ -284,10 +285,11 @@ function logout() {
     isLoggedIn = false;
 
 };
-/*******************Prajakta code Ends*******************/
-/*******************Prajakta code for children books starts*******************/
+
 // Children's Books Database
-// Function to initialize children's books functionality
+/**
+ *  Function to initialize children's books functionality
+ */
 function initChildrenBooks() {
     const childrenBooks = {
         book1: [
@@ -427,6 +429,7 @@ function initChildrenBooks() {
     }
 
 
+
     // Add event listeners to story buttons
     document.getElementById('buttonBook1').addEventListener('click', () => openStory('book1'));
     document.getElementById('buttonBook2').addEventListener('click', () => openStory('book2'));
@@ -451,7 +454,8 @@ function initChildrenBooks() {
     // Stop reading voice on page unload
     window.addEventListener('beforeunload', stopReading);
 }
-/*******************Prajakta code for children books ends*******************/
+
+
 
 /**
  * Resets form fields

@@ -1,19 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Macondo&display=swap');
 
-/*------------------Prapti code starts*--------------------------------*/
 /* CSS Variables */
 :root {
     --primary-font: "Grenze Gotisch", sans-serif;
     --secondary-font: "Macondo", cursive;
     --primary-color: #283618;
-    /* dark green */
     --secondary-color: #FEFAE0;
-    /*orange */
-    /* --highlight-color: rgb(6, 91, 6);  green */
-    /*--highlight-color-light: #FFB200; light yellow */
-    /*--text-color:#D91656;dark pink*/
     --background-color: #E5DBC0;
-    /* light yellow */
 }
 
 body {
@@ -22,122 +15,6 @@ body {
 
     background-color: var(--background-color);
 }
-
-/**************** Navbar ******************/
-
-/* #nav {
-    background-color: transparent;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    /* height: 60px; */
-/*     
-    transition: background-color 0.3s;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0;
-
-}
-
-#nav .navbar-toggle{
-    border: none; */
-/* background-color: var(--primary-color); */
-/* color: var(--primary-color);
-    font-size: 1rem;
-}
-#nav.toggled {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-#nav.toggled .nav-link {
-    color: var(--secondary-color);
-}
-#nav.toggled .button {
-    color: var(--secondary-color);
-}
-
-#nav.scrolled {
-    background-color: var(--primary-color);
-}
-
-#nav.scrolled .nav-link {
-    color: var(--secondary-color);
-}
-
-#nav.scrolled .button{
-    color: var(--secondary-color);
-}
-
-#nav.button {
-    background-color: var(--primary-color);
-}
-
-#nav a {
-    color: var(--primary-color);
-    text-decoration: none;
-    margin: 0%;
-    font-size: 1.20rem;
-
-}
-
-#nav button {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 1.20rem;
-}
-
-#nav .logo {
-    width: 80px;
-    height: 80px;
-    margin-right: 5px; */
-/* Adjust the value as needed */
-/* }
-
-
-.navbar-nav {
-    margin: 0; 
-    padding:0; */
-/* Adjust the value as needed */
-/* }
-
-.logo {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto;
-    display: block;
-}
-
-
-.search-bar {
-    display: flex;
-    align-items: center;
-}
-
-
-.search-bar .nav-link {
-    padding: 5px;
-    color: var(--primary-color);
-    font-size: 1.20rem;
-}
-
-.search-bar input {
-    padding: 5px;
-    border: none;
-    border-radius: 3px;
-    color: var(--primary-color);
-}
-
-#search-input {
-    padding: 5px;
-    border: none;
-    border-radius: 3px;
-    background-color: transparent;
-    color: var(--primary-color);
-    margin-left: 10px;
-} */
 
 
 .add-fav {
@@ -151,10 +28,6 @@ body {
     border-radius: 3px;
     box-shadow: inset 0 -1px 1px #eee;
 
-    /* &:hover {
-        background: -webkit-linear-gradient( top,#fff,#ccc) #ddd;
-    } */
-
     .icon-heart {
         font-size: 24px;
         color: #666;
@@ -165,10 +38,6 @@ body {
     input[type="checkbox"] {
         position: absolute;
         opacity: 0;
-        /* &:checked + .icon-heart {
-        color: red;
-        
-      }    */
     }
 }
 
@@ -177,7 +46,6 @@ body {
     color: red;
 }
 
-/* *****************Prajakta code starts here*********************** */
 .navbar {
     transition: background-color 0.3s ease;
 }
@@ -247,8 +115,6 @@ body {
 
 .card {
     position: relative;
-    /* width: 250px;
-    height: 250px; */
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -328,24 +194,23 @@ body {
     color: #fff;
 }
 
-/* *****************Prajakta code ends here*********************** */
-/* *****************Prajakta code starts for children tab here*********************** */
 .book-container {
     perspective: 1000px;
     margin-bottom: 20px;
-  }
+}
 
-  .book {
+.book {
     width: 100%;
     height: auto;
     position: relative;
     margin: auto;
     transform-style: preserve-3d;
     transition: transform 1s;
-    display: none; /* Hide by default */
-  }
+    display: none;
+    /* Hide by default */
+}
 
-  .page {
+.page {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -359,94 +224,99 @@ body {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-  }
+}
 
-  .page-content {
+.page-content {
     flex-grow: 1;
-  }
+}
 
-  .book-controls {
+.book-controls {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-  }
+}
 
-  .btn-control {
-    background-color: #007bff;
-    color: white;
+.btn-control {
+    background-color: #BC6C25;
+    color: #FEFAE0;
     border: none;
     padding: 5px 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
 
-  .btn-control:hover {
-    background-color: #0056b3;
-  }
+.btn-control:hover {
+    background-color: #FEFAE0;
+    color: #BC6C25;
+}
 
-  .btn-speak {
-    background-color: #ff5722;
-    color: white;
+.btn-speak {
+    background-color: #606C38;
+    color: #FEFAE0;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
 
-  .btn-speak:hover {
-    background-color: #e64a19;
-  }
+.btn-speak:hover {
+    background-color: #FEFAE0;
+    color: #606C38;
+}
 
-  .page img {
+.page img {
     max-width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
-  }
+}
 
-  .story-button {
+/* Set colour of buttons */
+.story-button {
     margin: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--primary-color);
+    color: #FEFAE0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
 
-  .story-button:hover {
-    background-color: #0056b3;
-  }
+/* Set colour of story button when hovered over */
+.story-button:hover {
+    background-color: #FEFAE0;
+    color: var(--primary-color);
+    border-color: #FEFAE0;
+}
 
-  .horizontal-card {
+.horizontal-card {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: auto;
-    border: 2px solid #007bff;
+    border: 2px solid var(--primary-color);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     margin-bottom: 20px;
-  }
+}
 
-  .horizontal-card img {
+.horizontal-card img {
     width: 50%;
     height: auto;
     object-fit: cover;
-  }
+}
 
-  .horizontal-card-content {
+.horizontal-card-content {
     padding: 20px;
     display: flex;
+    color: var(--primary-color);
     flex-direction: column;
     justify-content: space-between;
-  }
+}
 
-  /* *****************Prajakta code ends for children tab here*********************** */
-/*------------------Prapti code starts*--------------------------------*/
 .hero {
     position: relative;
     width: 100%;
@@ -478,13 +348,6 @@ h1 {
     transition: border 0.6s ease;
 }
 
-/* .dropdown-menu {
-    background-color: white;
-} */
-/*------------------Prapti code End*--------------------------------*/
-
-
-/*~~~~~~~~~~~~~~~~~ Mitali Code Starts ~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .footer-style {
     background-color: #283618;
     bottom: 0;
@@ -559,7 +422,6 @@ ul {
     color: #BC6C25;
     border-color: #FEFAE0;
 }
-/*~~~~~~~~~~~~~~~~~ Mitali Code Ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .dropdown-menu {
     right: auto;

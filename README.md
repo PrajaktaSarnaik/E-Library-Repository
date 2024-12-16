@@ -93,7 +93,8 @@ The project used two sans-serif fonts which were implemented via [Google Fonts](
 
 The colours used were taken from [Coolors](https://coolors.co/). Contrasting colours were used for the background, text and other elements (like buttons and info cards) to make the website easier to read and interact with. Some colours were not used in the final implementation, as they did not contrast enough to provide a suitable user experience.
 
-- `#283618` used for: header & footer backgrounds, form & modal pop-up backgrounds, homepage headings & text
+- `#606C38` used for: read aloud buttons
+- `#283618` used for: header & footer backgrounds, form & modal pop-up backgrounds, homepage headings & text, special buttons
 - `#FEFAE0` used for: form & modal pop-up text, button text, selected buttons
 - `#BC6C25` used for: buttons, selected button text, footer text & icon colour
 
@@ -247,7 +248,9 @@ High scores (90+) were achieved for both Desktop and Mobile when passing through
 
 <a id="future-features"></a>
 ## Future Features
-- Accounts retain information about borrowed and favourite books
+- Login section can take live user feed using jason-server.
+  - Tried to achieve this functionality but it needed different setup on server side, so it was cut out.
+- Accounts retain information about borrowed and favourite books.
 - Rate and review books, so feedback can be shared with other users.
 - View due dates for borrowed books.
 - Receive notifications about book return dates, so they can be returned on time and avoid late fees.
