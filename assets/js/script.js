@@ -1,3 +1,7 @@
+// Check if the current page is children.html and initialize children's books functionality
+if (window.location.pathname.includes('children.html')) {
+    initChildrenBooks();
+  }
 /*********************Prapti code Starts**********************/
 // window.onscroll = function () {
 //     var navbar = document.getElementById("nav");
@@ -270,17 +274,178 @@ function logout() {
       
 };
 /*******************Prajakta code Ends*******************/
+/*******************Prajakta code for children books starts*******************/
+// Children's Books Database
+// Function to initialize children's books functionality
+function initChildrenBooks() {
+    const childrenBooks = {
+       book1: [
+         { text: `Once upon a time there was a little red hen who lived with her friends, the cow, the horse, and the cat.  In the springtime the flowers were blossoming, the leaves were appearing on the trees once more, and the farmers were busy planting their fields.  The little red hen was delighted to find some seeds of wheat and she hurried home to show them to her friends.
+   
+   The little red hen said, “Who will help me plant the wheat?”
+   
+   “Moooo.  Not I,” said the cow.
+   
+   “Neigh.  Not I,” said the horse.
+   
+   “Meow.  Not I,” said the kitty cat.
+   
+   So the little red hen said, “Then I will plant the seeds of wheat all by myself.”  And so she planted the seeds of wheat.`, img: "assets/images/red-hen.jpg" },
+         { text: `In the summertime, the sun glowed bright and hot, the fields and gardens were growing and growing, and everywhere was green.  The wheat grew tall and golden in the sun, and the little red hen asked her friends, “Who will help me cut the wheat?”
+   
+   “Moooo.  Not I,” said the cow.
+   
+   “Neigh.  Not I,” said the horse.
+   
+   “Meow.  Not I,” said the kitty cat.
+   
+   So the little red hen said, “Then I will cut the wheat all by myself.”  And so she cut the stalks of wheat.
+   
+   In the autumn, the days grew cooler, the leaves turned beautiful shades of red and orange, gold and brown, and the farmers were busy bringing in the harvest.  The little red hen asked her friends, “Who will help me take the wheat to the mill?”
+   
+   “Moooo.  Not I,” said the cow.
+   
+   “Neigh.  Not I,” said the horse.
+   
+   “Meow.  Not I,” said the kitty cat.
+   
+   So the little red hen said, “Then I will take the wheat to the mill all by myself.”  And so she took the wheat to the mill.  The miller ground the wheat into flour, and then the little red hen brought the big bags of flour back home.`, img: "assets/images/red-hen2.jpeg" },
+         { text: `In the winter the snow fell and the days were short and very cold.  The little red hen asked her friends, “Who will help me bake the bread?”
+   
+   “Moooo.  Not I,” said the cow.
+   
+   “Neigh.  Not I,” said the horse.
+   
+   “Meow.  Not I,” said the kitty cat.
+   
+   So the little red hen said, “Then I will bake the bread all by myself.”  And so she took the flour, mixed it and kneaded it and put it in the oven.  And while the bread was baking, it smelled wonderful!  The cow and the horse and the cat came running when they smelled that fresh bread.
+   
+   The little red hen took the bread out of the oven and asked her friends, “Who will help me eat the bread?”
+   
+   “Moooo.  I will!” said the cow.
+   
+   “Neigh.  I will!” said the horse.
+   
+   “Meow.  I will!” said the kitty cat.
+   
+   But the little red hen said, “Oh, no, no, no!  I planted the seeds of wheat, I cut the wheat, I took the wheat to the mill and brought home the flour, and I baked the bread, all by myself.  Now I will eat the bread - all by myself!”  And so she did, and it was delicious!`, img: "assets/images/red-hen3.jpeg" }
+       ],
+       book2: [
+         { text: "Page 1: Meet Rusty, a little robot living in the heart of a big city full of adventure.", img: "assets/images/brave_robot1.jpg" },
+         { text: "Page 2: Rusty dreams of becoming a hero, but he’s small and underestimated.", img: "assets/images/brave_robot2.jpg" },
+         { text: "Page 3: One day, a mysterious signal leads him on a quest that changes everything.", img: "assets/images/brave_robot3.jpg" }
+       ],
+       book3: [
+         { text: "Page 1: Fluffy, the cloud, wonders what lies beyond the vast blue sky.", img: "assets/images/curious_cloud1.jpg" },
+         { text: "Page 2: He floats over mountains, seas, and cities, meeting other clouds.", img: "assets/images/curious_cloud2.jpg" },
+         { text: "Page 3: Finally, he discovers a magical storm that teaches him the power of teamwork.", img: "assets/images/curious_cloud3.jpg" }
+       ]
+     };
+   
+     // Current page trackers
+     const currentPage = {
+       book1: 0,
+       book2: 0,
+       book3: 0
+     };
+   
+     // Text-to-Speech functionality
+     let synth = window.speechSynthesis;
+     let utterance;
+     let currentPosition = 0; // Tracks where to resume
+   
+     function startReading(contentId) {
+       const text = document.getElementById(contentId).textContent;
+       const remainingText = text.slice(currentPosition);
+   
+       utterance = new SpeechSynthesisUtterance(remainingText);
+       utterance.lang = "en-US";
+       utterance.pitch = 1;
+       utterance.rate = 1;
+   
+       utterance.onboundary = (event) => {
+         currentPosition = event.charIndex;
+       };
+   
+       synth.speak(utterance);
+     }
+   
+     function stopReading() {
+       if (synth.speaking) {
+         synth.cancel(); // Stop speaking
+       }
+     }
+   
+     // Change page function
+     function changePage(bookId, direction) {
+       stopReading(); // Stop reading when changing pages
+       const book = childrenBooks[bookId];
+       const newPage = currentPage[bookId] + direction;
+   
+       if (newPage >= 0 && newPage < book.length) {
+         currentPage[bookId] = newPage;
+         const content = document.getElementById(`content${bookId.slice(-1)}`);
+         const img = document.querySelector(`#${bookId} img`);
+         content.textContent = book[currentPage[bookId]].text;
+         img.src = book[currentPage[bookId]].img;
+   
+         // Play page flip sound
+         const pageFlipSound = document.getElementById('pageFlipSound');
+         pageFlipSound.play();
+   
+         // Reset reading position
+         currentPosition = 0;
+       }
+     }
+   
+     // Open story function
+     function openStory(bookId) {
+       // Hide all books
+       document.querySelectorAll('.book').forEach(book => {
+         book.style.display = 'none';
+       });
+   
+       // Show the selected book
+       document.getElementById(bookId).style.display = 'block';
+     }
+   
+   
+     // Add event listeners to story buttons
+     document.getElementById('buttonBook1').addEventListener('click', () => openStory('book1'));
+     document.getElementById('buttonBook2').addEventListener('click', () => openStory('book2'));
+     document.getElementById('buttonBook3').addEventListener('click', () => openStory('book3'));
+   
+     // Add event listeners to book controls
+     document.getElementById('prevBook1').addEventListener('click', () => changePage('book1', -1));
+     document.getElementById('nextBook1').addEventListener('click', () => changePage('book1', 1));
+     document.getElementById('prevBook2').addEventListener('click', () => changePage('book2', -1));
+     document.getElementById('nextBook2').addEventListener('click', () => changePage('book2', 1));
+     document.getElementById('prevBook3').addEventListener('click', () => changePage('book3', -1));
+     document.getElementById('nextBook3').addEventListener('click', () => changePage('book3', 1));
+   
+     // Add event listeners to reading buttons
+     document.getElementById('startReadingBook1').addEventListener('click', () => startReading('content1'));
+     document.getElementById('stopReadingBook1').addEventListener('click', stopReading);
+     document.getElementById('startReadingBook2').addEventListener('click', () => startReading('content2'));
+     document.getElementById('stopReadingBook2').addEventListener('click', stopReading);
+     document.getElementById('startReadingBook3').addEventListener('click', () => startReading('content3'));
+     document.getElementById('stopReadingBook3').addEventListener('click', stopReading);
+   
+   // Stop reading voice on page unload
+     window.addEventListener('beforeunload', stopReading);
+    }
+   /*******************Prajakta code for children books ends*******************/
 
 /**
  * Resets form fields
  */
 function clearForm() {
     document.getElementById('enquiryForm').reset();
-};
+}
 
 /**
  * Clears session after logout
  */
 function afterLogOut() {
     location.reload();
-};
+}
