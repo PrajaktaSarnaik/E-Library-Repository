@@ -1,57 +1,192 @@
 /*********************Prapti code Starts**********************/
-window.onscroll = function () {
-    var navbar = document.getElementById("nav");
-    if (window.pageYOffset > 0) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-};
+// window.onscroll = function () {
+//     var navbar = document.getElementById("nav");
+//     if (window.pageYOffset > 0) {
+//         navbar.classList.add("scrolled");
+//     } else {
+//         navbar.classList.remove("scrolled");
+//     }
+// };
 
-// ACTIVATE SEARCH BAR WHEN CLICKED ON SEARCH ICON
-document.getElementById('search-bar').addEventListener('click', function (event) {
-    event.preventDefault();
-    var searchInput = document.getElementById('search-input');
-    if (searchInput.style.display === 'none' || searchInput.style.display === '') {
-        searchInput.style.display = 'block';
-    } else {
-        searchInput.style.display = 'none';
+//Book Database
+const books = [
+    { id: 0, title: "Whispers of The Wild", author: "Areaina Greens", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 1, title:"the crystal shards" ,author:"arlen wynd" ,genre:"fantasy",image:'assets/images/fantasy1.jpeg', borrowed: false, favorite: false },
+    { id: 2, title: "embers of sorcery" ,author:"sylas raven" ,genre:"fantasy",image:'assets/images/fantasy2.jpeg', borrowed: false, favorite: false },
+    { id: 3, title: "the dragon's heir", author: "elara wind", genre: "fantasy",image:'assets/images/fantasy3.jpeg', borrowed: false, favorite: false },
+    { id: 4, title: "wings of the star", author: "elysaa thorn", genre: "fantasy",image:'assets/images/fantasy4.jpeg', borrowed: false, favorite: false },
+    { id: 5, title: "the Forgotten Gods", author: "cealan storm", genre: "fantasy",image:'assets/images/fantasy5.jpeg', borrowed: false, favorite: false },
+    { id: 6, title: "veil of eternity", author: "roderick", genre: "fantasy",image:'assets/images/fantasy5.jpeg', borrowed: false, favorite: false },
+    { id: 7, title: "oops I did it again", author: "max droll", genre: "comedy",image:'assets/images/comedy1.jpeg', borrowed: false, favorite: false },
+    { id: 8, title: "laughing through chaos", author: "benny high", genre: "comedy", borrowed: false, favorite: false },
+    { id: 9, title: "the unlikaly heros guide", author: "sally quick", genre: "comedy", borrowed: false, favorite: false },
+    { id: 10, title: "mildred & milte's misadventures", author: "clara tickle", genre: "comedy", borrowed: false, favorite: false },
+    { id: 11, title: "how to loose friends", author: "holly laugh", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 12, title: "coffee & chaos", author: "jake giggle", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 14, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 15, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 16, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 17, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 18, title: "Oops I did it again", author: "Max Droll", genre: "Comedy", borrowed: false, favorite: false }
+  ];
+
+  // Get the search bar element
+const searchBar = document.getElementById('search-bar');
+const searchResults = document.getElementById('searchResults');
+
+// Add an event listener to the search bar
+searchBar.addEventListener('input', function() {
+    const query = searchBar.value.toLowerCase();
+    console.log(query);
+    
+    if (query === '') {
+        clearResults();
+        console.log('clear');
+        return;
+    }
+    const book = books.find(book => 
+        book.title.toLowerCase().includes(query) ||
+        book.author.toLowerCase().includes(query) ||
+        book.genre.toLowerCase().includes(query)
+    );
+    
+    console.log(book);
+    if (book) {
+        jumpToBook(book.id);
+        console.log('jump');
     }
 });
 
-function searchBooks() {
-    const query = document.getElementById('search-bar').value.toLowerCase();
-    const books = document.querySelectorAll('#book-list .book');
-    let firstVisibleBook = null;
-
-    books.forEach(book => {
-        const title = book.getAttribute('data-title').toLowerCase();
-        const author = book.getAttribute('data-author').toLowerCase();
-        const genre = book.getAttribute('data-genre').toLowerCase();
-
-        if (title.includes(query) || author.includes(query) || genre.includes(query)) {
-            book.style.display = 'block';
-            if (!firstVisibleBook) {
-                firstVisibleBook = book;
-            }
-        } else {
-            book.style.display = 'none';
-        }
-    });
-
-    if (firstVisibleBook) {
-        firstVisibleBook.scrollIntoView({ behavior: 'smooth' });
+// Function to jump to the book card
+function jumpToBook(bookId) {
+    const bookElement = document.getElementById(`${bookId}`);
+    console.log(bookElement);
+    if (bookElement) {
+        bookElement.scrollIntoView({ behavior: 'smooth' });
+        bookElement.classList.add('highlight'); // Optionally add a highlight class
+        setTimeout(() => {
+            bookElement.classList.remove('highlight');
+        }, 6000); // Remove highlight after 6 seconds
     }
 }
 
-document.getElementById('search-bar').addEventListener('input', searchBooks);
+// Function to clear search results
+function clearResults() {
+    searchResults.innerHTML = '';
+}
 
-document.getElementById('search-bar').addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') {
-        event.preventDefault();
-        searchBooks();
-    }
+let isLoggedIn = false; // This should be set to true when the user logs in
+const borrowedBooks = [];
+
+// Add event listener to all borrow buttons
+document.querySelectorAll('.borrow-btn').forEach((button,index) => {
+    button.addEventListener('click', function() {
+        if (!isLoggedIn) {
+            showModal();
+            return;
+        }
+console.log(index); 
+        const book = books[index];
+        console.log(book);
+        if (book) {
+            if (book.borrowed) {
+                // Return the book
+                book.borrowed = false;
+                this.textContent = 'Borrow';
+                const borrowedIndex = borrowedBooks.findIndex(b => b.id == book.id);
+                if (borrowedIndex > -1) {
+                    borrowedBooks.splice(borrowedIndex, 1);
+                }
+            } else {
+                // Borrow the book
+                book.borrowed = true;
+                this.textContent = 'Return';
+                borrowedBooks.push(book);
+            }
+            updateBorrowedBooksList();
+        }
+    });
 });
+
+// Function to update the borrowed books list
+function updateBorrowedBooksList() {
+    const borrowedBooksList = document.getElementById('borrowedBooksList');
+    borrowedBooksList.innerHTML = '';
+    borrowedBooks.forEach(book => {
+        const bookElement = document.createElement('li');
+        bookElement.textContent = `${book.title} by ${book.author}`;
+        borrowedBooksList.appendChild(bookElement);
+    });
+}
+
+// Function to show the modal
+
+
+function showModal() {
+    const modalMessage = new bootstrap.Modal(document.getElementById('messageModal'));
+    modalMessage.show();
+}
+
+const favorites = [];
+// Favourite book 
+// Add event listener to all favorite buttons
+document.querySelectorAll('.favorite-btn').forEach((button, index) => {
+    button.addEventListener('click', function() {
+        console.log(index);
+        if (!isLoggedIn) {
+            console.log('Please log in first.');
+            showModal();
+            return;
+        }
+
+        const book = books[index];
+        if (book) {
+            if (book.favorite) {
+                // Remove from favorites
+                book.favorite = false;
+                // this.textContent = 'Add to Favorites';
+                this.classList.remove('favorite');
+                console.log('Removed from favorites');
+                const favoriteIndex = favorites.findIndex(b => b.id == book.id);
+                if (favoriteIndex > -1) {
+                    favorites.splice(favoriteIndex, 1);
+                }
+            } else {
+                // Add to favorites
+                book.favorite = true;
+               // this.textContent = 'Remove from Favorites';
+                this.classList.add('favorite');
+                console.log(this.classList);
+                console.log('Added to favorites');
+
+                favorites.push(book);
+            }
+            updateFavoritesList();
+        }
+    });
+});
+
+// Function to update the favorites list in the dropdown menu
+function updateFavoritesList() {
+    const favoritesList = document.getElementById('favouritesList');
+    favoritesList.innerHTML = ''; // Clear the current list
+
+    favorites.forEach(book => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${book.title}`; // Assuming book has a title property
+        favoritesList.appendChild(listItem);
+    });
+}
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const navbarToggler = document.querySelector('.navbar-toggler');
+//     const navbar = document.getElementById('nav');
+
+//     navbarToggler.addEventListener('click', function() {
+//         navbar.classList.toggle('toggled');
+//     });
+// });
+
 /*********************Prapti code Ends**********************/
 
 /*******************Prajakta code Starts*******************/
@@ -101,10 +236,10 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
 // Login Form Submission
 document.getElementById('loginForm').addEventListener('submit', function (e) {
     e.preventDefault();
-
+     
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
-
+    
     const user = users.find(user => user.email === email && user.password === password);
     if (user) {
         alert('Login successful!');
@@ -112,10 +247,23 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         loginModal.hide();
         document.getElementById('buttonLogin').style.display = "none";
         document.getElementById('buttonUser').style.display = "block";
+        // Praptis Code starts
+        isLoggedIn = true;
+        // Praptis Code ends
+     
     } else {
         alert('Invalid email or password!');
     }
 });
+// Logout Form Submission
+document.getElementById('logout').addEventListener('click', logout);
+function logout() {
+    
+        document.getElementById('buttonLogin').style.display = "block";
+        document.getElementById('buttonUser').style.display = "none";
+        isLoggedIn = false;
+      
+};
 /*******************Prajakta code Ends*******************/
 
 /**

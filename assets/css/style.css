@@ -1,6 +1,6 @@
-/*------------------Prapti code starts*--------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Macondo&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Macondo&display=swap');
+/*------------------Prapti code starts*--------------------------------*/
 /* CSS Variables */
 :root {
     --primary-font: "Grenze Gotisch", sans-serif;
@@ -25,14 +25,14 @@ body {
 
 /**************** Navbar ******************/
 
-#nav {
+/* #nav {
     background-color: transparent;
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
-    height: 60px;
-    
+    /* height: 60px; */
+/*     
     transition: background-color 0.3s;
     z-index: 1000;
     display: flex;
@@ -42,11 +42,32 @@ body {
 
 }
 
+#nav .navbar-toggle{
+    border: none; */ 
+    /* background-color: var(--primary-color); */
+    /* color: var(--primary-color);
+    font-size: 1rem;
+}
+#nav.toggled {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+#nav.toggled .nav-link {
+    color: var(--secondary-color);
+}
+#nav.toggled .button {
+    color: var(--secondary-color);
+}
+
 #nav.scrolled {
     background-color: var(--primary-color);
 }
 
 #nav.scrolled .nav-link {
+    color: var(--secondary-color);
+}
+
+#nav.scrolled .button{
     color: var(--secondary-color);
 }
 
@@ -71,15 +92,16 @@ body {
 #nav .logo {
     width: 80px;
     height: 80px;
-    margin-right: 5px;
+    margin-right: 5px; */
     /* Adjust the value as needed */
-}
+/* }
 
 
 .navbar-nav {
     margin: 0; 
-    padding:0;/* Adjust the value as needed */
-}
+    padding:0; */
+    /* Adjust the value as needed */
+/* }
 
 .logo {
     width: 70px;
@@ -115,25 +137,101 @@ body {
     background-color: transparent;
     color: var(--primary-color);
     margin-left: 10px;
+} */
+
+
+.add-fav {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: -webkit-linear-gradient( top,#fff,#ddd) #ddd;
+    position: relative;
+    transition: all .5s ease;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 1px #eee;
+    
+    /* &:hover {
+        background: -webkit-linear-gradient( top,#fff,#ccc) #ddd;
+    } */
+  
+    .icon-heart {
+      font-size: 24px;
+      color: #666;
+      position: relative;
+      transition: all .5s ease-in-out;
+    }
+
+      input[type="checkbox"] { 
+      position: absolute;
+      opacity: 0;
+        /* &:checked + .icon-heart {
+        color: red;
+        
+      }    */
+    } 
+  } 
+/* fill heart icon with red color when clicked */
+  .add-fav .favorite {
+   color: red;       
 }
+
 /* *****************Prajakta code starts here*********************** */
-#buttonLogin,
-#buttonUser {
-    border: none;
-    background: none;
-    color: #1f3b32
-}
+.navbar {
+            transition: background-color 0.3s ease;
+        }
 
-#buttonLogin
-{
-    margin: 0;
-    padding: 8px;
-}
+        .navbar.transparent {
+            background-color: var(--primary-color) !important;
+        }
 
-#buttonUser {
-    font-size: 1.5rem;
-    padding: 8px;
-}
+        .navbar.scrolled {
+            background-color: var(--primary-color) !important;
+            
+        }
+
+        .navbar-brand,
+        .nav-link
+        
+        {
+            color: #fff !important;
+        }
+        #button-navbar-toggler
+        {
+            color: #fff;
+            border: 2px solid #fff;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .search-icon {
+            color: #4D937D;
+            font-size: 1.2rem;
+            cursor: pointer;
+
+        }
+        #search-input {
+            border: 1px solid #1f3b32;
+        }
+
+        #buttonLogin,
+        #buttonUser,
+        .button-search
+         {
+            border: none;
+            background: none;
+            color: #fff;
+            padding: 8px;
+        }
+        
+
+        #buttonUser
+        {
+            font-size: 1.2rem;
+        }
+        .navbar-container {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
 
 /* Cards Section */
 .card-container {
@@ -231,6 +329,7 @@ body {
 }
 
 /* *****************Prajakta code ends here*********************** */
+/*------------------Prapti code starts*--------------------------------*/
 .hero {
     position: relative;
     width: 100%;
@@ -256,90 +355,15 @@ h1 {
     color: var(--primary-color);
 }
 
-/* Cards */
 
-.bookcard-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    padding: 20px;
-    overflow-x: auto;
+.highlight {
+    border: 4px solid rgb(3, 3, 163);
+    transition: border 0.6s ease;
 }
 
-.bookcard {
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card {
-    position: relative;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden;
-    /* Ensure content doesn't overflow the card */
-}
-
-.card-body {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.9);
-    /* Optional: Add a background color for better visibility */
-}
-
-.card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    transform: translateY(100%);
-}
-
-
-.bookcard:hover {
-    transform: scale(1.25);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.bookcard:hover .card-body-full {
-    display: block;
-}
-
-.bookcard img {
-    width: 100%;
-    transition: transform 0.3s;
-}
-
-.bookcard:hover img {
-    transform: scale(1.05);
-}
-
-.bookcard button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.bookcard button:hover {
-    background-color: #0056b3;
-}
-
-
-
+/* .dropdown-menu {
+    background-color: white;
+} */
 /*------------------Prapti code End*--------------------------------*/
 
 
@@ -396,7 +420,7 @@ ul {
     padding: 5vw;
 }
 
-/* Set colour of submit button */
+/* Set colour of buttons */
 .btn {
     background-color: #BC6C25;
     color: #FEFAE0;
@@ -419,3 +443,80 @@ ul {
     color: var(--secondary-color);
 };
 /*~~~~~~~~~~~~~~~~~ Mitali Code Ends ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.dropdown-menu {
+    right: auto;
+    left: auto;
+}
+
+@media (max-width: 1024px) {
+.hero {
+min-height: calc(100vh - 70px); 
+}
+
+.hero h1 {
+font-size: 3rem; /* Adjust heading size for tablet screens */
+}
+
+.hero p {
+font-size: 1.3rem; /* Adjust paragraph font size */
+}
+
+.borrow-btn {
+font-size: 1.1rem; /* Adjust button font size */
+}
+
+.heart-icon {
+font-size: 1.7rem; /* Adjust heart icon size */
+}
+}
+
+@media (max-width: 768px) {
+.hero {
+min-height: calc(100vh - 80px);
+
+text-align: left;  /* Keep the text aligned to the left */
+}
+
+.hero h1 {
+font-size: 2.5rem; /* Smaller heading font size */
+}
+
+.hero p {
+font-size: 1.1rem; /* Adjust paragraph font size */
+}
+
+.borrow-btn {
+font-size: 1.1rem;
+padding: 12px 25px;
+}
+
+.heart-icon {
+font-size: 1.8rem;
+}
+}
+
+@media (max-width: 576px) {
+.hero {
+min-height: calc(100vh - 90px);
+padding-top: 90px; /* Adjust padding-top more for small screens */
+padding: 20px; /* Add padding to prevent text from touching edges */
+}
+
+.hero h1 {
+font-size: 2rem; /* Smaller heading font size for small screens */
+}
+
+.hero p {
+font-size: 1rem; /* Adjust paragraph text size */
+}
+
+.borrow-btn {
+font-size: 1rem; /* Adjust button text size */
+padding: 10px 20px;
+}
+
+.heart-icon {
+font-size: 1.5rem; /* Adjust heart icon size */
+}
+}
