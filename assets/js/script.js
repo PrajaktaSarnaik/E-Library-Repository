@@ -8,7 +8,7 @@ if (window.location.pathname.includes('children.html')) {
  * Book Database
  */
 const books = [
-    { id: 0, title: "Whispers of The Wild", author: "Areaina Greens", genre: "Comedy", borrowed: false, favorite: false },
+    { id: 0, title: "Whispers of The Wild", author: "Areaina Greens", genre: "Fantasy", borrowed: false, favorite: false },
     { id: 1, title: "The Crystal Shards", author: "Arlen Wynd", genre: "Fantasy", image: 'assets/images/fantasy1.jpeg', borrowed: false, favorite: false },
     { id: 2, title: "Embers of Sorcery", author: "Sylas Raven", genre: "Fantasy", image: 'assets/images/fantasy2.jpeg', borrowed: false, favorite: false },
     { id: 3, title: "The Dragon's Heir", author: "Elara Wind", genre: "Fantasy", image: 'assets/images/fantasy3.jpeg', borrowed: false, favorite: false },
